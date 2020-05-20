@@ -1,0 +1,25 @@
+@import "../_PARTIALS/breakpoints";
+
+.about {
+    background-image:url("https://www.lamodeenimages.com/sites/default/files-lmi/styles/1365x768/public/images/article/homepage/full/louis-vuitton-volez-voguez-voyagez-shanghai-exhibition-center-la-mode-en-images-cover.jpg?itok=5ygYxpnS"); 
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.about-text {
+    margin: 0px;
+    padding:5% 10%;
+    width:80%;
+    text-align:left;
+    font-size:20px;
+    * {
+        color: cyan;
+    }
+}
+
+@media (min-width:$bp-lg){
+        .about-text p {
+            padding-right:50%;
+        }
+}

@@ -1,0 +1,80 @@
+@import "../_PARTIALS/breakpoints";
+
+    //General
+    header {
+        width:80%;
+        margin: auto;
+    }
+
+    //Base
+    .header-wrapper {
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .logo {
+        flex-basis:50%;
+        flex-grow: 1;
+    }
+    .navbar-opts, .menuburger {
+        flex-basis:60px;
+    }
+    .navbar-opts {
+        display:flex;
+    }
+        .btn-spt, .btn-cnt {
+            display:none;
+        }
+    .searchbar {
+        display:flex;
+        flex-basis:100%;
+    }
+        .inp-sch {
+            flex-grow:1;
+        }
+
+    .btn {
+        flex-basis: 60px;
+    }
+
+    @media (min-width:$bp-sm){
+        .header-wrapper {
+            flex-wrap:nowrap;
+        }
+        .navbar-opts {
+            display:none;
+        }
+        .menuburger {
+            order: 1;
+        }
+        .searchbar {
+            flex-basis: 200px;
+        }
+    }
+
+    @media (min-width:$bp-md) {
+        .navbar-opts {
+            display:flex;
+            flex-basis:120px;
+        }
+            .btn-phn {
+                display:none;
+            }
+            .btn-spt, .btn-cnt {
+                display:block;
+            }
+        .searchbar {
+            flex-basis: 60px;
+        }
+            .inp-sch {
+                display:none;
+            }
+    }
+
+    @media (min-width:$bp-lg) {
+        .searchbar {
+            flex-basis: 200px;
+        }
+            .inp-sch {
+                display:block;
+            }
+    }

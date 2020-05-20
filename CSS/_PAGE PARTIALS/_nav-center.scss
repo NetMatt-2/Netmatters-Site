@@ -1,0 +1,44 @@
+@import "../_PARTIALS/breakpoints";
+
+$gutterWidth:20px;
+
+.nav-mid {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width:80%;
+    margin:auto;
+    justify-content: space-between;
+}
+.nav-mid .panel {
+    flex-basis:100%;
+    color:white;
+}
+
+@mixin panel-width-fixed-gutters ($panels, $gutter) {
+    //flex-basis: calc( (100% - (#{$gutterWidth}* (1)) ) / 2);                      //<== Works
+    //flex-basis: calc( (100% - (#{$gutter} * ( $panels - 1 ) ) ) / $panels );      //<==Obstinate refusal to work
+    flex-basis: calc( (100% - (#{$gutter} * ( #{$panels} - 1 ) ) ) / #{$panels} );  //<== Works...??????????
+}
+
+@media (min-width:$bp-sm){
+    /*Get last 4 children (2x2)*/
+    .nav-mid .panel:nth-child(1n+4){
+        //flex-basis: calc((100%-#{$gutterWidth})/2);
+        @include panel-width-fixed-gutters(2, $gutterWidth);
+    }
+}
+@media (min-width:$bp-md){
+    /*Get first 3 children (3x1)*/
+    .nav-mid .panel:nth-last-child(1n+5){
+        //flex-basis: calc((100%-$gutterWidth*2)/3);
+        @include panel-width-fixed-gutters(3, $gutterWidth);
+    }
+}
+@media (min-width:$bp-lg){
+    /*Get last 4 children (4x1)*/
+    .nav-mid .panel:nth-child(1n+4){
+        //flex-basis: calc((100%-$gutterWidth*3)/4);
+        @include panel-width-fixed-gutters(4, $gutterWidth);
+    }
+}

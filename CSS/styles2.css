@@ -1,0 +1,257 @@
+header {
+  width: 80%;
+  margin: auto;
+}
+
+.header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.logo {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.navbar-opts, .menuburger {
+  -ms-flex-preferred-size: 60px;
+      flex-basis: 60px;
+}
+
+.navbar-opts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn-spt, .btn-cnt {
+  display: none;
+}
+
+.searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.inp-sch {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.btn {
+  -ms-flex-preferred-size: 60px;
+      flex-basis: 60px;
+}
+
+@media (min-width: 768px) {
+  .header-wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .navbar-opts {
+    display: none;
+  }
+  .menuburger {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .searchbar {
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-opts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 120px;
+        flex-basis: 120px;
+  }
+  .btn-phn {
+    display: none;
+  }
+  .btn-spt, .btn-cnt {
+    display: block;
+  }
+  .searchbar {
+    -ms-flex-preferred-size: 60px;
+        flex-basis: 60px;
+  }
+  .inp-sch {
+    display: none;
+  }
+}
+
+@media (min-width: 1260px) {
+  .searchbar {
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+  }
+  .inp-sch {
+    display: block;
+  }
+}
+
+.splash {
+  width: 100%;
+  position: relative;
+}
+
+.splash img {
+  width: 100%;
+}
+
+.splash-text {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 40px;
+}
+
+.splash-text * {
+  color: cyan;
+}
+
+/*Fixed size, text-align center*/
+@media (min-width: 992px) {
+  .splash-text {
+    -webkit-transform: translate(-40%, -50%);
+    transform: translate(-40%, -50%);
+    text-align: left;
+  }
+}
+
+.nav-mid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-mid .panel {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  /*Get last 4 children (2x2)*/
+  .nav-mid .panel:nth-child(1n+4) {
+    -ms-flex-preferred-size: calc( (100% - (20px * ( 2 - 1 ) ) ) / 2);
+        flex-basis: calc( (100% - (20px * ( 2 - 1 ) ) ) / 2);
+  }
+}
+
+@media (min-width: 992px) {
+  /*Get first 3 children (3x1)*/
+  .nav-mid .panel:nth-last-child(1n+5) {
+    -ms-flex-preferred-size: calc( (100% - (20px * ( 3 - 1 ) ) ) / 3);
+        flex-basis: calc( (100% - (20px * ( 3 - 1 ) ) ) / 3);
+  }
+}
+
+@media (min-width: 1260px) {
+  /*Get last 4 children (4x1)*/
+  .nav-mid .panel:nth-child(1n+4) {
+    -ms-flex-preferred-size: calc( (100% - (20px * ( 4 - 1 ) ) ) / 4);
+        flex-basis: calc( (100% - (20px * ( 4 - 1 ) ) ) / 4);
+  }
+}
+
+.about {
+  background-image: url("https://www.lamodeenimages.com/sites/default/files-lmi/styles/1365x768/public/images/article/homepage/full/louis-vuitton-volez-voguez-voyagez-shanghai-exhibition-center-la-mode-en-images-cover.jpg?itok=5ygYxpnS");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.about-text {
+  margin: 0px;
+  padding: 5% 10%;
+  width: 80%;
+  text-align: left;
+  font-size: 20px;
+}
+
+.about-text * {
+  color: cyan;
+}
+
+@media (min-width: 1260px) {
+  .about-text p {
+    padding-right: 50%;
+  }
+}
+
+.latest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.latest .newspanel {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  .latest .newspanel:nth-last-child(1) {
+    display: none;
+  }
+  .latest .newspanel {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media (min-width: 1260px) {
+  .latest .newspanel:nth-last-child(1) {
+    display: block;
+  }
+  .latest .newspanel {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+}
+
+* {
+  background: transparent;
+  color: white;
+}
+
+body {
+  background: black;
+  width: 100%;
+  margin: auto;
+  overflow-x: hidden;
+}
+/*# sourceMappingURL=styles2.css.map */

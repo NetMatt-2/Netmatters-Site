@@ -1,0 +1,33 @@
+@import "../_PARTIALS/breakpoints";
+
+.splash {
+    width:100%;
+    position:relative;
+    img {
+        width:100%;
+    }
+}
+.splash-text {
+    width:100%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align:center;
+    font-size:40px;
+    * {
+        color: cyan;
+    }
+}
+
+/*Fixed size, text-align center*/
+
+@media (min-width:$bp-md) {
+    .splash-text {
+        -webkit-transform: translate(-40%, -50%);
+                transform: translate(-40%, -50%);
+        text-align: left;
+
+    }
+}

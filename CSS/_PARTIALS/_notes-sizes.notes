@@ -1,0 +1,47 @@
+//Really Small
+//no sponsors
+//
+/*
+@mixin s {
+    .headerbar {
+        display:flex;
+        .logo {
+
+        }
+        .navbar-opts {
+
+        }
+        .searchbar {
+            display: flex;
+            flex-wrap:nowrap;
+            input {
+
+            }
+            button {
+
+            }
+        }
+    }
+}
+*/
+//Small
+// Contact us button disappears
+// Search bar shrinks and goes next to the logo and menu burger.
+// Main nav top 3 in a single column, bottom 4 in a 2x2
+// 2 news items side-by-side
+// contact details in 2 columns, w/ social media buttons on the right.
+
+//Medium
+// Support and contact buttons appear
+// Search bar becomes pretentious
+// Top nav actually appears.
+// Big splash text goes to left hand side.
+// Main nav 3 across and 2x2
+
+
+//Large
+// Search bar becomes normal
+// 3 across and 4 across
+// about us takes up half the screen, for some reason.
+// 3 news items side by side
+// social media buttons in 4 columns.

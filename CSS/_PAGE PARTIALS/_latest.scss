@@ -1,0 +1,28 @@
+@import "../_PARTIALS/breakpoints";
+
+.latest {
+    color: red;
+    display: flex;
+    flex-wrap:wrap;
+}
+.latest .newspanel {
+    flex-basis:100%;
+}
+
+@media (min-width:$bp-sm) {
+    .latest .newspanel:nth-last-child(1) {
+        display:none;
+    }
+    .latest .newspanel {
+        flex-basis:50%;
+    }
+}
+
+@media (min-width:$bp-lg) {
+    .latest .newspanel:nth-last-child(1) {
+        display:block;
+    }
+    .latest .newspanel {
+        flex-basis:33%;
+    }
+}
