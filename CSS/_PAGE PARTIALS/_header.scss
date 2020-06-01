@@ -21,14 +21,14 @@
     .navbar-opts {
         display:flex;
     }
-        .btn-spt, .btn-cnt {
+        .btn-support, .btn-contact {
             display:none;
         }
     .searchbar {
         display:flex;
         flex-basis:100%;
     }
-        .inp-sch {
+        .inp-search {
             flex-grow:1;
         }
 
@@ -56,16 +56,16 @@
             display:flex;
             flex-basis:120px;
         }
-            .btn-phn {
+            .btn-phone {
                 display:none;
             }
-            .btn-spt, .btn-cnt {
+            .btn-support, .btn-contact {
                 display:block;
             }
         .searchbar {
             flex-basis: 60px;
         }
-            .inp-sch {
+            .inp-search {
                 display:none;
             }
     }
@@ -74,7 +74,7 @@
         .searchbar {
             flex-basis: 200px;
         }
-            .inp-sch {
+            .inp-search {
                 display:block;
             }
     }
