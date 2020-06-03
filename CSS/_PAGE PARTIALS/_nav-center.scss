@@ -1,16 +1,16 @@
 @import "../_PARTIALS/breakpoints",
         "../_PARTIALS/borders-placeholders",
-        "../_PARTIALS/mix_flex-basis-fixed-gutters";
-
-$gutterWidth:20px;
+        "../_PARTIALS/universals",
+        "../_PARTIALS/mix_flex-basis-static-gutters",
+        "../_PARTIALS/mix_flex-common-settings",
+        "../_PARTIALS/mix_flex-ctnr-static-widths";
 
 .nav-mid {
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width:80%;
-    margin:auto;
-    justify-content: space-between;
+    @include flex-ctnr-static-widths ($x-pad_page, $bp-sm $bp-md $bp-lg);
+    .flex-container {
+        @include flex-common-wrap;
+        @include flex-vertical-padding ($y-pad_section, $y-pad_section, $y-gutter_section);
+    }
 }
 .nav-mid .panel {
     flex-basis:100%;
@@ -21,18 +21,18 @@ $gutterWidth:20px;
 @media (min-width:$bp-sm){
     /*Get last 4 children (2x2)*/
     .nav-mid .panel:nth-child(1n+4){
-        @include flex-basis-fixed-gutters(2, $gutterWidth);
+        @include flex-basis-static-gutters(2, $x-gutter_section);
     }
 }
 @media (min-width:$bp-md){
     /*Get first 3 children (3x1)*/
     .nav-mid .panel:nth-last-child(1n+5){
-        @include flex-basis-fixed-gutters(3, $gutterWidth);
+        @include flex-basis-static-gutters(3, $x-gutter_section);
     }
 }
 @media (min-width:$bp-lg){
     /*Get last 4 children (4x1)*/
     .nav-mid .panel:nth-child(1n+4){
-        @include flex-basis-fixed-gutters(4, $gutterWidth);
+        @include flex-basis-static-gutters(4, $x-gutter_section);
     }
 }

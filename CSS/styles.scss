@@ -1,16 +1,18 @@
-@import "_PAGE PARTIALS/header",
+@import "_PARTIALS/fonts",
+        "_PAGE PARTIALS/header",
         "_PAGE PARTIALS/splash",
         "_PAGE PARTIALS/nav-center",
         "_PAGE PARTIALS/about",
         "_PAGE PARTIALS/latest",
+        "_PAGE PARTIALS/affiliates",
         "_PAGE PARTIALS/footer";
 
 *{
     background:transparent;
-    color: white;
+    color: black;
 }
 body {
-    background:black;
+    background:white;
     width:100%;
     margin: auto;
     overflow-x: hidden; 

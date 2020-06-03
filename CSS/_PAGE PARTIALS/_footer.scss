@@ -1,52 +1,42 @@
 @import "../_PARTIALS/breakpoints",
-        "../_PARTIALS/mix_flex-basis-fixed-gutters";
+        "../_PARTIALS/colours",
+        "../_PARTIALS/universals",
+        "../_PARTIALS/mix_flex-basis-static-gutters",
+        "../_PARTIALS/mix_flex-ctnr-static-widths",
+        "../_PARTIALS/mix_flex-common-settings";
 
-.flex-ctnr_footer  {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    padding:70px 20px;
-    section {
-        flex-basis:100%;
+footer {
+    background-color: $bg;
+    * { 
+        color: white; 
     }
-    ul {
-        padding: 0;
-    }
-    li {
-        list-style: none;
+    @include flex-ctnr-static-widths($x-pad_page, $bp-sm $bp-md $bp-lg);
+    .flex-container {
+        @include flex-common-wrap;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        section {
+            flex-basis:100%;
+            @media (min-width:$bp-sm) {
+                flex-basis: 50%;
+            }
+            @media (min-width:$bp-lg) {
+                flex-basis: 25%;
+            }
+        }
+        ul {
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
     }
 }
 
 .socMed-links {
-    display:flex;
-    flex-wrap:wrap;
+    @include flex-common-wrap;
+    @include flex-children-static-gutters (2, $x-gutter_section);
     a {
-        @include flex-basis-fixed-gutters (2, 40px);
-    }
-}
-
-
-@media (min-width:$bp-sm) {
-    .flex-ctnr_footer {
-        width:$bp-sm;
-        margin: auto;
-        section {
-            flex-basis: 50%;
-        }
-    }
-}
-
-@media (min-width:$bp-md) {
-    .flex-ctnr_footer {
-        width:$bp-md;
-    }
-}
-
-@media (min-width:$bp-lg) {
-    .flex-ctnr_footer {
-        width:$bp-lg;
-        section {
-            flex-basis: 25%;
-        }
+        background-color: transparent;
     }
 }

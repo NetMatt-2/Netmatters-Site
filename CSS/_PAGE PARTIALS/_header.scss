@@ -1,22 +1,38 @@
-@import "../_PARTIALS/breakpoints";
+@import "../_PARTIALS/borders-placeholders",
+        "../_PARTIALS/breakpoints",
+        "../_PARTIALS/universals";
 
-    //General
+//THESE STYLES APPLY AT ALL BREAKPOINTS
     header {
-        width:80%;
-        margin: auto;
+        width:100%;
+        height: auto;
+        padding: 20px $x-pad_page;
+        box-sizing: border-box;
     }
-
-    //Base
     .header-wrapper {
         display:flex;
         flex-wrap:wrap;
+        margin: auto;
     }
+//////////////////////////////////////////////////
+
+    //Netmatters logo
     .logo {
         flex-basis:50%;
         flex-grow: 1;
+    /*    @media (max-width:calc(($btn-icon-width * 2) + ($x-pad_page * 2)) ) {
+            //Do something
+            //Prevents phone and menu buttons being pushed down.
+        }   */
     }
+    //Buttons
+    .btn {
+        flex-basis:$btn-icon-width;
+    }
+    //Navigation bar
     .navbar-opts, .menuburger {
-        flex-basis:60px;
+        flex-basis:$btn-icon-width;
+        margin-left: $gutter-size;
     }
     .navbar-opts {
         display:flex;
@@ -24,6 +40,8 @@
         .btn-support, .btn-contact {
             display:none;
         }
+    //
+    //Searchbar
     .searchbar {
         display:flex;
         flex-basis:100%;
@@ -31,50 +49,63 @@
         .inp-search {
             flex-grow:1;
         }
+        //.btn-search {}
+    //
 
-    .btn {
-        flex-basis: 60px;
+@media (min-width:$bp-sm){
+    .header-wrapper {
+        flex-wrap:nowrap;
+        width:calc(#{$bp-sm} - (2 * #{$x-pad_page}));
+        //width:$bp-sm;
     }
+    .navbar-opts {display:none;}
+    .menuburger {order: 1;}
+    .searchbar {flex-basis: 200px;}
+}
 
-    @media (min-width:$bp-sm){
-        .header-wrapper {
-            flex-wrap:nowrap;
-        }
-        .navbar-opts {
+@media (min-width:$bp-md) {
+    .header-wrapper {
+        width:calc(#{$bp-md} - (2 * #{$x-pad_page}));
+    }
+    .navbar-opts {  
+        margin-left: 0;
+        display:flex;
+        flex-basis:calc(50% - (2 * #{$btn-icon-width}) );
+        justify-content:space-between;
+    }
+        .btn-phone {
             display:none;
         }
-        .menuburger {
-            order: 1;
+        .btn-support, .btn-contact {
+            display:block;
+            flex-basis:calc((100% - #{$gutter-size}) / 2);
+            border:$ph-border2;
+            box-sizing: border-box;
+            img {
+                width:$btn-icon-width;
+            }
         }
-        .searchbar {
-            flex-basis: 200px;
-        }
+    //
+    .searchbar, .menuburger {
+        flex-basis:$btn-icon-width;
     }
+    .searchbar {
+        margin-left:$gutter-size;
+    }
+        .inp-search {
+            display:none;
+        }
+    //
+}
 
-    @media (min-width:$bp-md) {
-        .navbar-opts {
-            display:flex;
-            flex-basis:120px;
-        }
-            .btn-phone {
-                display:none;
-            }
-            .btn-support, .btn-contact {
-                display:block;
-            }
-        .searchbar {
-            flex-basis: 60px;
-        }
-            .inp-search {
-                display:none;
-            }
+@media (min-width:$bp-lg) {
+    .header-wrapper {
+        width:calc(#{$bp-lg} - (2 * #{$x-pad_page}));        }
+    .searchbar {
+        flex-basis: 200px;
     }
-
-    @media (min-width:$bp-lg) {
-        .searchbar {
-            flex-basis: 200px;
+        .inp-search {
+            display:initial;
         }
-            .inp-search {
-                display:block;
-            }
-    }
+    //
+}

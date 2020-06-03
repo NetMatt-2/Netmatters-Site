@@ -1,11 +1,27 @@
-@import "../_PARTIALS/breakpoints";
+@import "../_PARTIALS/breakpoints",
+        "../_PARTIALS/universals",
+        "../_PARTIALS/mix_flex-basis-static-gutters",
+        "../_PARTIALS/mix_flex-common-settings",
+        "../_PARTIALS/mix_flex-ctnr-static-widths";
 
 .latest {
-    display: flex;
-    flex-wrap:wrap;
+    @include flex-ctnr-static-widths($x-pad_page, $bp-sm $bp-md $bp-lg);
+    .flex-container {
+        @include flex-common-wrap;
+        @include flex-vertical-padding ($y-pad_section, $y-pad_section, $y-gutter_section);
+    }
 }
-.latest .newspanel {
+.newspanel {
     flex-basis:100%;
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transform-origin: center;
+        :hover {
+            transform: scale(120%);
+        }
+    }
 }
 
 @media (min-width:$bp-sm) {
@@ -13,7 +29,7 @@
         display:none;
     }
     .latest .newspanel {
-        flex-basis:50%;
+        @include flex-basis-static-gutters (2, $x-gutter_section);
     }
 }
 
@@ -22,6 +38,6 @@
         display:block;
     }
     .latest .newspanel {
-        flex-basis:33%;
+        @include flex-basis-static-gutters (3, $x-gutter_section);
     }
 }

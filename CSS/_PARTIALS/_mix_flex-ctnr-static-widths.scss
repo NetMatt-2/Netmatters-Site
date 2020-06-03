@@ -1,0 +1,33 @@
+@import "breakpoints";
+
+//Include this in a section that has a .flex-container
+// as its child.
+
+//Use this to apply a fixed width to a flex container
+// @ the specified breakpoints, based on the supplied
+// x-padding value.
+
+//Initially this @mixin allowed you to the specify top
+// and bottom padding as well as flex-wrap properties,
+// but I removed that functionality to give the @mixin
+// more focus.
+
+@mixin flex-ctnr-static-widths (
+$pad-x: 20px,
+$breakpoints: $bp-sm $bp-md $bp-lg,
+) {
+    width: 100%;
+    height: auto;
+    padding-left: $pad-x;
+    padding-right: $pad-x;
+    box-sizing: border-box;
+    >.flex-container {
+        display: flex;
+        margin: auto;
+        @each $var in $breakpoints {
+            @media (min-width: $var) {
+                width:calc(#{$var} - (2 * #{$pad-x}));
+            }
+        }
+    }
+}

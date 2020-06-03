@@ -1,7 +1,8 @@
-@import "../_PARTIALS/breakpoints";
+@import "../_PARTIALS/breakpoints",
+        "../_PARTIALS/colours";
 
 .about {
-    background-image:url("https://www.lamodeenimages.com/sites/default/files-lmi/styles/1365x768/public/images/article/homepage/full/louis-vuitton-volez-voguez-voyagez-shanghai-exhibition-center-la-mode-en-images-cover.jpg?itok=5ygYxpnS"); 
+    background-color: $bg;
     background-repeat:no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -19,7 +20,10 @@
 }
 
 @media (min-width:$bp-lg){
-        .about-text p {
-            padding-right:50%;
-        }
+    .about {
+        background-image:url("https://www.lamodeenimages.com/sites/default/files-lmi/styles/1365x768/public/images/article/homepage/full/louis-vuitton-volez-voguez-voyagez-shanghai-exhibition-center-la-mode-en-images-cover.jpg?itok=5ygYxpnS"); 
+    }
+    .about-text p {
+        padding-right:50%;
+    }
 }

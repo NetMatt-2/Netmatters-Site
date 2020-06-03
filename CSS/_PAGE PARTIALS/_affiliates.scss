@@ -1,0 +1,26 @@
+@import "../_PARTIALS/breakpoints",
+        "../_PARTIALS/colours",
+        "../_PARTIALS/universals",
+        "../_PARTIALS/mix_flex-common-settings",
+        "../_PARTIALS/mix_flex-ctnr-static-widths";
+
+$af-height: 45px;
+
+.affiliates {
+    display:none;
+    @include flex-ctnr-static-widths ($x-pad_page, $bp-sm $bp-md $bp-lg);
+    .flex-container {
+        @include flex-common-nowrap;
+    }
+}
+@media (min-width: $bp-sm) {
+    .affiliates {
+        display:block;
+    }
+    .af {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        height: $af-height;
+    }
+}
