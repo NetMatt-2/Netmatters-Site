@@ -1,0 +1,8 @@
+//Apply the specified colour to the included properties
+@mixin colour-schema-news ($colour) {
+    h3 {color:$colour;}
+    a {background-color:$colour;}
+    a:hover {
+        background-color:darken($colour, 10);
+    }
+}

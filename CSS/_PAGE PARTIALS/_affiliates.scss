@@ -7,6 +7,7 @@
 $af-height: 45px;
 
 .affiliates {
+    background-color: $bg-lite;
     display:none;
     @include flex-ctnr-static-widths ($x-pad_page, $bp-sm $bp-md $bp-lg);
     .flex-container {

@@ -1,9 +1,11 @@
 @import "../_PARTIALS/borders-placeholders",
         "../_PARTIALS/breakpoints",
+        "../_PARTIALS/colours",
         "../_PARTIALS/universals";
 
 //THESE STYLES APPLY AT ALL BREAKPOINTS
     header {
+        background-color: $bg-lite;
         width:100%;
         height: auto;
         padding: 20px $x-pad_page;
