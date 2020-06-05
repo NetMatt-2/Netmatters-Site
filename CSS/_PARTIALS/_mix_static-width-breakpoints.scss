@@ -1,0 +1,7 @@
+@mixin static-width-breakpoints ($pseudo-padding, $breakpoints: $bp-sm $bp-md $bp-lg) {
+    @each $var in $breakpoints {
+        @media (min-width: $var) {
+            width:calc(#{$var} - (2 * #{$pseudo-padding}));
+        }
+    }
+}

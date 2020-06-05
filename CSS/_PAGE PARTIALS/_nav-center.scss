@@ -1,6 +1,8 @@
 @import "../_PARTIALS/breakpoints",
         "../_PARTIALS/borders-placeholders",
+        "../_PARTIALS/colours",
         "../_PARTIALS/universals",
+        "../_PARTIALS/mix_create-colour-schemas",
         "../_PARTIALS/mix_flex-basis-static-gutters",
         "../_PARTIALS/mix_flex-common-settings",
         "../_PARTIALS/mix_flex-ctnr-static-widths";
@@ -11,12 +13,53 @@
         @include flex-common-wrap;
         @include flex-vertical-padding ($y-pad_section, $y-pad_section, $y-gutter_section);
     }
+    .panel {
+        flex-basis:100%;
+        border: solid $grey-md 1px;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        padding: $y-pad_panel 40px;
+        box-shadow: 0 0 20px -10px;
+        h2, p {
+            color: $grey-dk;
+        }
+        span {
+            width:28px;
+            height: 3px;
+            margin: auto;
+            background-color: #333645;
+            display: block;
+        }
+    }
+    .icon {
+        $circle: 50px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        height: $circle;
+        width: $circle;
+        display:inline-block;
+        img {
+            max-width:100%;
+            height: auto;
+        }
+    }
+    .readmore {
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 30px;
+        display: block;
+        width: 100px;
+        text-transform: uppercase;
+        text-align: center;
+        color:white;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
-.nav-mid .panel {
-    flex-basis:100%;
-    color:white;
-    border: $ph-border2;
-}
+
 
 @media (min-width:$bp-sm){
     /*Get last 4 children (2x2)*/
@@ -36,3 +79,12 @@
         @include flex-basis-static-gutters(4, $x-gutter_section);
     }
 }
+
+
+
+.schema-nav-seagrey { @include colour-schema-nav ($col-seagrey); }
+.schema-nav-blue    { @include colour-schema-nav ($col-blue); }
+.schema-nav-green   { @include colour-schema-nav ($col-green); }
+.schema-nav-red     { @include colour-schema-nav ($col-red); }
+.schema-nav-purple  { @include colour-schema-nav ($col-purple); }
+.schema-nav-pink    { @include colour-schema-nav ($col-pink); }

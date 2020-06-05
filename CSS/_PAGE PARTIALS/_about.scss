@@ -1,29 +1,52 @@
 @import "../_PARTIALS/breakpoints",
-        "../_PARTIALS/colours";
+        "../_PARTIALS/colours",
+        "../_PARTIALS/universals",
+        "../_PARTIALS/mix_static-width-breakpoints";
+
 
 .about {
     background-color: $bg-dark;
     background-repeat:no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-}
-
-.about-text {
-    margin: 0px;
-    padding:5% 10%;
-    width:50%;
-    text-align:left;
-    font-size:20px;
-    * {
-        color: cyan;
-    }
-}
-
-@media (min-width:$bp-lg){
+    height: auto;
+    padding: $y-pad_panel $x-pad_page;
+    box-sizing: border-box;
     .about {
         background-image:url("https://www.lamodeenimages.com/sites/default/files-lmi/styles/1365x768/public/images/article/homepage/full/louis-vuitton-volez-voguez-voyagez-shanghai-exhibition-center-la-mode-en-images-cover.jpg?itok=5ygYxpnS"); 
     }
-    .about-text p {
-        padding-right:50%;
+}
+
+.about-text {
+    box-sizing: border-box;
+    line-height: 1.8;
+    margin: auto;
+    width:100%;
+    text-align:left;
+    * {
+        color: white;
+    }
+    h2 {
+        margin-top: 15px;
+        margin-bottom: 0;
+        font-weight: 300;
+        font-size: 40px;
+    }
+    p {
+        font-size: 17px;
+        font-weight: 300;
+    }
+    p:first-of-type {
+        font-weight: 600;
+    }
+    a {
+        @include btn-style-1 ($bg-dark, white, 10px, ) ;
+        margin-bottom: 15px;
+    }
+    @include static-width-breakpoints ($x-pad_page);
+    @media (min-width: $bp-lg) {
+        padding-right: calc( (#{$bp-lg} - (2 * #{$x-pad_page})) / 2 );
     }
 }
+
+

@@ -4,7 +4,28 @@
         "../_PARTIALS/mix_create-colour-schemas",
         "../_PARTIALS/mix_flex-basis-static-gutters",
         "../_PARTIALS/mix_flex-common-settings",
-        "../_PARTIALS/mix_flex-ctnr-static-widths";
+        "../_PARTIALS/mix_flex-ctnr-static-widths",
+        "../_PARTIALS/mix_static-width-breakpoints";
+
+.latest-heading {
+    margin: auto;
+    @include static-width-breakpoints ($x-pad_page);    
+    // ^^^ A pretty late addition to the project.
+    span {
+        width:72px;
+        height: 5px;
+        margin-right: auto;
+        background-color: #333645;
+        display: block;
+    }
+    h2 {
+        margin: 40px 0;
+        font-weight: 600;
+        font-size: 20px;
+        color: #333645;
+        text-transform: uppercase;
+    }    
+}
 
 .latest {
     background-image: linear-gradient($grey-md 0, white $y-pad_section);
@@ -28,7 +49,7 @@
     }
     .text-container {
         text-overflow: ellipsis;
-        padding: 0 30px 30px;
+        padding: 0 30px $y-pad_panel;
         h3 {
             margin-top: 30px;
             margin-bottom: 30px;
@@ -46,10 +67,24 @@
             text-decoration: none;
             text-align: center;
             color:white;
-            :hover {
-
-            }
         }
+    }
+}
+.divider {
+    width: 100%;
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid $grey-md;
+    p:first-child {
+        color: black;
+        font-weight: bold;
+    }
+    td:first-child {
+        width: 60px;
+        height: auto;
+    }
+    p {
+        padding-left: 20px;
     }
 }
 
@@ -59,6 +94,10 @@
 //This fix is a bit of a hack, because I didn't forsee
 // the difficulties I would have replicating the bg
 // gradients of the original. 
+
+//It only works in this context because the children of
+// the .flex-container don't wrap, otherwise the thing
+// would be ruined.
     .latest {
         padding-top: $y-pad_section;
         padding-bottom: $y-pad_section;
@@ -91,10 +130,10 @@
     .newspanel {
         @include flex-basis-static-gutters (3, $x-gutter_section);
     }
-    .newspanel img:hover {
+    //.newspanel img:hover {
         //Do something
         //transform: scale(120%);
-    }
+    //}
 }
 
 
@@ -104,6 +143,6 @@
 //@include create-schemas ($col-seagrey, $col-blue, $col-purple);
 //NOPE!
 
-.schema-seagrey { @include colour-schema-news ($col-seagrey); }
-.schema-blue    { @include colour-schema-news ($col-blue); }
-.schema-purple  { @include colour-schema-news ($col-purple); }
+.schema-news-seagrey { @include colour-schema-news ($col-seagrey); }
+.schema-news-blue    { @include colour-schema-news ($col-blue); }
+.schema-news-purple  { @include colour-schema-news ($col-purple); }

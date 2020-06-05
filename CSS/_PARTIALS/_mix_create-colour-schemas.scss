@@ -6,3 +6,18 @@
         background-color:darken($colour, 10);
     }
 }
+
+
+@mixin colour-schema-nav ($colour) {
+    .readmore, .icon {background-color: $colour;}
+    &:hover {
+        background-color:$colour;
+        .readmore {
+            color:$colour
+        }
+        .readmore, .icon {
+            background-color: white;
+        }
+        h2, p {color:white;}
+    }
+}

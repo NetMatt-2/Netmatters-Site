@@ -8,13 +8,14 @@
         background-color: $bg-lite;
         width:100%;
         height: auto;
-        padding: 20px $x-pad_page;
+        padding: $y-pad_panel $x-pad_page;
         box-sizing: border-box;
     }
     .header-wrapper {
         display:flex;
         flex-wrap:wrap;
         margin: auto;
+        justify-content: space-between;
     }
 //////////////////////////////////////////////////
 
@@ -22,15 +23,62 @@
     .logo {
         flex-basis:50%;
         flex-grow: 1;
-    /*    @media (max-width:calc(($btn-icon-width * 2) + ($x-pad_page * 2)) ) {
-            //Do something
-            //Prevents phone and menu buttons being pushed down.
-        }   */
+        flex-shrink: 1;
+        margin: auto 0;
+        img {
+            display: inline-block;
+            width: 80%;
+        }
     }
     //Buttons
+    .btn, .btn img {
+        border: none;
+        border-radius: 5px;
+    }
     .btn {
         flex-basis:$btn-icon-width;
+        height:$btn-height;
+        position: relative;
+        text-decoration: none;
+        img {
+            $img-xy:40px;
+            height:$img-xy;
+            width:$img-xy;
+            position: absolute;
+            top:calc((#{$btn-height} - #{$img-xy}) / 2);
+            left:calc((#{$btn-icon-width} - #{$img-xy}) / 2);
+        }
+        p{
+            color: white;
+            text-transform: uppercase;
+            margin-left: $btn-icon-width;
+        }
     }
+    .btn-support, .btn-contact {
+        display:none;
+        color: white;
+        border: none;
+    }
+    .btn-support {
+        background-color: $col-blue;
+        &:hover { background-color: darken($col-blue, 10); }
+    }
+    .btn-contact {
+        background-color: $grey-md-dk;
+        &:hover { background-color: darken($grey-md-dk, 10); }
+    }
+    .menuburger, .btn-search {
+        flex-basis: $btn-icon-width;
+        width: $btn-icon-width;
+    }
+    .menuburger {
+        background-color: $bg-dark;
+        color: white;
+        padding: 0;
+        &:hover { background-color: darken($bg-dark, 10); }
+    }
+
+
     //Navigation bar
     .navbar-opts, .menuburger {
         flex-basis:$btn-icon-width;
@@ -39,20 +87,41 @@
     .navbar-opts {
         display:flex;
     }
-        .btn-support, .btn-contact {
-            display:none;
-        }
-    //
+
+
     //Searchbar
+    .searchbar, .inp-search, .btn-search {
+        box-sizing: border-box;
+        height: $btn-height;
+        border: none;
+    }
     .searchbar {
         display:flex;
         flex-basis:100%;
     }
         .inp-search {
             flex-grow:1;
+            padding: 0;
+            padding-left: 20px;
+            background-color: white;
         }
-        //.btn-search {}
+        .btn-search {
+            flex-basis:$btn-icon-width;
+            background-color: $grey-md-dk;
+            padding: 0;
+            &:hover { background-color: darken($grey-md-dk, 10); }
+        }
     //
+
+@media (max-width:$bp-sm) {
+    .searchbar {
+        border: 2px solid $grey-md;
+        margin-top: $y-pad_panel;
+    }
+    .inp-search, .btn-search {
+        background-color: $grey-lt;
+    }
+}
 
 @media (min-width:$bp-sm){
     .header-wrapper {
@@ -63,6 +132,14 @@
     .navbar-opts {display:none;}
     .menuburger {order: 1;}
     .searchbar {flex-basis: 200px;}
+    .inp-search {
+        border-width: 1px;
+        border-style: solid none solid solid;
+        border-color: $grey-md;
+    }
+    .btn-search {
+        border-radius: 4px;
+    }
 }
 
 @media (min-width:$bp-md) {
@@ -81,21 +158,14 @@
         .btn-support, .btn-contact {
             display:block;
             flex-basis:calc((100% - #{$gutter-size}) / 2);
-            border:$ph-border2;
-            box-sizing: border-box;
-            img {
-                width:$btn-icon-width;
-            }
         }
     //
-    .searchbar, .menuburger {
-        flex-basis:$btn-icon-width;
-    }
     .searchbar {
+        flex-basis:$btn-icon-width;
         margin-left:$gutter-size;
     }
         .inp-search {
-            display:none;
+           display:none;
         }
     //
 }

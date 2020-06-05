@@ -1,4 +1,5 @@
 $btn-icon-width:60px;
+$btn-height: 50px;
 $gutter-size: 20px;
 
 //Horizontal padding for the entire page. 
@@ -9,5 +10,21 @@ $x-gutter_section: 30px;
 
 //Vertical gutters and padding for .nav-center and
 // .latest sections.
-$y-gutter_section: 30px;
+$y-gutter_section: $x-gutter_section;
+$y-pad_panel: $y-gutter_section;
 $y-pad_section: 50px;
+
+//Buttons for about and splash
+@mixin btn-style-1 ($txt-colour, $bg-colour, $y-pad:10px, ) {
+    padding: $y-pad 20px;
+    border-radius: 5px;
+    width: auto;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    display: inline-block;
+    color: $txt-colour;
+    background-color: $bg-colour;
+    &:hover { background-color: darken($bg-colour, 10); }
+}

@@ -8,20 +8,74 @@ $af-height: 45px;
 
 .affiliates {
     background-color: $bg-lite;
-    display:none;
+    height: auto;
+    padding: $y-pad_section 0;
     @include flex-ctnr-static-widths ($x-pad_page, $bp-sm $bp-md $bp-lg);
     .flex-container {
         @include flex-common-nowrap;
     }
-}
-@media (min-width: $bp-sm) {
-    .affiliates {
-        display:block;
-    }
-    .af {
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: auto;
-        height: $af-height;
+    @media (max-width: $bp-sm) {
+        display: none;
     }
 }
+
+.af {
+    flex-basis: auto;
+    flex-shrink: 1;
+    position: relative;
+    * {
+        color: white;
+    }
+    img {
+        padding: 0 20px;
+        box-sizing: border-box;
+        max-width: 100%;
+        &:nth-of-type(1) {
+            display: inline-block;
+        }
+        &:nth-of-type(2) {
+            display: none;
+        }
+    }
+    >div {
+        display: none;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: auto;
+        text-align: center;
+        background-color: $bg-dark;
+        box-sizing: border-box;
+        padding: 10px;
+        >div {
+            transform: rotateZ(45deg);
+            background-color:  $bg-dark;
+            width: 30px;
+            height: 30px;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: -14px;
+            left: 86px;
+        }
+    }
+    span {
+        width:28px;
+        height: 3px;
+        margin: auto;
+        background-color: white;
+        display: block;
+    }
+    &:hover {
+        >img:nth-of-type(1) {
+            display: none;
+        }
+        >img:nth-of-type(2) {
+            display: inline-block;
+        }
+        >div {
+            display: block;
+        }
+    }
+} 
