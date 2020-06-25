@@ -3,12 +3,14 @@
         "../_PARTIALS/colours",
         "../_PARTIALS/universals";
 
+* {flex-grow: 0;} 
+
 //THESE STYLES APPLY AT ALL BREAKPOINTS
     header {
-        background-color: $bg-lite;
+        background-color: white;
         width:100%;
         height: auto;
-        padding: $y-pad_panel $x-pad_page;
+        padding: 20px $x-pad_page;
         box-sizing: border-box;
     }
     .header-wrapper {
@@ -21,13 +23,18 @@
 
     //Netmatters logo
     .logo {
-        flex-basis:50%;
+        flex-basis:30%;
         flex-grow: 1;
         flex-shrink: 1;
         margin: auto 0;
         img {
             display: inline-block;
-            width: 80%;
+            max-height: 70px;
+            width: auto;
+            max-width: 80%;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
     //Buttons
@@ -48,7 +55,7 @@
             top:calc((#{$btn-height} - #{$img-xy}) / 2);
             left:calc((#{$btn-icon-width} - #{$img-xy}) / 2);
         }
-        p{
+        p {
             color: white;
             text-transform: uppercase;
             margin-left: $btn-icon-width;
@@ -70,14 +77,31 @@
     .menuburger, .btn-search {
         flex-basis: $btn-icon-width;
         width: $btn-icon-width;
+        &:hover {
+            cursor: pointer;
+        }
     }
     .menuburger {
         background-color: $bg-dark;
         color: white;
         padding: 0;
         &:hover { background-color: darken($bg-dark, 10); }
+        div {
+            height: 60px;
+        }
+        img {
+            max-height: 25px;
+            width: 60px;
+            left: 0px;
+        }
+        p {
+            position: absolute;
+            top: 40px;
+            margin: 0;
+            width: 40px;
+            left: 10px;
+        }
     }
-
 
     //Navigation bar
     .navbar-opts, .menuburger {
@@ -96,6 +120,7 @@
         border: none;
     }
     .searchbar {
+        box-sizing: content-box;
         display:flex;
         flex-basis:100%;
     }
@@ -104,23 +129,44 @@
             padding: 0;
             padding-left: 20px;
             background-color: white;
+            font-size: 15px;
         }
         .btn-search {
             flex-basis:$btn-icon-width;
             background-color: $grey-md-dk;
             padding: 0;
+            img {
+                width: 25px;
+                &:nth-child(1){
+                    display: initial;
+                }
+                &:nth-child(2){
+                    display: none;
+                }
+            }
             &:hover { background-color: darken($grey-md-dk, 10); }
         }
     //
 
 @media (max-width:$bp-sm) {
     .searchbar {
-        border: 2px solid $grey-md;
-        margin-top: $y-pad_panel;
+        border: 3px solid $grey-md;
+        margin-top: 10px;
     }
-    .inp-search, .btn-search {
+
+    .searchbar, .inp-search, .btn-search {
         background-color: $grey-lt;
+        height: 40px;
     }
+    .btn-search {
+        img:nth-child(1){
+            display: none;
+        }
+        img:nth-child(2){
+            display: initial;
+            width: 20px;
+        }
+    } 
 }
 
 @media (min-width:$bp-sm){
@@ -149,7 +195,7 @@
     .navbar-opts {  
         margin-left: 0;
         display:flex;
-        flex-basis:calc(50% - (2 * #{$btn-icon-width}) );
+        flex-basis:calc(288px + #{$gutter-size});
         justify-content:space-between;
     }
         .btn-phone {
@@ -158,6 +204,13 @@
         .btn-support, .btn-contact {
             display:block;
             flex-basis:calc((100% - #{$gutter-size}) / 2);
+            p {
+                height: $btn-height;
+                line-height: $btn-height;
+                margin: 0;
+                text-align: center;
+                padding-left: 50px;
+            }
         }
     //
     .searchbar {

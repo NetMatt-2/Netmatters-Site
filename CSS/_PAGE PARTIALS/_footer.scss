@@ -8,7 +8,10 @@
 footer {
     background-color: $bg-dark;
     * { 
-        color: white; 
+        color: white;
+    }
+    a {
+        text-decoration: none;
     }
     @include flex-ctnr-static-widths($x-pad_page, $bp-sm $bp-md $bp-lg);
     .flex-container {
@@ -39,10 +42,12 @@ footer {
     a {
         background-color: darken($color: $bg-dark, $amount: 10);
         text-align: center;
-        padding: 15px 0;
+        padding: 10px 0 8px;
         box-sizing: border-box;
         img {
             display: inline-block;
+            width: 30px;
+            height: 30px;
         }
         margin: 10px 0;
     }

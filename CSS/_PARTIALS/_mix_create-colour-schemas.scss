@@ -9,7 +9,15 @@
 
 
 @mixin colour-schema-nav ($colour) {
-    .readmore, .icon {background-color: $colour;}
+    
+    .readmore, .icon {
+        background-color: $colour;
+    }
+    .icon {
+        img:nth-child(1){ display:initial; }
+        img:nth-child(2){ display:none; }
+    }
+
     &:hover {
         background-color:$colour;
         .readmore {
@@ -18,6 +26,15 @@
         .readmore, .icon {
             background-color: white;
         }
-        h2, p {color:white;}
+        h2, p {
+            color:white;
+        }
+        span {
+            background-color: white;
+        }
+        .icon {
+            img:nth-child(1){ display:none; }
+            img:nth-child(2){ display:initial; }
+        }
     }
 }
