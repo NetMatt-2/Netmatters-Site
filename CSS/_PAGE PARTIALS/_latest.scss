@@ -19,7 +19,7 @@
         display: block;
     }
     h2 {
-        margin: 40px 0;
+        margin: 40px 0 35px;
         font-weight: 600;
         font-size: 20px;
         color: #333645;
@@ -69,16 +69,19 @@
     }
     .text-container {
         text-overflow: ellipsis;
-        padding: 0 30px $y-pad_panel;
-        h3 {
+        padding: 30px;
+        a:nth-of-type(1) {
             margin-top: 30px;
             margin-bottom: 30px;
+            font-weight: 600;
+            background-color: transparent;
         }
         p {
             color: $grey-dk;
+            font-size: 13px;
         }
-        a {
-            padding: 20px;
+        a:nth-of-type(2) {
+            padding: 5px 15px;
             border-radius: 5px;
             margin-top: 30px;
             display: block;
@@ -86,28 +89,34 @@
             text-transform: uppercase;
             text-decoration: none;
             text-align: center;
+            line-height: 35px;
             color:white;
         }
     }
-}
-.divider {
-    width: 100%;
-    padding-top: 20px;
-    margin-top: 20px;
-    border-top: 1px solid $grey-md;
-    p:first-child {
-        color: black;
-        font-weight: bold;
-    }
-    td:first-child {
-        width: 60px;
-        height: auto;
-    }
-    p {
-        padding-left: 20px;
-    }
-}
 
+    .divider {
+        width: 100%;
+        padding-top: 30px;
+        margin-top: 30px;
+        border-top: 1px solid $grey-md;
+        p:first-child {
+            color: black;
+            font-weight: 500;
+        }
+        td:first-child {
+            width: 47px;
+            height: auto;
+        }
+        img {
+            width: 100%;
+        }
+        p {
+            font-size: 14px;
+            padding-left: 20px;
+            margin: 0;
+        }
+    }
+}
 
 
 @media (min-width:$bp-sm) {
@@ -150,19 +159,18 @@
     .newspanel {
         @include flex-basis-static-gutters (3, $x-gutter_section);
     }
-    //.newspanel img:hover {
-        //Do something
-        //transform: scale(120%);
-    //}
 }
 
+// vvv This vvv
 
+@each $schema-name, $colour in $colours {
+    .schema-news-#{$schema-name} {
+        @include colour-schema-news ($colour);
+    }
+}
 
+// vvv Deprecates this vvv
 
-//NOPE!
-//@include create-schemas ($col-seagrey, $col-blue, $col-purple);
-//NOPE!
-
-.schema-news-seagrey { @include colour-schema-news ($col-seagrey); }
-.schema-news-blue    { @include colour-schema-news ($col-blue); }
-.schema-news-purple  { @include colour-schema-news ($col-purple); }
+//.schema-news-seagrey { @include colour-schema-news ($col-seagrey); }
+//.schema-news-blue    { @include colour-schema-news ($col-blue); }
+//.schema-news-purple  { @include colour-schema-news ($col-purple); }

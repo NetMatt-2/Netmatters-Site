@@ -5,20 +5,13 @@
         "../_PARTIALS/mix_flex-ctnr-static-widths",
         "../_PARTIALS/mix_flex-common-settings";
 
-footer {
-    background-color: $bg-dark;
-    * { 
-        color: white;
-    }
-    a {
-        text-decoration: none;
-    }
+#links {
     @include flex-ctnr-static-widths($x-pad_page, $bp-sm $bp-md $bp-lg);
     .flex-container {
         @include flex-common-wrap;
         padding-top: 70px;
         padding-bottom: 70px;
-        section {
+        .link-group {
             flex-basis:100%;
             @media (min-width:$bp-sm) {
                 flex-basis: 50%;
@@ -34,12 +27,24 @@ footer {
             list-style: none;
         }
     }
+    background-color: $bg-dark;
+    * { 
+        color: white;
+    }
+    a, li {
+        text-decoration: none;
+        font-size: 13px;
+    }
+    h2 {
+        font-size: 16px;
+        text-transform: uppercase;
+    }
 }
 
 .socMed-links {
-    @include flex-common-wrap;
-    @include flex-children-static-gutters (2, $x-gutter_section);
+    @include flex-children-static-gutters (2, 30px);
     a {
+        margin-top: 30px;
         background-color: darken($color: $bg-dark, $amount: 10);
         text-align: center;
         padding: 10px 0 8px;
@@ -49,7 +54,6 @@ footer {
             width: 30px;
             height: 30px;
         }
-        margin: 10px 0;
     }
     a:hover {
         background-color: $col-blue;

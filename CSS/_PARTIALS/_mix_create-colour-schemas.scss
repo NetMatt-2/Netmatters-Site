@@ -1,10 +1,15 @@
 //Apply the specified colour to the included properties
 @mixin colour-schema-news ($colour) {
-    h3 {color:$colour;}
-    a {background-color:$colour;}
-    a:hover {
-        background-color:darken($colour, 10);
+    a:nth-of-type(1) {
+        color: $colour;
     }
+    a:not(:nth-of-type(1)) {
+        background-color:$colour;
+        &:hover {
+            background-color:darken($colour, 10);
+        }
+    }
+
 }
 
 
@@ -14,7 +19,7 @@
         background-color: $colour;
     }
     .icon {
-        img:nth-child(1){ display:initial; }
+        img:nth-child(1){ display:inline-block; }
         img:nth-child(2){ display:none; }
     }
 
@@ -34,7 +39,7 @@
         }
         .icon {
             img:nth-child(1){ display:none; }
-            img:nth-child(2){ display:initial; }
+            img:nth-child(2){ display:inline-block; }
         }
     }
 }

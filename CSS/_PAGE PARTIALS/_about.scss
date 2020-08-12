@@ -27,21 +27,22 @@
         color: white;
     }
     h2 {
-        margin-top: 15px;
-        margin-bottom: 0;
-        font-weight: 300;
-        font-size: 40px;
+        margin-top: 20px;
+        margin-bottom: 28px;
+        font-size: 36px;
+        line-height: 36px;
+        text-transform: uppercase;
     }
     p {
-        font-size: 17px;
-        font-weight: 300;
+        font-size: 16px;
+        margin-bottom: 25px;
     }
     p:first-of-type {
         font-weight: 600;
     }
     a {
         @include btn-style-1 ($bg-dark, white, 10px, ) ;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
     @include static-width-breakpoints ($x-pad_page);
     @media (min-width: $bp-lg) {

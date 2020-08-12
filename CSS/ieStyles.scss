@@ -1,0 +1,100 @@
+@import "_PARTIALS/breakpoints",
+        "_PARTIALS/mix_clearfix",
+        "_PARTIALS/mix_column-width-ratio_V2",
+        "_PARTIALS/mix_static-width-breakpoints",
+        "_PARTIALS/mix_simulate-objFit-contain",
+        "_PARTIALS/universals";
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* credit to Philip Newcomer @ https://philipnewcomer.net/2014/04/target-internet-explorer-10-11-css/ */
+    .splash {
+        @include simulate-objFit-contain (750px);   
+        /* calc(4272px * (500 / 2848)) */;
+    }
+    .nav-mid .flex-container {
+        width: calc(100% - (2 * 20px));
+        @media (max-width:$bp-sm) {
+            margin: auto 20px;
+        }
+        padding: 20px 0;
+        margin: auto;
+        @include static-width-breakpoints(20px);
+
+        .panel {
+            width: 100%;
+            height: auto;
+            padding: $y-pad_panel 40px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            display: block;
+        }
+        @media (min-width:$bp-sm){
+            /*Get last 4 children (2x2)*/
+            &>.panel:nth-child(1n+4) {
+               width: calc((100% - #{$x-gutter_section}) /2);
+               display: inline-block;
+               margin-top: 0;
+            }
+            &>.panel:nth-child(2n+4) {
+                float: left;
+            }
+            &>.panel:nth-child(2n+4) {
+                float: right;
+            }
+        }
+        @media (min-width:$bp-md){
+            /*Get first 3 children (3x1)*/
+            &>.panel:nth-last-child(1n+5) {
+                width: calc( (100% - (#{$x-gutter_section * 2})) /3);
+                display: inline-block;
+                float: left;
+            }
+            &>.panel:nth-child(2){
+                margin-right: $x-gutter_section - 0.1px;    //<== Prevents 3rd child shifting at large breakpoint
+                margin-left: $x-gutter_section;
+            }
+            &>.panel:nth-child(3){
+                float: right;
+            }
+        }
+        @media (min-width:$bp-lg){
+            /*Get last 4 children (4x1)*/
+            &>.panel:nth-child(1n+4) {
+                width: calc( (100% - (#{$x-gutter_section * 3})) /4);
+                display: inline-block;
+                float: left;
+                margin-right: $x-gutter_section;
+            }
+            &>.panel:last-child {
+                float: right;
+                margin-right: 0;
+            }
+        }
+        @include clearfix;
+    }
+    .latest .flex-container {
+        .newspanel .img-wrapper {
+            overflow: hidden;
+            @media (max-width: $bp-sm) {
+                @include simulate-objFit-contain (435px);
+            }
+            /* Images staay at a fixed size beyond the small breakpoint;
+                this makes it a lot easier to manage fitting them into
+                their containers. */
+            @media (min-width: $bp-sm) {
+                overflow: hidden;
+                img {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+            @media (min-width: $bp-md) {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

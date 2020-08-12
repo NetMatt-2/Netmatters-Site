@@ -4,315 +4,472 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/ieStyles.css">
 </head>
 <body>
     
-    <header>
-        <div class="header-wrapper">
+    <!-- 
+    /* Hacky sidebar implementation */
 
-            <div class="logo">
-                <img src="../IMGs/f-logo.png" alt="Netmatters Logo">
-            </div>
-
-            <div class="navbar-opts">
-                <button class="btn btn-phone">
-                    <img src="../IMGs/telephone-dark.svg" alt="Phone">
-                </button>
-                <a href="#" class="btn btn-support">
-                    <img src="../IMGs/mouse-white.svg" alt="Support">
-                    <p>Support</p>
-                </a>
-                <a href="#" class="btn btn-contact">
-                    <img src="../IMGs/send-white.svg" alt="Contact">
-                   <p>Contact</p>
-                </a>
-            </div>
-
-            <button type="button" class="btn menuburger">
-                <div>
-                    <img src="../IMGs/burger-white.svg" alt="Menu">
-                    <p>MENU</p>
-                </div>   
-            </button>
-
-            <div class="searchbar">
-                <input type="search" class="inp-search" placeholder="Search...">
-                <button type="submit" class="btn-search">
-                    <img src="../IMGs/search-white.svg" alt="Search">
-                    <img src="../IMGs/search-dark.svg" alt="Search">
-                </button>
-            </div>
-
+    <input type="checkbox" id="btn-menu">
+    <label>
+        <div class=not-sidebar> 
+            ...etc
         </div>
-    </header>
-
-    <main>
-        <div class=splash>
-            <img src="../IMGs/gratisography-30H.jpg" alt="">
-            <div></div>
-            <div class=splash-text>
-                <h2>Heading</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                <a href="#">Find out more &rarr;</a>
-            </div>
-        </div>
-
-        <section class="nav-mid">
-            <div class="flex-container">
-                <a class="panel schema-nav-seagrey" href="#">
-                    <div class="icon">
-                        <img src="../IMGs/grid-white.svg" alt="Icon">
-                        <img src="../IMGs/grid-seagrey.svg" alt="Icon">
-                    </div>
-                    <h2>Bespoke Software</h2>
-                    <span></span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="readmore">Read More</div>
-                </a>
-                <a class="panel schema-nav-blue" href="#">
-                    <div class="icon">
-                        <img src="../IMGs/monitor-white.svg" alt="Icon">
-                        <img src="../IMGs/monitor-blue.svg" alt="Icon">
-                    </div>
-                    <h2>IT Support</h2>
-                    <span></span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="readmore">Read More</div>
-                </a>
-                <a class="panel schema-nav-green" href="#">
-                    <div class="icon">
-                        <img src="../IMGs/graph-white.svg" alt="Icon">
-                        <img src="../IMGs/graph-green.svg" alt="Icon">
-                    </div>
-                    <h2>Digital Marketing</h2>
-                    <span></span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="readmore">Read More</div>
-                </a>
-                <a class="panel schema-nav-red" href="#">
-                    <div class="icon">
-                        <img src="../IMGs/telephone-white.svg" alt="Icon">
-                        <img src="../IMGs/telephone-red.svg" alt="Icon">
-                    </div>
-                    <h2>Telecoms Services</h2>
-                    <span></span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="readmore">Read More</div>
-                </a>
-                <a class="panel schema-nav-purple" href="#">
-                    <div class="icon">
-                        <img src="../IMGs/code-white.svg" alt="Icon">
-                        <img src="../IMGs/code-purple.svg" alt="Icon">
-                    </div>
-                    <h2>Web Design</h2>
-                    <span></span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class=readmore>Read More</div>
-                </a>
-                <a class="panel schema-nav-pink" href="#">
-                    <div class="icon">
-                        <img src="../IMGs/shield-white.svg" alt="Icon">
-                        <img src="../IMGs/shield-pink.svg" alt="Icon">
-                    </div> 
-                    <h2>Cyber Security</h2>
-                    <span></span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class=readmore>Read More</div>
-                </a>
-                <a class="panel schema-nav-purple" href="#">
-                    <div class="icon">
-                        <img src="../IMGs/graduate-white.svg" alt="Icon">
-                        <img src="../IMGs/graduate-purple.svg" alt="Icon">
-                    </div>
-                    <h2>Developer Training</h2>
-                    <span></span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class=readmore>Read More</div>
-                </a>
-            </div>
-        </section>
-
-
-        <section class=about>
-            <div class=about-text>    
-                <h2>Netmatters</h2>
-                <p>Netmatters Ltd is a leading web design, IT support and digital marketing agency based in Wymondham, Norfolk.</p>
-                <p>Founded in 2008, we work with businesses from a variety of industries to gain new prospects, nurture existing leads and further grow their sales.</p>
-                <p>We provide cost effective, reliable solutions to a range of services; from bespoke cloud-based management systems, workflow and IT solutions through to creative website development and integrated digital campaigning.</p>
-                <a href="#">Our Culture &rarr;</a>
-            </div>
-        </section>
-
-
-        <section class=latest-heading>
-            <h2>Latest</h2>
-            <span></span>
-        </section>
-
-
-        <section class=latest>
-            <div class=flex-container>
-                <div class="newspanel">
-                    <div class="img-wrapper">
-                        <img class="banner-img" src="../IMGs/gratisography-79H.jpg">
-                    </div>
-                    <div class="text-container schema-news-seagrey">
-                        <h3>News Item 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <a href="#">Read More</a>
-                        <table class="divider">
-                            <tr>
-                                <td>
-                                    <img src="../IMGs/nm.png" alt="icon" class="foot-icon">
-                                </td>
-                                <td>
-                                    <p>Posted by Netmatters Ltd</p>
-                                    <p>23rd May 2020</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="newspanel">
-                    <div class="img-wrapper">
-                        <img class="banner-img" src="../IMGs/gratisography-140H.jpg">
-                    </div>
-                    <div class="text-container schema-news-blue">
-                        <h3>News Item 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <a href="#">Read More</a>
-                        <table class="divider">
-                            <tr>
-                                <td>
-                                    <img src="../IMGs/nm.png" alt="icon" class="foot-icon">
-                                </td>
-                                <td>
-                                    <p>Posted by Netmatters Ltd</p>
-                                    <p>23rd May 2020</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="newspanel">
-                    <div class= "img-wrapper">
-                        <img class="banner-img" src="../IMGs/gratisography-163H.jpg">
-                    </div>
-                    <div class="text-container schema-news-purple">
-                        <h3>News Item 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <a href="#">Read More</a>
-                        <table class="divider">
-                            <tr>
-                                <td>
-                                    <img src="../IMGs/nm.png" alt="icon" class="foot-icon">
-                                </td>
-                                <td>
-                                    <p>Posted by Netmatters Ltd</p>
-                                    <p>23rd May 2020</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class=affiliates>
-            <div class=flex-container>
-                <div class=af>
-                    <img src="../IMGs/busseys-gs.png">
-                    <img src="../IMGs/busseys.png">
-                    <div>
-                        <h4>Busseys</h4>
-                        <span></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div></div>
-                    </div>
-                </div>
-                <div class=af>
-                    <img src="../IMGs/crane-gs.png">
-                    <img src="../IMGs/crane.png">
-                    <div>
-                        <h4>Crane Garden Buildings</h4>
-                        <span></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div></div>
-                    </div>
-                </div>
-                <div class=af>
-                    <img src="../IMGs/beat-gs.png">
-                    <img src="../IMGs/beat.png">
-                    <div>
-                        <h4>Beat</h4>
-                        <span></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div></div>
-                    </div>
-                </div>
-                <div class=af>
-                    <img src="../IMGs/northern-gs.png">
-                    <img src="../IMGs/northern.png">
-                    <div>
-                        <h4>Northern Diver</h4>
-                        <span></span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-<footer>
-    <div class=flex-container>
-        <section>
-            <h2>Contact Us</h2>
-            <ul>
-                <li>11 Penfold Drive</li>
-                <li>Wymondham</li>
-                <li>Norfolk</li>
-                <li>NR18 0WZ</li>
-            </ul>
-            <ul>
-                <li>Tel: 01603 70 40 20</li>
-                <li>Email: support@netmatters.com</li>
-            </ul>
-        </section>
-        <section>
-            <h2>About Netmatters</h2>
-            <ul>
-                <li><a href=#>News</a></li>
-                <li><a href=#>Our Careers</a></li>
-                <li><a href=#>Our Team</a></li>
-                <li><a href=#>Our Office Tour</a></li>
-                <li><a href=#>Privacy Policy</a></li>
-                <li><a href=#>Cookie Policy</a></li>
-                <li><a href=#>Terms & Conditions</a></li>
-                <li><a href=#>UK Domains</a></li>
-            </ul>
-        </section>
-        <section>
-            <h2>Website</h2>
-            <ul>
-                <a href=#>Sitemap</a>
-                <li>&copy; Copyright Netmatters Ltd. 2020</li>
-                <li>All rights reserved</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Social Media</h2>
-            <div class=socMed-links>
-                <a href="#"><img src="../IMGs/facebook-white.svg" alt="Facebook logo"></a>
-                <a href="#"><img src="../IMGs/twitter-white.svg" alt="Twitter logo"></a>
-                <a href="#"><img src="../IMGs/linkedin-white.svg" alt="LinkedIn logo"></a>
-            </div>
-        </section>
+    </label>
+    
+    <div class=sidebar>
     </div>
-</footer>
+
+    -->
+
+    <div class=not-sidebar>
+
+        <header>
+            <div class="header-wrapper">
+
+                <div class="logo">
+                    <img src="../IMGs/f-logo.png" alt="Netmatters Logo">
+                </div>
+
+                <div class="navbar-opts">
+                    <button class="btn btn-phone">
+                        <img src="../IMGs/telephone-dark.svg" alt="Phone icon">
+                    </button>
+                    <a href="#" class="btn btn-support">
+                        <img src="../IMGs/mouse-white.svg" alt="Mouse icon">
+                        <p>Support</p>
+                    </a>
+                    <a href="#" class="btn btn-contact">
+                        <img src="../IMGs/send-white.svg" alt="Letter icon">
+                    <p>Contact</p>
+                    </a>
+                </div>
+
+                <button type="button" class="btn menuburger">
+                    <span>
+                        <img src="../IMGs/burger-white.svg" alt="Menu icon">
+                        <p>MENU</p>
+                    </span>   
+                </button>
+
+                <div class="searchbar">
+                    <input type="search" class="inp-search" placeholder="Search...">
+                    <button type="submit" class="btn-search">
+                        <img src="../IMGs/search-white.svg" alt="Search icon">
+                        <img src="../IMGs/search-dark.svg" alt="Search icon">
+                    </button>
+                </div>
+
+            </div>
+        </header>
+
+        <div id="banner-menu">
+            <div class="categories flex-container">
+
+                <!--MENU CATEGORIES-->
+                <div class="cat" id="bMenu-WD">
+                    <div class="icon">
+                        <img src="../IMGs/code-white.svg" alt="Code tag icon">
+                        <img src="../IMGs/code-purple.svg" alt="Code tag icon">
+                    </div>
+                    <h5>Web</h5>
+                    <h5>Design</h5>
+                </div>
+                <div class="cat" id="bMenu-IT">
+                    <div class="icon">
+                        <img src="../IMGs/monitor-white.svg" alt="Monitor icon">
+                        <img src="../IMGs/monitor-blue.svg" alt="Monitor icon">
+                    </div>
+                    <h5>IT</h5>
+                    <h5>Support</h5>
+
+                </div>
+                <div class="cat" id="bMenu-TC">
+                    <div class="icon">
+                        <img src="../IMGs/telephone-white.svg" alt="Telephone icon">
+                        <img src="../IMGs/telephone-red.svg" alt="Telephone icon">
+                    </div>
+                    <h5>Telecoms</h5>
+                    <h5>Services</h5>
+                </div>
+                <div class="cat" id="bMenu-BS">
+                    <div class="icon">
+                        <img src="../IMGs/grid-white.svg" alt="Layout icon">
+                        <img src="../IMGs/grid-seagrey.svg" alt="Layout icon">
+                    </div>
+                    <h5>Bespoke</h5>
+                    <h5>Software</h5>
+                </div>
+                <div class="cat" id="bMenu-DM">
+                    <div class="icon">
+                        <img src="../IMGs/graph-white.svg" alt="Graph icon">
+                        <img src="../IMGs/graph-green.svg" alt="Graph icon">
+                    </div>
+                    <h5>Digital</h5>
+                    <h5>Marketing</h5>
+                </div>
+                <div class="cat" id="bMenu-CS">
+                    <div class="icon">
+                        <img src="../IMGs/shield-white.svg" alt="Shield icon">
+                        <img src="../IMGs/shield-pink.svg" alt="Shield icon">
+                    </div>
+                    <h5>Cyber</h5>
+                    <h5>Security</h5>
+                </div>
+
+                <!--SUB-MENU LISTS-->
+                <ul class=h-list id="list-WD">
+                    <li><a href="#">Stylish Websites</a></li>
+                    <li><a href="#">ECommerce Stores</a></li>
+                    <li><a href="#">Branding</a></li>
+                    <li><a href="#">Mobile Apps</a></li>
+                    <li><a href="#">Web Hosting</a></li>
+                    <li><a href="#">Pay Monthly Websites</a></li>
+                </ul>
+                <ul class=h-list id="list-IT">
+                    <li><a href="#">Managed IT Support</a></li>
+                    <li><a href="#">Business IT Support</a></li>
+                    <li><a href="#">Office 365</a></li>
+                    <li><a href="#">Consultancy</a></li>
+                    <li><a href="#">Cloud Provider</a></li>
+                    <li><a href="#">Data Backup</a></li>
+                </ul>
+                <ul class=h-list id="list-TC">
+                    <li><a href="#">Gigabit Voucher</a></li>
+                    <li><a href="#">Hosted VOIP</a></li>
+                    <li><a href="#">Business VOIP</a></li>
+                    <li><a href="#">Business Broadband</a></li>
+                    <li><a href="#">Leased Line</a></li>
+                    <li><a href="#">3CX Systems</a></li>
+                </ul>
+                <ul class=h-list id="list-BS">
+                    <li><a href="#">Workflow Solutions</a></li>
+                    <li><a href="#">Automation</a></li>
+                    <li><a href="#">System Integration</a></li>
+                    <li><a href="#">Database Management</a></li>
+                    <li><a href="#">Sharepoint</a></li>
+                    <li><a href="#">ERP</a></li>
+                </ul>
+                <ul class=h-list id="list-DM">
+                    <li><a href="#">SEO</a></li>
+                    <li><a href="#">PPC</a></li>
+                    <li><a href="#">CRO</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Social</a></li>
+                    <li><a href="#">Content</a></li>
+                </ul>
+                <ul class=h-list id="list-CS">
+                    <li><a href="#">Assessment</a></li>
+                    <li><a href="#">Management</a></li>
+                    <li><a href="#">Penetration Testing</a></li>
+                    <li><a href="#">Cyber Essentials</a></li>
+                    <li><a href="#">PCI/DSS</a></li>
+                    <li><a href="#">Hacker Prevention</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <main>
+            <div class=splash>
+                <img src="../IMGs/gratisography-30H.jpg" alt="Man on cup phone">
+                <div></div>
+                <div class=splash-text>
+                    <h2>Heading</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <a href="#">Find out more &rarr;</a>
+                </div>
+            </div>
+
+            <section class="nav-mid">
+                <div class="flex-container">
+                    <a class="panel schema-nav-seagrey" id="Bespoke software" href="#">
+                        <div class="icon">
+                            <img src="../IMGs/grid-white.svg" alt="Layout icon">
+                            <img src="../IMGs/grid-seagrey.svg" alt="Layout icon">
+                        </div>
+                        <h2>Bespoke Software</h2>
+                        <span></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="readmore">Read More</div>
+                    </a>
+                    <a class="panel schema-nav-blue" id="IT Support" href="#">
+                        <div class="icon">
+                            <img src="../IMGs/monitor-white.svg" alt="Monitor icon">
+                            <img src="../IMGs/monitor-blue.svg" alt="Monitor icon">
+                        </div>
+                        <h2>IT Support</h2>
+                        <span></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="readmore">Read More</div>
+                    </a>
+                    <a class="panel schema-nav-green" id="Digital Marketing" href="#">
+                        <div class="icon">
+                            <img src="../IMGs/graph-white.svg" alt="Graph icon">
+                            <img src="../IMGs/graph-green.svg" alt="Graph icon">
+                        </div>
+                        <h2>Digital Marketing</h2>
+                        <span></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="readmore">Read More</div>
+                    </a>
+                    <a class="panel schema-nav-red" id="Telecoms Services" href="#">
+                        <div class="icon">
+                            <img src="../IMGs/telephone-white.svg" alt="Telephone icon">
+                            <img src="../IMGs/telephone-red.svg" alt="Telephone icon">
+                        </div>
+                        <h2>Telecoms Services</h2>
+                        <span></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="readmore">Read More</div>
+                    </a>
+                    <a class="panel schema-nav-purple" id="Web Design" href="#">
+                        <div class="icon">
+                            <img src="../IMGs/code-white.svg" alt="Code tag icon">
+                            <img src="../IMGs/code-purple.svg" alt="Code tag icon">
+                        </div>
+                        <h2>Web Design</h2>
+                        <span></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class=readmore>Read More</div>
+                    </a>
+                    <a class="panel schema-nav-pink" id="Cyber Security" href="#">
+                        <div class="icon">
+                            <img src="../IMGs/shield-white.svg" alt="Shield icon">
+                            <img src="../IMGs/shield-pink.svg" alt="Shield icon">
+                        </div> 
+                        <h2>Cyber Security</h2>
+                        <span></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class=readmore>Read More</div>
+                    </a>
+                    <a class="panel schema-nav-purple" id="Developer Training" href="#">
+                        <div class="icon">
+                            <img src="../IMGs/graduate-white.svg" alt="Mortarboard icon">
+                            <img src="../IMGs/graduate-purple.svg" alt="Mortarboard icon">
+                        </div>
+                        <h2>Developer Training</h2>
+                        <span></span>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class=readmore>Read More</div>
+                    </a>
+                </div>
+            </section>
+
+
+            <section class=about>
+                <div class=about-text>    
+                    <h2>Netmatters</h2>
+                    <p>Netmatters Ltd is a leading web design, IT support and digital marketing agency based in Wymondham, Norfolk.</p>
+                    <p>Founded in 2008, we work with businesses from a variety of industries to gain new prospects, nurture existing leads and further grow their sales.</p>
+                    <p>We provide cost effective, reliable solutions to a range of services; from bespoke cloud-based management systems, workflow and IT solutions through to creative website development and integrated digital campaigning.</p>
+                    <a href="#">Our Culture &rarr;</a>
+                </div>
+            </section>
+
+
+            <section class=latest-heading>
+                <h2>Latest</h2>
+                <span></span>
+            </section>
+
+
+            <section class=latest>
+                <div class=flex-container>
+                    <div class="newspanel">
+                        <div class="img-wrapper">
+                            <img class="banner-img" src="../IMGs/gratisography-79H.jpg" alt="Communication device">
+                        </div>
+                        <div class="text-container schema-news-seagrey">
+                            <a>News Item 1</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <a href="#">Read More</a>
+                            <table class="divider">
+                                <tr>
+                                    <td>
+                                        <img src="../IMGs/nm.png" alt="icon" class="foot-icon">
+                                    </td>
+                                    <td>
+                                        <p>Posted by Netmatters Ltd</p>
+                                        <p>23rd May 2020</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="newspanel">
+                        <div class="img-wrapper">
+                            <img class="banner-img" src="../IMGs/gratisography-140H.jpg" alt="Pumped athelete">
+                        </div>
+                        <div class="text-container schema-news-blue">
+                            <a>News Item 2</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <a href="#">Read More</a>
+                            <table class="divider">
+                                <tr>
+                                    <td>
+                                        <img src="../IMGs/nm.png" alt="icon" class="foot-icon">
+                                    </td>
+                                    <td>
+                                        <p>Posted by Netmatters Ltd</p>
+                                        <p>23rd May 2020</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="newspanel">
+                        <div class= "img-wrapper">
+                            <img class="banner-img" src="../IMGs/gratisography-163H.jpg" alt="Traveller at departure lounge">
+                        </div>
+                        <div class="text-container schema-news-purple">
+                            <a>News Item 3</a>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <a href="#">Read More</a>
+                            <table class="divider">
+                                <tr>
+                                    <td>
+                                        <img src="../IMGs/nm.png" alt="icon" class="foot-icon">
+                                    </td>
+                                    <td>
+                                        <p>Posted by Netmatters Ltd</p>
+                                        <p>23rd May 2020</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+
+            <section class=affiliates id="affi-1">
+                <div class=flex-container>
+                    <div class="af changable">
+                        <img src="../IMGs/busseys-gs.png" alt="Busseys logo greyscale">
+                        <img src="../IMGs/busseys.png" alt="Busseys logo">
+                        <div>
+                            <h4>Busseys</h4>
+                            <span></span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="af changable">
+                        <img src="../IMGs/crane-gs.png" alt="Crane logo greyscale">
+                        <img src="../IMGs/crane.png" alt="Crane logo">
+                        <div>
+                            <h4>Crane Garden Buildings</h4>
+                            <span></span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="af changable">
+                        <img src="../IMGs/beat-gs.png" alt="Beat logo greyscale">
+                        <img src="../IMGs/beat.png" alt="Beat logo">
+                        <div>
+                            <h4>Beat</h4>
+                            <span></span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="af changable">
+                        <img src="../IMGs/northern-gs.png" alt="Northern logo greyscale">
+                        <img src="../IMGs/northern.png" alt="Northern logo">
+                        <div>
+                            <h4>Northern Diver</h4>
+                            <span></span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="links">
+                <div class=flex-container>
+                    <div class=link-group>
+                        <h2>Contact Us</h2>
+                        <ul>
+                            <li>11 Penfold Drive</li>
+                            <li>Wymondham</li>
+                            <li>Norfolk</li>
+                            <li>NR18 0WZ</li>
+                        </ul>
+                        <ul>
+                            <li>Tel: 01603 70 40 20</li>
+                            <li>Email: support@netmatters.com</li>
+                        </ul>
+                    </div>
+                    <div class=link-group>
+                        <h2>About Netmatters</h2>
+                        <ul>
+                            <li><a href=#>News</a></li>
+                            <li><a href=#>Our Careers</a></li>
+                            <li><a href=#>Our Team</a></li>
+                            <li><a href=#>Our Office Tour</a></li>
+                            <li><a href=#>Privacy Policy</a></li>
+                            <li><a href=#>Cookie Policy</a></li>
+                            <li><a href=#>Terms & Conditions</a></li>
+                            <li><a href=#>UK Domains</a></li>
+                        </ul>
+                    </div>
+                    <div class=link-group>
+                        <h2>Website</h2>
+                        <ul>
+                            <li><a href=#>Sitemap</a></li>
+                            <li>&copy; Copyright Netmatters Ltd. 2020</li>
+                            <li>All rights reserved</li>
+                        </ul>
+                    </div>
+                    <div class=link-group>
+                        <h2>Social Media</h2>
+                        <div class=socMed-links>
+                            <a href="#"><img src="../IMGs/facebook-white.svg" alt="Facebook logo"></a>
+                            <a href="#"><img src="../IMGs/twitter-white.svg" alt="Twitter logo"></a>
+                            <a href="#"><img src="../IMGs/linkedin-white.svg" alt="LinkedIn logo"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class=affiliates id="affi-2">
+                <div class=flex-container>
+                    <div class=af>
+                        <img src="../IMGs/PartnerBadge.png" alt="Google Partner badge">
+                    </div>
+                    <div class=af>
+                        <img src="../IMGs/silver-microsoft-partner.jpg" alt="Silver Partner badge">
+                    </div>
+                    <div class="af changable">
+                        <img src="../IMGs/future-50-gs.jpg" alt="Future 50 logo greyscale">
+                        <img src="../IMGs/future-50.jpg" alt="Future 50 logo">
+                    </div>
+                    <div class="af changable">
+                        <img src="../IMGs/qms-gs.jpg" alt="QMS logo greyscale">
+                        <img src="../IMGs/qms.jpg" alt="QMS logo">
+                    </div>
+                    <div class="af changable">
+                        <img src="../IMGs/norfolk-carbon-charter-gs.jpg" alt="Norfolk Carbon Charter logo greyscale">
+                        <img src="../IMGs/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter logo">
+                    </div>
+                </div>
+            </section>
+
+        </footer>
+
+    </div>  <!--end of .not-sidebar-->
+
+    <div class=sidebar style="display:none">
+    </div>
 
 </body>
 </html>

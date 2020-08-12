@@ -1,0 +1,187 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* credit to Philip Newcomer @ https://philipnewcomer.net/2014/04/target-internet-explorer-10-11-css/ */
+  .splash {
+    /* 
+    $break needs to be manually calculated with the following formula:
+        (image-x * (container-y / image-y)
+    because @media and calc() don't play well together.
+
+    If the container is smaller than the page width, you will need to
+    add the margin/padding values to $break.
+*/
+    overflow: hidden;
+    /* calc(4272px * (500 / 2848)) */
+  }
+  .splash img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (max-width: 750px), (-ms-high-contrast: active) and (max-width: 750px) {
+  .splash img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .nav-mid .flex-container {
+    width: calc(100% - (2 * 20px));
+    padding: 20px 0;
+    margin: auto;
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (max-width: 768px), (-ms-high-contrast: active) and (max-width: 768px) {
+  .nav-mid .flex-container {
+    margin: auto 20px;
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (min-width: 768px), (-ms-high-contrast: active) and (min-width: 768px) {
+  .nav-mid .flex-container {
+    width: calc(768px - (2 * 20px));
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (min-width: 992px), (-ms-high-contrast: active) and (min-width: 992px) {
+  .nav-mid .flex-container {
+    width: calc(992px - (2 * 20px));
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (min-width: 1260px), (-ms-high-contrast: active) and (min-width: 1260px) {
+  .nav-mid .flex-container {
+    width: calc(1260px - (2 * 20px));
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .nav-mid .flex-container .panel {
+    width: 100%;
+    height: auto;
+    padding: 30px 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (min-width: 768px), (-ms-high-contrast: active) and (min-width: 768px) {
+  .nav-mid .flex-container {
+    /*Get last 4 children (2x2)*/
+  }
+  .nav-mid .flex-container > .panel:nth-child(1n+4) {
+    width: calc((100% - 30px) /2);
+    display: inline-block;
+    margin-top: 0;
+  }
+  .nav-mid .flex-container > .panel:nth-child(2n+4) {
+    float: left;
+  }
+  .nav-mid .flex-container > .panel:nth-child(2n+4) {
+    float: right;
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (min-width: 992px), (-ms-high-contrast: active) and (min-width: 992px) {
+  .nav-mid .flex-container {
+    /*Get first 3 children (3x1)*/
+  }
+  .nav-mid .flex-container > .panel:nth-last-child(1n+5) {
+    width: calc( (100% - (60px)) /3);
+    display: inline-block;
+    float: left;
+  }
+  .nav-mid .flex-container > .panel:nth-child(2) {
+    margin-right: 29.9px;
+    margin-left: 30px;
+  }
+  .nav-mid .flex-container > .panel:nth-child(3) {
+    float: right;
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (min-width: 1260px), (-ms-high-contrast: active) and (min-width: 1260px) {
+  .nav-mid .flex-container {
+    /*Get last 4 children (4x1)*/
+  }
+  .nav-mid .flex-container > .panel:nth-child(1n+4) {
+    width: calc( (100% - (90px)) /4);
+    display: inline-block;
+    float: left;
+    margin-right: 30px;
+  }
+  .nav-mid .flex-container > .panel:last-child {
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .latest .flex-container .newspanel .img-wrapper {
+    overflow: hidden;
+    /* Images staay at a fixed size beyond the small breakpoint;
+                this makes it a lot easier to manage fitting them into
+                their containers. */
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (max-width: 768px), (-ms-high-contrast: active) and (max-width: 768px) {
+  .latest .flex-container .newspanel .img-wrapper {
+    /* 
+    $break needs to be manually calculated with the following formula:
+        (image-x * (container-y / image-y)
+    because @media and calc() don't play well together.
+
+    If the container is smaller than the page width, you will need to
+    add the margin/padding values to $break.
+*/
+    overflow: hidden;
+  }
+  .latest .flex-container .newspanel .img-wrapper img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (max-width: 768px) and (max-width: 435px), (-ms-high-contrast: active) and (max-width: 768px) and (max-width: 435px) {
+  .latest .flex-container .newspanel .img-wrapper img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (min-width: 768px), (-ms-high-contrast: active) and (min-width: 768px) {
+  .latest .flex-container .newspanel .img-wrapper {
+    overflow: hidden;
+  }
+  .latest .flex-container .newspanel .img-wrapper img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (min-width: 992px), (-ms-high-contrast: active) and (min-width: 992px) {
+  .latest .flex-container .newspanel .img-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+}
+/*# sourceMappingURL=ieStyles.css.map */

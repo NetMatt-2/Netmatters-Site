@@ -6,8 +6,6 @@ $grey-md-dk: rgb(153,154,162);
 $grey-dk: rgb(116, 116, 116);
 
 
-
-
 //Schema colours
 $col-seagrey:rgb(103,128,159);
 $col-blue:rgb(65,131,215);
@@ -15,3 +13,13 @@ $col-green:rgb(46,204,113);
 $col-red:rgb(214,69,65);
 $col-purple:rgb(146,111,177);
 $col-pink:rgb(246,36,89);
+
+
+$colours: (
+    'seagrey':rgb(103,128,159),
+    'blue':rgb(65,131,215),
+    'green':rgb(46,204,113),
+    'red':rgb(214,69,65),
+    'purple':rgb(146,111,177),
+    'pink':rgb(246,36,89),
+);

@@ -1,0 +1,126 @@
+@import "../_PARTIALS/breakpoints",
+        "../_PARTIALS/colours",
+        "../_PARTIALS/mix_flex-common-settings",
+        "../_PARTIALS/mix_flex-ctnr-static-widths";
+
+$height: 97.6px;
+
+#banner-menu {
+    display: none;
+    height: $height;
+    background-color: $bg-dark;
+    @media (min-width: $bp-md) {
+        display: flex;
+    }
+
+    $bp-md-padding: 17.6px;
+    $bp-lg-padding: 36.6px;
+    @include flex-ctnr-static-widths($bp-md-padding, $bp-md);
+    @include flex-ctnr-static-widths($bp-lg-padding, $bp-lg);
+
+    .flex-container {
+        @include flex-common-nowrap;
+        position: relative;
+    }
+    .cat {
+        height: $height;
+        padding: 19px 0 18px;
+        flex-basis: 154.34%;
+        @media (min-width: $bp-lg) {
+            flex-basis: 192.66%;
+        }
+        text-align: center;
+        .icon {
+            height: 23.2px;
+            img:nth-child(2){ display:initial; }
+            img:nth-child(1){ display:none; }
+            >img {
+                max-height: 100%;
+            }
+        }
+        h5 {
+            margin: 6px 0 0;
+            font-size: 10px;
+            line-height: 10px;
+            text-transform: uppercase;
+            color: white;
+            &:last-of-type {
+                font-size: 18px;
+                line-height: 18px;
+                margin: 1.5px 0 0;
+            }
+        }
+        &:hover {
+            .icon {
+                img:nth-child(2){ display:none; }
+                img:nth-child(1){ display:initial; }
+            }
+            &+*+*+*+*+*+* {
+                display: block;
+            }
+        }
+    }
+    .h-list {
+        $widthPct: 1000%;
+        $buffer: calc((#{$widthPct} - 100%) / 2);
+        position: absolute;
+        z-index: 1000000000;
+        top: $height;
+        width: $widthPct;
+        margin: 0;
+        box-sizing: border-box;
+        text-align: left;
+        display: none;
+
+        left: calc(#{$buffer} * -1);
+        padding-left: #{$buffer};
+        padding-right: #{$buffer};
+        li {
+            display: inline-block;
+            box-sizing: border-box;
+            &:not(:last-of-type)::after {
+                content:"-";
+                padding-left: 20px;
+                padding-right: 20px;
+                color: white;
+            }
+        }
+        a {
+            color: white;
+            text-decoration-line: none;
+            text-transform: uppercase;
+            line-height: 45px;
+            font-size: 13px;
+            @media (min-width: $bp-lg) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    //$cols:      ($col-purple, $col-blue, $col-red, 
+    //            $col-seagrey, $col-green, $col-pink);
+    //@for $i from 1 through 6 {
+    //    .cat:nth-child(#{$i}):hover {
+    //        background-color: nth($cols, $i);
+    //    }
+    //    .flex-container .h-list:nth-of-type(#{$i}) {
+    //        background-color: darken(nth($cols, $i), 12);
+    //    }
+    //}
+
+    $str-colours: ('purple', 'blue', 'red', 'seagrey', 'green', 'pink');
+    //I could re-order the list in the _colours partial and skip getting the string value from the list,
+    // but I don't want it to be too dependent on the internal ordering of a seperate file.
+
+    // I could also create classes instead of using selectors. Whatevs'
+
+   @for $i from 1 through 6 {
+        .cat:nth-child(#{$i}):hover {
+            background-color: map-get($colours, #{nth($str-colours, $i)});
+        }
+        .flex-container .h-list:nth-of-type(#{$i}) {
+            background-color: darken(map-get($colours, #{nth($str-colours, $i)}), 12);
+        }
+    }
+
+}
