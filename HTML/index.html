@@ -5,188 +5,447 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../JS/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../JS/slick-1.8.1/slick/slick-theme.css">
+    
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/ieStyles.css">
-</head>
-<body>
-    
-    <!-- 
-    /* Hacky sidebar implementation */
+    <link rel="stylesheet" href="../CUSTOM-SIDEBAR/custom-sidebar.css">
 
-    <input type="checkbox" id="btn-menu">
-    <label>
-        <div class=not-sidebar> 
-            ...etc
+    <style>
+        #cookie-popup, #cookie-settings {display: none}
+    </style>
+
+</head>
+
+<body>    
+
+    <div id="cookie-popup">
+        <div class=thingy>
+            <h3>Cookies Policy</h3>
+            <div class=text-ctnr>
+                <p>We use cookies to obtain aggregate data regarding site traffic and interaction, in order to identify user trends and obtain insights in order to continually improve our site. These cookies enable us to improve your customer experience as you use our site and help provide you with relevant online marketing.</p>
+                <p>You can see a list of the other companies who use cookies on this website, by visiting cookie settings at the bottom of each page. For full details of how we use your personal information, and your rights in relation to it, view our privacy policy.</p>
+            </div>
+            <div class=link-ctnr>
+                <a id=c-btn-1 class=btn-base>Change Settings</a>
+                <a id=c-btn-2 class=btn-base>Accept Cookies</a>
+            </div>
         </div>
-    </label>
-    
-    <div class=sidebar>
+    </div>
+    <div id=cookie-settings>
+        <div class=content-ctnr>
+            <h3>Cookies Preferences</h3>
+            <p>Netmatters uses cookies on their website. Cookies are small text files that are stored on your computer or other device by websites that you visit. This page explains the cookies we use and what we use them for, and lets you turn them on or off. (Some cookies are necessary in order for our website to work properly.) We also explain below which other companies use cookies on our website and what they use them for, and lets you turn those other companies' cookies on or off.</p>
+            <p>Our website uses cookies in order to make the website easier to use, to support the provision of information and functionality to you, as well as to provide us with information about how the website is used so that we can make sure it is as up to date, relevant and error free as we can. We also use cookies to try to ensure that our online adverts reflect the interests of web users. Further information about the types of cookies that are used on our website is set out box below.</p>
+            <p>As well as the options provided below, you can choose to restrict or block cookies through your browser settings at any time. For more information about how to do this, and about cookies in general, you can visit www.allaboutcookies.org and www.youronlinechoices.eu. However, please be aware that restricting or blocking cookies set on our website may impact the functionality or performance of the website, or prevent you from using certain services provided through the website.</p>
+            <p>Please note that third parties (including, for example, advertising networks and providers of external services like website analysis services) may also use cookies, over which we have no control, although we may receive services from these third parties (including, for example, for targeted advertising purposes and website analytics). These cookies are likely to be performance cookies or targeting cookies (as described below).</p>
+
+            <h1>Functional Cookies</h1>
+            <p>Functional cookies allow our website to remember choices you make, such as your user name, log in details or language preferences, and any customisations you make to pages on our website during your visit.</p>
+            <h4>Examples of how we use these cookies include:</h4>
+            <ul><li>Live Chat</li></ul>
+            <div class=btn-ctnr>
+                <button class=btn-base></button>
+                <button class=btn-base></button>
+            </div>
+
+            <h1>Performance & Analytics</h1>
+            <p>These cookies help us understand how people use our website. They collect information such as which pages on our website visitors go to most often, which features they use, and which websites people have visited before they visit ours. We use this information to improve our website and provide a better user experience.</p>
+            <h4>Examples of how we use these cookies include:</h4>
+            <ul>
+                <li>Monitoring and providing statistics on how our website is used.</li>
+                <li>Helping us improve our website by measuring any errors that occur.</li>
+                <li>Testing the website's design and operability.</li>
+            </ul>
+            <div class=btn-ctnr>
+                <button class=btn-base></button>
+                <button class=btn-base></button>
+            </div>
+
+            <p>Different web browsers may use different methods for managing cookies. Please follow the instructions below, from the web browser manufacturers directly, to configure your browser settings*.</p>
+            <ul>
+                <li><a>Microsoft Internet Explorer (IE)</a></li>
+                <li><a>Google Chrome</a></li>
+                <li><a>Safari</a></li>
+                <li><a>Firefox</a></li>
+            </ul>
+            <div id=tbl class=btn-base>
+                <table>
+                    <tr>
+                        <th>Company</th>
+                        <th>Domain</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td><a>company</a></td>
+                        <td>domain</td>
+                        <td>
+                            <div class=btn-ctnr>
+                                <button class=btn-base></button>
+                                <button class=btn-base></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a>company</a></td>
+                        <td>domain</td>
+                        <td>
+                            <div class=btn-ctnr>
+                                <button class=btn-base></button>
+                                <button class=btn-base></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a>company</a></td>
+                        <td>domain</td>
+                        <td>
+                            <div class=btn-ctnr>
+                                <button class=btn-base></button>
+                                <button class=btn-base></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a>company</a></td>
+                        <td>domain</td>
+                        <td>
+                            <div class=btn-ctnr>
+                                <button class=btn-base></button>
+                                <button class=btn-base></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a>company</a></td>
+                        <td>domain</td>
+                        <td>
+                            <div class=btn-ctnr>
+                                <button class=btn-base></button>
+                                <button class=btn-base></button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a>company</a></td>
+                        <td>domain</td>
+                        <td>
+                            <div class=btn-ctnr>
+                                <button class=btn-base></button>
+                                <button class=btn-base></button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
 
-    -->
+    <div id="page-blocker" class="blocker-hidden"></div>
+    <nav id="side-menu" class="menu-closed">
+        <div id="side-section1">
+            <ul>
+                <li id=mm-contactUs>
+                    <a>Contact us</a>
+                </li>
 
-    <div class=not-sidebar>
+                <li id=mm-webDesign>
+                    <a>Web design</a>
+                    <ul>
+                        <li><a>Stylish Websites</a></li>
+                        <li><a>ECommerce Stores</a></li>
+                        <li><a>Branding</a></li>
+                        <li><a>Mobile Apps</a></li>
+                        <li><a>Web Hosting</a></li>
+                        <li><a>Pay Monthly Websites</a></li>
+                    </ul>
+                </li>
+                
+                <li id=mm-ITSupport>
+                    <a></a>
+                    <ul>
+                        <li><a>Managed IT Support</a></li>
+                        <li><a>Business IT Support</a></li>
+                        <li><a>Office 365</a></li>
+                        <li><a>Consultancy</a></li>
+                        <li><a>Cloud Provider</a></li>
+                        <li><a>Data Backup</a></li>
+                    </ul>
+                </li>
+                <li id=mm-telecomsServices>
+                    <a></a>
+                    <ul>
+                        <li><a>Gigabit Voucher</a></li>
+                        <li><a>Hosted VOIP</a></li>
+                        <li><a>Business VOIP</a></li>
+                        <li><a>Business Broadband</a></li>
+                        <li><a>Leased Line</a></li>
+                        <li><a>3CX Systems</a></li>
+                    </ul>
+                </li>
+                <li id=mm-bespokeSoftware>
+                    <a></a>
+                    <ul>
+                        <li><a>Workflow Solutions</a></li>
+                        <li><a>Automation</a></li>
+                        <li><a>System Integration</a></li>
+                        <li><a>Database Management</a></li>
+                        <li><a>Sharepoint</a></li>
+                        <li><a>ERP</a></li>
+                    </ul>
+                </li>
+                <li id=mm-digitalMarketing>
+                    <a></a>
+                    <ul>
+                        <li><a>SEO</a></li>
+                        <li><a>PPC</a></li>
+                        <li><a>CRO</a></li>
+                        <li><a>Email</a></li>
+                        <li><a>Social</a></li>
+                        <li><a>Content</a></li>
+                    </ul>
+                </li>
+                <li id=mm-cyberSecurity>
+                    <a></a>
+                    <ul>
+                        <li><a>Assessment</a></li>
+                        <li><a>Management</a></li>
+                        <li><a>Penetration Testing</a></li>
+                        <li><a>Cyber Essentials</a></li>
+                        <li><a>PCI/DSS</a></li>
+                        <li><a>Hacker Prevention</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="side-section2">
 
+        </div>
+    </nav>
+
+    <!--#page-wrapper | Wrapper for page content (header/main/footer/etc...) -->
+    <div id="page-wrapper">
+        <!--SECTION - header-->
         <header>
+            <!--Wraps the logo, searchbar, and buttons-->
             <div class="header-wrapper">
-
                 <div class="logo">
                     <img src="../IMGs/f-logo.png" alt="Netmatters Logo">
                 </div>
-
+                <!--Contact/support links-->
                 <div class="navbar-opts">
-                    <button class="btn btn-phone">
+                    <a href="tel:01603704020" class="btn-base btn-header" id="btn-phone">
                         <img src="../IMGs/telephone-dark.svg" alt="Phone icon">
-                    </button>
-                    <a href="#" class="btn btn-support">
+                    </a>
+                    <!-- <a href="#" class="btn btn-support"> -->
+                    <a href="#" class="btn-base btn-header" id="btn-support">
                         <img src="../IMGs/mouse-white.svg" alt="Mouse icon">
                         <p>Support</p>
                     </a>
-                    <a href="#" class="btn btn-contact">
+                    <!-- <a href="#" class="btn btn-contact"> -->
+                    <a href="mailto:sales@netmatters.com?subject=Is%20this%20OK&#63;" class="btn-base btn-header" id="btn-contact">
                         <img src="../IMGs/send-white.svg" alt="Letter icon">
                     <p>Contact</p>
                     </a>
                 </div>
-
-                <button type="button" class="btn menuburger">
-                    <span>
-                        <img src="../IMGs/burger-white.svg" alt="Menu icon">
-                        <p>MENU</p>
-                    </span>   
-                </button>
-
+                <!--Open mMenu-->
+                <a class="btn-base btn-header" id="btn-menuburger">
+                    <img src="../IMGs/burger-white.svg" alt="Menu icon">
+                    <p>MENU</p>
+                </a>
+                <!--Searchbar-->
                 <div class="searchbar">
                     <input type="search" class="inp-search" placeholder="Search...">
-                    <button type="submit" class="btn-search">
+                    <button type="submit" class="btn-base btn-header" id="btn-search">
                         <img src="../IMGs/search-white.svg" alt="Search icon">
                         <img src="../IMGs/search-dark.svg" alt="Search icon">
                     </button>
                 </div>
+            </div>
+            <!--Sub-header - banner menu-->
+            <div id="banner-menu">
+                <div class="categories flex-container">
 
+                    <!--MENU CATEGORIES-->
+                    <div class="cat" id="bMenu-WD">
+                        <div class="icon">
+                            <img src="../IMGs/code-white.svg" alt="Code tag icon">
+                            <img src="../IMGs/code-purple.svg" alt="Code tag icon">
+                        </div>
+                        <h5>Web</h5>
+                        <h5>Design</h5>
+                        <div class=h-list-ctnr>
+                            <ul class=h-list id="list-WD">
+                                <li><a href="#">Stylish Websites</a></li>
+                                <li><a href="#">ECommerce Stores</a></li>
+                                <li><a href="#">Branding</a></li>
+                                <li><a href="#">Mobile Apps</a></li>
+                                <li><a href="#">Web Hosting</a></li>
+                                <li><a href="#">Pay Monthly Websites</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cat" id="bMenu-IT">
+                        <div class="icon">
+                            <img src="../IMGs/monitor-white.svg" alt="Monitor icon">
+                            <img src="../IMGs/monitor-blue.svg" alt="Monitor icon">
+                        </div>
+                        <h5>IT</h5>
+                        <h5>Support</h5>
+                        <div class=h-list-ctnr>
+                            <ul class=h-list id="list-IT">
+                                <li><a href="#">Managed IT Support</a></li>
+                                <li><a href="#">Business IT Support</a></li>
+                                <li><a href="#">Office 365</a></li>
+                                <li><a href="#">Consultancy</a></li>
+                                <li><a href="#">Cloud Provider</a></li>
+                                <li><a href="#">Data Backup</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cat" id="bMenu-TC">
+                        <div class="icon">
+                            <img src="../IMGs/telephone-white.svg" alt="Telephone icon">
+                            <img src="../IMGs/telephone-red.svg" alt="Telephone icon">
+                        </div>
+                        <h5>Telecoms</h5>
+                        <h5>Services</h5>
+                        <div class=h-list-ctnr>
+                            <ul class=h-list id="list-TC">
+                                <li><a href="#">Gigabit Voucher</a></li>
+                                <li><a href="#">Hosted VOIP</a></li>
+                                <li><a href="#">Business VOIP</a></li>
+                                <li><a href="#">Business Broadband</a></li>
+                                <li><a href="#">Leased Line</a></li>
+                                <li><a href="#">3CX Systems</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cat" id="bMenu-BS">
+                        <div class="icon">
+                            <img src="../IMGs/grid-white.svg" alt="Layout icon">
+                            <img src="../IMGs/grid-seagrey.svg" alt="Layout icon">
+                        </div>
+                        <h5>Bespoke</h5>
+                        <h5>Software</h5>
+                        <div class=h-list-ctnr>
+                            <ul class=h-list id="list-TC">
+                                <li><a href="#">Gigabit Voucher</a></li>
+                                <li><a href="#">Hosted VOIP</a></li>
+                                <li><a href="#">Business VOIP</a></li>
+                                <li><a href="#">Business Broadband</a></li>
+                                <li><a href="#">Leased Line</a></li>
+                                <li><a href="#">3CX Systems</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cat" id="bMenu-DM">
+                        <div class="icon">
+                            <img src="../IMGs/graph-white.svg" alt="Graph icon">
+                            <img src="../IMGs/graph-green.svg" alt="Graph icon">
+                        </div>
+                        <h5>Digital</h5>
+                        <h5>Marketing</h5>
+                        <div class=h-list-ctnr>
+                            <ul class=h-list id="list-DM">
+                                <li><a href="#">SEO</a></li>
+                                <li><a href="#">PPC</a></li>
+                                <li><a href="#">CRO</a></li>
+                                <li><a href="#">Email</a></li>
+                                <li><a href="#">Social</a></li>
+                                <li><a href="#">Content</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cat" id="bMenu-CS">
+                        <div class="icon">
+                            <img src="../IMGs/shield-white.svg" alt="Shield icon">
+                            <img src="../IMGs/shield-pink.svg" alt="Shield icon">
+                        </div>
+                        <h5>Cyber</h5>
+                        <h5>Security</h5>
+                        <div class=h-list-ctnr>
+                            <ul class=h-list id="list-CS">
+                                <li><a href="#">Assessment</a></li>
+                                <li><a href="#">Management</a></li>
+                                <li><a href="#">Penetration Testing</a></li>
+                                <li><a href="#">Cyber Essentials</a></li>
+                                <li><a href="#">PCI/DSS</a></li>
+                                <li><a href="#">Hacker Prevention</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
-        <div id="banner-menu">
-            <div class="categories flex-container">
-
-                <!--MENU CATEGORIES-->
-                <div class="cat" id="bMenu-WD">
-                    <div class="icon">
-                        <img src="../IMGs/code-white.svg" alt="Code tag icon">
-                        <img src="../IMGs/code-purple.svg" alt="Code tag icon">
-                    </div>
-                    <h5>Web</h5>
-                    <h5>Design</h5>
-                </div>
-                <div class="cat" id="bMenu-IT">
-                    <div class="icon">
-                        <img src="../IMGs/monitor-white.svg" alt="Monitor icon">
-                        <img src="../IMGs/monitor-blue.svg" alt="Monitor icon">
-                    </div>
-                    <h5>IT</h5>
-                    <h5>Support</h5>
-
-                </div>
-                <div class="cat" id="bMenu-TC">
-                    <div class="icon">
-                        <img src="../IMGs/telephone-white.svg" alt="Telephone icon">
-                        <img src="../IMGs/telephone-red.svg" alt="Telephone icon">
-                    </div>
-                    <h5>Telecoms</h5>
-                    <h5>Services</h5>
-                </div>
-                <div class="cat" id="bMenu-BS">
-                    <div class="icon">
-                        <img src="../IMGs/grid-white.svg" alt="Layout icon">
-                        <img src="../IMGs/grid-seagrey.svg" alt="Layout icon">
-                    </div>
-                    <h5>Bespoke</h5>
-                    <h5>Software</h5>
-                </div>
-                <div class="cat" id="bMenu-DM">
-                    <div class="icon">
-                        <img src="../IMGs/graph-white.svg" alt="Graph icon">
-                        <img src="../IMGs/graph-green.svg" alt="Graph icon">
-                    </div>
-                    <h5>Digital</h5>
-                    <h5>Marketing</h5>
-                </div>
-                <div class="cat" id="bMenu-CS">
-                    <div class="icon">
-                        <img src="../IMGs/shield-white.svg" alt="Shield icon">
-                        <img src="../IMGs/shield-pink.svg" alt="Shield icon">
-                    </div>
-                    <h5>Cyber</h5>
-                    <h5>Security</h5>
-                </div>
-
-                <!--SUB-MENU LISTS-->
-                <ul class=h-list id="list-WD">
-                    <li><a href="#">Stylish Websites</a></li>
-                    <li><a href="#">ECommerce Stores</a></li>
-                    <li><a href="#">Branding</a></li>
-                    <li><a href="#">Mobile Apps</a></li>
-                    <li><a href="#">Web Hosting</a></li>
-                    <li><a href="#">Pay Monthly Websites</a></li>
-                </ul>
-                <ul class=h-list id="list-IT">
-                    <li><a href="#">Managed IT Support</a></li>
-                    <li><a href="#">Business IT Support</a></li>
-                    <li><a href="#">Office 365</a></li>
-                    <li><a href="#">Consultancy</a></li>
-                    <li><a href="#">Cloud Provider</a></li>
-                    <li><a href="#">Data Backup</a></li>
-                </ul>
-                <ul class=h-list id="list-TC">
-                    <li><a href="#">Gigabit Voucher</a></li>
-                    <li><a href="#">Hosted VOIP</a></li>
-                    <li><a href="#">Business VOIP</a></li>
-                    <li><a href="#">Business Broadband</a></li>
-                    <li><a href="#">Leased Line</a></li>
-                    <li><a href="#">3CX Systems</a></li>
-                </ul>
-                <ul class=h-list id="list-BS">
-                    <li><a href="#">Workflow Solutions</a></li>
-                    <li><a href="#">Automation</a></li>
-                    <li><a href="#">System Integration</a></li>
-                    <li><a href="#">Database Management</a></li>
-                    <li><a href="#">Sharepoint</a></li>
-                    <li><a href="#">ERP</a></li>
-                </ul>
-                <ul class=h-list id="list-DM">
-                    <li><a href="#">SEO</a></li>
-                    <li><a href="#">PPC</a></li>
-                    <li><a href="#">CRO</a></li>
-                    <li><a href="#">Email</a></li>
-                    <li><a href="#">Social</a></li>
-                    <li><a href="#">Content</a></li>
-                </ul>
-                <ul class=h-list id="list-CS">
-                    <li><a href="#">Assessment</a></li>
-                    <li><a href="#">Management</a></li>
-                    <li><a href="#">Penetration Testing</a></li>
-                    <li><a href="#">Cyber Essentials</a></li>
-                    <li><a href="#">PCI/DSS</a></li>
-                    <li><a href="#">Hacker Prevention</a></li>
-                </ul>
-
-            </div>
-        </div>
-
+        <!--SECTION - main-->
         <main>
-            <div class=splash>
-                <img src="../IMGs/gratisography-30H.jpg" alt="Man on cup phone">
-                <div></div>
-                <div class=splash-text>
-                    <h2>Heading</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                    <a href="#">Find out more &rarr;</a>
+            <!--Splash / carousel (uses Slick plugin)-->
+            <section class=splash>
+                <div class="slides">
+                    <div class="slide" id="slide-webDesign">
+                        <img src="../IMGs/gratisography-30H.jpg" alt="Man on cup phone">
+                        <div></div>
+                        <div class="slide-text">
+                            <h2>Web Design</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            <a class="btn-base btn-slide" id="slideBtn-webDesign" href="#">Find out more &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="slide" id="slide-ITSupport">
+                        <img src="../IMGs/gratisography-30H.jpg" alt="Man on cup phone">
+                        <div></div>
+                        <div class="slide-text">
+                            <h2>IT Support</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            <a class="btn-base btn-slide" id="slideBtn-ITSupport" href="#">Find out more &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="slide" id="slide-telecomsServices">
+                        <img src="../IMGs/gratisography-30H.jpg" alt="Man on cup phone">
+                        <div></div>
+                        <div class="slide-text">
+                            <h2>Telecoms Services</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            <a class="btn-base btn-slide" id="slideBtn-telecomsServices" href="#">Find out more &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="slide" id="slide-bespokeSoftware">
+                        <img src="../IMGs/gratisography-30H.jpg" alt="Man on cup phone">
+                        <div></div>
+                        <div class="slide-text">
+                            <h2>Bespoke Software</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            <a class="btn-base btn-slide" id="slideBtn-bespokeSoftware" href="#">Find out more &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="slide" id="slide-digitalMarketing">
+                        <img src="../IMGs/gratisography-30H.jpg" alt="Man on cup phone">
+                        <div></div>
+                        <div class="slide-text">
+                            <h2>Digital Marketing</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            <a class="btn-base btn-slide" id="slideBtn-digitalMarketing" href="#">Find out more &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="slide" id="slide-cyberSecurity">
+                        <img src="../IMGs/gratisography-30H.jpg" alt="Man on cup phone">
+                        <div></div>
+                        <div class="slide-text">
+                            <h2>Cyber Security</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                            <a class="btn-base btn-slide" id="slideBtn-cyberSecurity" href="#">Find out more &rarr;</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
+                <div id="dotHolder"></div>
+            </section>
+            <!--Central navigation container-->
             <section class="nav-mid">
                 <div class="flex-container">
-                    <a class="panel schema-nav-seagrey" id="Bespoke software" href="#">
+                    <a class="panel schema-nav-seagrey" id="nav-bespokeSoftware" href="#">
                         <div class="icon">
                             <img src="../IMGs/grid-white.svg" alt="Layout icon">
                             <img src="../IMGs/grid-seagrey.svg" alt="Layout icon">
@@ -196,7 +455,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div class="readmore">Read More</div>
                     </a>
-                    <a class="panel schema-nav-blue" id="IT Support" href="#">
+                    <a class="panel schema-nav-blue" id="nav-ITSupport" href="#">
                         <div class="icon">
                             <img src="../IMGs/monitor-white.svg" alt="Monitor icon">
                             <img src="../IMGs/monitor-blue.svg" alt="Monitor icon">
@@ -206,7 +465,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div class="readmore">Read More</div>
                     </a>
-                    <a class="panel schema-nav-green" id="Digital Marketing" href="#">
+                    <a class="panel schema-nav-green" id="nav-digitalMarketing" href="#">
                         <div class="icon">
                             <img src="../IMGs/graph-white.svg" alt="Graph icon">
                             <img src="../IMGs/graph-green.svg" alt="Graph icon">
@@ -216,7 +475,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div class="readmore">Read More</div>
                     </a>
-                    <a class="panel schema-nav-red" id="Telecoms Services" href="#">
+                    <a class="panel schema-nav-red" id="nav-telecomsServices" href="#">
                         <div class="icon">
                             <img src="../IMGs/telephone-white.svg" alt="Telephone icon">
                             <img src="../IMGs/telephone-red.svg" alt="Telephone icon">
@@ -226,7 +485,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div class="readmore">Read More</div>
                     </a>
-                    <a class="panel schema-nav-purple" id="Web Design" href="#">
+                    <a class="panel schema-nav-purple" id="nav-webDesign" href="#">
                         <div class="icon">
                             <img src="../IMGs/code-white.svg" alt="Code tag icon">
                             <img src="../IMGs/code-purple.svg" alt="Code tag icon">
@@ -236,7 +495,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div class=readmore>Read More</div>
                     </a>
-                    <a class="panel schema-nav-pink" id="Cyber Security" href="#">
+                    <a class="panel schema-nav-pink" id="nav-cyberSecurity" href="#">
                         <div class="icon">
                             <img src="../IMGs/shield-white.svg" alt="Shield icon">
                             <img src="../IMGs/shield-pink.svg" alt="Shield icon">
@@ -246,7 +505,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <div class=readmore>Read More</div>
                     </a>
-                    <a class="panel schema-nav-purple" id="Developer Training" href="#">
+                    <a class="panel schema-nav-purple" id="nav-developerTraining" href="#">
                         <div class="icon">
                             <img src="../IMGs/graduate-white.svg" alt="Mortarboard icon">
                             <img src="../IMGs/graduate-purple.svg" alt="Mortarboard icon">
@@ -258,35 +517,38 @@
                     </a>
                 </div>
             </section>
-
-
+            <!--About text-->
             <section class=about>
                 <div class=about-text>    
                     <h2>Netmatters</h2>
                     <p>Netmatters Ltd is a leading web design, IT support and digital marketing agency based in Wymondham, Norfolk.</p>
                     <p>Founded in 2008, we work with businesses from a variety of industries to gain new prospects, nurture existing leads and further grow their sales.</p>
                     <p>We provide cost effective, reliable solutions to a range of services; from bespoke cloud-based management systems, workflow and IT solutions through to creative website development and integrated digital campaigning.</p>
-                    <a href="#">Our Culture &rarr;</a>
+                    <a class="btn-base" id="btn-about" href="#">Our Culture &rarr;</a>
                 </div>
             </section>
-
-
+            <!--News section-->
             <section class=latest-heading>
                 <h2>Latest</h2>
                 <span></span>
             </section>
-
-
             <section class=latest>
                 <div class=flex-container>
-                    <div class="newspanel">
+                    <div class="newspanel panel-category-news">
+                        <div class="news-tag">
+                            <a href=#></a>
+                            <div class="description-ctnr">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
                         <div class="img-wrapper">
                             <img class="banner-img" src="../IMGs/gratisography-79H.jpg" alt="Communication device">
                         </div>
-                        <div class="text-container schema-news-seagrey">
-                            <a>News Item 1</a>
+                        <div class="text-container">
+                            <a href=#>News Item 1</a>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href="#">Read More</a>
+                            <a href="#" class="btn-readmore">Read More</a>
                             <table class="divider">
                                 <tr>
                                     <td>
@@ -300,14 +562,21 @@
                             </table>
                         </div>
                     </div>
-                    <div class="newspanel">
+                    <div class="newspanel panel-category-portfolio">
+                        <div class="news-tag">
+                            <a href=#></a>
+                            <div class="description-ctnr">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
                         <div class="img-wrapper">
                             <img class="banner-img" src="../IMGs/gratisography-140H.jpg" alt="Pumped athelete">
                         </div>
-                        <div class="text-container schema-news-blue">
-                            <a>News Item 2</a>
+                        <div class="text-container">
+                            <a href=#>News Item 2</a>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href="#">Read More</a>
+                            <a href="#" class="btn-readmore">Read More</a>
                             <table class="divider">
                                 <tr>
                                     <td>
@@ -321,14 +590,21 @@
                             </table>
                         </div>
                     </div>
-                    <div class="newspanel">
+                    <div class="newspanel panel-category-careers">
+                        <div class="news-tag">
+                            <a href=#></a>
+                            <div class="description-ctnr">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
                         <div class= "img-wrapper">
                             <img class="banner-img" src="../IMGs/gratisography-163H.jpg" alt="Traveller at departure lounge">
                         </div>
-                        <div class="text-container schema-news-purple">
-                            <a>News Item 3</a>
+                        <div class="text-container">
+                            <a href=#>News Item 3</a>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                            <a href="#">Read More</a>
+                            <a href="#" class="btn-readmore">Read More</a>
                             <table class="divider">
                                 <tr>
                                     <td>
@@ -344,56 +620,64 @@
                     </div>
                 </div>
             </section>
-
         </main>
 
+        <!--SECTION - footer-->
         <footer>
-
+            <!--Clients | popup descriptions-->
             <section class=affiliates id="affi-1">
                 <div class=flex-container>
                     <div class="af changable">
                         <img src="../IMGs/busseys-gs.png" alt="Busseys logo greyscale">
                         <img src="../IMGs/busseys.png" alt="Busseys logo">
-                        <div>
-                            <h4>Busseys</h4>
-                            <span></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div></div>
+                        <div class="popup-ctnr">
+                            <div class="affi-popup">
+                                <h4>Busseys</h4>
+                                <span></span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div></div>
+                            </div>
                         </div>
                     </div>
                     <div class="af changable">
                         <img src="../IMGs/crane-gs.png" alt="Crane logo greyscale">
                         <img src="../IMGs/crane.png" alt="Crane logo">
-                        <div>
-                            <h4>Crane Garden Buildings</h4>
-                            <span></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div></div>
+                        <div class=popup-ctnr>
+                            <div class="affi-popup">
+                                <h4>Crane Garden Buildings</h4>
+                                <span></span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div></div>
+                            </div>
                         </div>
                     </div>
                     <div class="af changable">
                         <img src="../IMGs/beat-gs.png" alt="Beat logo greyscale">
                         <img src="../IMGs/beat.png" alt="Beat logo">
-                        <div>
-                            <h4>Beat</h4>
-                            <span></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div></div>
+                        <div class="popup-ctnr">
+                            <div class="affi-popup">
+                                <h4>Beat</h4>
+                                <span></span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div></div>
+                            </div>
                         </div>
                     </div>
                     <div class="af changable">
                         <img src="../IMGs/northern-gs.png" alt="Northern logo greyscale">
                         <img src="../IMGs/northern.png" alt="Northern logo">
-                        <div>
-                            <h4>Northern Diver</h4>
-                            <span></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <div></div>
+                        <div class=popup-ctnr>
+                            <div class="affi-popup">
+                                <h4>Northern Diver</h4>
+                                <span></span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <div></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-
+            <!--Links area | inc. Social Media, Contact details, etc-->
             <section id="links">
                 <div class=flex-container>
                     <div class=link-group>
@@ -440,7 +724,7 @@
                     </div>
                 </div>
             </section>
-
+            <!--Affiliates-->
             <section class=affiliates id="affi-2">
                 <div class=flex-container>
                     <div class=af>
@@ -463,13 +747,30 @@
                     </div>
                 </div>
             </section>
-
         </footer>
 
-    </div>  <!--end of .not-sidebar-->
-
-    <div class=sidebar style="display:none">
+    <!--end of #my-page-->
     </div>
 
+
+<!--Scripts-->
+    <!--jQuery slim build-->
+    <script src="../JS/jQuery/jquery-3.5.1.slim.min.js"></script>
+    <!--Slick minified-->
+    <script src="../JS/slick-1.8.1/slick/slick.min.js"></script>
+        <!--(Config)-->
+        <script>
+            $('.slides').slick({
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                appendDots: document.getElementById('dotHolder'),
+            });
+        </script>
+    <!--Menu-->
+        <script src="../CUSTOM-SIDEBAR/custom-sidebar.js"></script>
+<!--end Scripts-->
+<!--end Body-->
 </body>
 </html>

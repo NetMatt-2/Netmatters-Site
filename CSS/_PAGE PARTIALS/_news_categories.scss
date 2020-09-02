@@ -1,0 +1,128 @@
+@import "../_PARTIALS/breakpoints",
+        "../_PARTIALS/colours",
+        "../_PARTIALS/universals",
+        "../_PARTIALS/mix_flex-basis-static-gutters",
+        "../_PARTIALS/mix_flex-common-settings",
+        "../_PARTIALS/mix_flex-ctnr-static-widths",
+        "../_PARTIALS/mix_static-width-breakpoints";
+
+@mixin center-abs() {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+$tag-top: 10px;
+$tag-height: 22px;
+
+.news-tag {
+    top: $tag-top;
+    right: 0;
+    padding: 0 10px;
+    position: absolute;
+    z-index: 100;
+    &:hover {
+        a {
+            text-decoration: underline;
+        }
+        >.description-ctnr {
+            display: block;
+        }
+    }
+    height: $tag-height;
+    width: auto;
+    a {
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 12px;
+        height: $tag-height;
+        line-height: $tag-height;
+        bottom: 4px;
+        &:before { 
+            text-transform: uppercase;
+            height: $tag-height;
+            line-height: $tag-height;
+        }
+    }
+}
+.description-ctnr {
+    @include center-abs();
+    display: none;
+    bottom: $tag-height + $tag-top;
+    >div:first-child {
+        @include center-abs();
+        bottom: 0;
+        width: 200px;
+        height: auto;
+        text-align: center;
+        background-color: $bg-dark;
+        padding: 10px 15px;
+        color: white;
+        font-size: 12px;
+    }
+    >div:last-child {
+        @include center-abs();
+        transform: rotateZ(45deg) translateX(-50%);
+        background-color:  $bg-dark;
+        width: 10px;
+        height: 10px;
+        bottom: -8px;
+        z-index: -1;
+    }
+}
+
+
+//CATEGORIES
+@mixin category-scheme($category, $description, $colour){
+    .news-tag {
+        background-color: $colour;
+        a:before { 
+            content:$category;
+        }
+        >.description-ctnr >div:first-child:before {
+            content: $description;
+        }
+    }
+    .text-container {
+        a:first-of-type {
+            color: $colour;
+        }
+        a:last-of-type {
+            background-color:$colour;
+            &:hover {
+                background-color:darken($colour, 10);
+            }
+        }
+    }
+}
+
+.panel-category-news {
+    @include category-scheme("news", "views news here or whatever", map-get($colours, 'purple'));
+}
+.panel-category-careers {
+    @include category-scheme("careers", "views careers here or whatever", map-get($colours, 'seagrey'));
+}
+.panel-category-portfolio {
+    @include category-scheme("portfolios", "views portfolios here or whatever", map-get($colours, 'red'));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Tags
+
+

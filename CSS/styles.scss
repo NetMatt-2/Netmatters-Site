@@ -1,13 +1,15 @@
 @import "_PARTIALS/fonts",
+        "_PAGE PARTIALS/btn-styles",
+        "_PAGE PARTIALS/cookies",
         "_PAGE PARTIALS/header",
-        "_PAGE PARTIALS/banner-menu",
+        "_PAGE PARTIALS/header_banner-menu",
         "_PAGE PARTIALS/splash",
         "_PAGE PARTIALS/nav-center",
         "_PAGE PARTIALS/about",
-        "_PAGE PARTIALS/latest",
+        "_PAGE PARTIALS/news",
+        "_PAGE PARTIALS/news_categories",
         "_PAGE PARTIALS/affiliates",
-        "_PAGE PARTIALS/footer",
-        "_PAGE PARTIALS/sidebar";
+        "_PAGE PARTIALS/footer";
 
 *{
     background:transparent;
@@ -15,6 +17,7 @@
     font-family: "Poppins", sans-serif;
     letter-spacing: .4px;
     font-weight: 400;
+    box-sizing: border-box;
 }
 body {
     background:white;

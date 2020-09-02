@@ -1,0 +1,167 @@
+@import "../_PARTIALS/breakpoints",
+        "../_PARTIALS/colours",
+        "../_PARTIALS/universals";
+
+@mixin btn-colour($bg-colour) {
+    background-color: $bg-colour;
+    &:hover { background-color: darken($bg-colour, 10); }
+}
+
+$btn-height-header: 56px;
+
+.btn-base {
+    border-radius: $btn-bord-rad;
+    position: relative;
+    display: block;
+    cursor:pointer;
+    img {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    p {
+        margin: 0;
+    }
+}
+.btn-base, .btn-base p {
+    height: $btn-height-header;
+    line-height: $btn-height-header;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+.btn-header {
+    flex-basis: 60px; 
+    font-size: 18px;
+    img {
+        height: 24px;
+        width: 24px;
+    }
+}
+
+//HEADER BUTTONS INDV STYLES
+#btn-support {
+    @include btn-colour (map-get($colours, 'blue'));
+}
+#btn-contact {
+    @include btn-colour ($grey-md-dk);
+}
+#btn-support, #btn-contact {
+    display: none;
+    img {
+        left: 20px;
+    }
+    p {
+        margin-left: 40px;
+    }
+    @media (min-width: $bp-md) {
+        display: block;
+        flex-basis: calc((100% - #{$gutter-size}) / 2);
+        p {
+            height: $btn-height-header;
+            line-height: $btn-height-header;
+        }
+    }
+}
+
+#btn-menuburger {
+    @include btn-colour ($bg-dark);
+    img {
+        top: 20px;
+        max-height: 25px;
+        width: 60px;
+    }
+    p {
+        height: initial;
+        line-height: initial;
+        position: absolute;
+        top: 30px;
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+#btn-search {
+    @include btn-colour($grey-md-dk);
+    img {
+        &:nth-child(1){
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+        }
+        &:nth-child(2){
+            display: none;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &:hover { background-color: darken($grey-md-dk, 10); }
+}
+#btn-search, #btn-phone {
+    border: none;
+}
+
+
+.btn-slide {
+    height: 60px;
+    line-height: 60px;
+    width: 224px;
+    margin: 0 auto;
+    @media (min-width: $bp-md) {
+        margin-left: 0;
+    }
+}
+//I don't think I can use :nth-child() because /*something to do with display settings / carousel???*/
+#slideBtn-webDesign          { @include btn-colour (map-get($colours, 'purple')); }
+#slideBtn-ITSupport          { @include btn-colour (map-get($colours, 'blue')); }
+#slideBtn-telecomsServices   { @include btn-colour (map-get($colours, 'red')); }
+#slideBtn-bespokeSoftware    { @include btn-colour (map-get($colours, 'seagrey')); }
+#slideBtn-digitalMarketing   { @include btn-colour (map-get($colours, 'green')); }
+#slideBtn-cyberSecurity      { @include btn-colour (map-get($colours, 'pink')); }
+
+#btn-about {
+    width: 173.19px;
+    margin-bottom: 20px;
+    @include btn-colour (white);
+    color: $bg-dark;
+}
+
+.btn-readmore-news {
+    margin-top: 30px;
+    width: 100px;
+}
+
+.btn-socMed {
+    border-radius: 0;
+    margin-top: 30px;
+    background-color: darken($color: $bg-dark, $amount: 10);
+    &:hover {
+        background-color: (map-get($colours, 'blue'));
+    }
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+#cookie-settings {
+    button, .btn-ctnr {
+        height: 46.4px;
+        line-height: 46.4px;
+    }
+    .btn-ctnr button {
+        text-transform: uppercase;
+        width: 90px;
+        display: inline-block;
+        color: black;
+        &:first-of-type:before {
+            content: "Disable";
+        }
+        &:last-of-type:before { 
+            content: "Enable";
+        }
+    }
+}

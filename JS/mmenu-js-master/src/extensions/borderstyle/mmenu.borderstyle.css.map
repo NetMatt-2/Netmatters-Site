@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAGI,AACI,oBADgB,CAChB,YAAY,AAAA,MAAM,CAAC;EACf,OAAO,EAAE,IAAI;CAChB;;AAKL,AACI,oBADgB,CAChB,YAAY,AAAA,MAAM,CAAC;EACf,IAAI,EAAE,YAAY;CACrB",
+    "sources": [
+        "mmenu.borderstyle.scss",
+        "../../_mixins.scss",
+        "../../_includes.scss",
+        "../../_variables.scss"
+    ],
+    "names": [],
+    "file": "mmenu.borderstyle.css"
+}

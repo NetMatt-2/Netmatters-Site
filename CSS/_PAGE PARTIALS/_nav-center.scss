@@ -2,7 +2,6 @@
         "../_PARTIALS/borders-placeholders",
         "../_PARTIALS/colours",
         "../_PARTIALS/universals",
-        "../_PARTIALS/mix_create-colour-schemas",
         "../_PARTIALS/mix_flex-basis-static-gutters",
         "../_PARTIALS/mix_flex-common-settings",
         "../_PARTIALS/mix_flex-ctnr-static-widths";
@@ -67,7 +66,6 @@
     .icon {
         $circle: 60px;
         padding: 18px;
-        box-sizing: border-box;
         border-radius: 50%;
         height: $circle;
         width: $circle;
@@ -76,6 +74,8 @@
             max-width:100%;
             height: auto;
         }
+        img:nth-child(1){ display:inline-block; }
+        img:nth-child(2){ display:none; }
     }
     .readmore {
         padding: 5px 15px;
@@ -88,26 +88,41 @@
         line-height: 35px;
         text-align: center;
         color:white;
-        box-sizing: border-box;
         margin-left: auto;
         margin-right: auto;
     }
+    .panel:hover {
+        .readmore, .icon {
+            background-color: white;
+        }
+        h2, p {
+            color:white;
+        }
+        span {
+            background-color: white;
+        }
+        .icon {
+            img:nth-child(1){ display:none; }
+            img:nth-child(2){ display:inline-block; }
+        }
+    }
 }
 
-
-// vvv This vvv
-
+//Categories
+@mixin colour-schema-nav ($colour) {
+    .readmore, .icon {
+        background-color: $colour;
+    }
+    &:hover {
+        background-color:$colour;
+        .readmore {
+            color:$colour;
+        }
+    }
+}
 @each $schema-name, $colour in $colours {
     .schema-nav-#{$schema-name} {
         @include colour-schema-nav (#{$colour});
     }
 }
 
-// vvv Deprecates this vvv
-
-// .schema-nav-seagrey { @include colour-schema-nav ($col-seagrey); }
-// .schema-nav-blue    { @include colour-schema-nav ($col-blue); }
-// .schema-nav-green   { @include colour-schema-nav ($col-green); }
-// .schema-nav-red     { @include colour-schema-nav ($col-red); }
-// .schema-nav-purple  { @include colour-schema-nav ($col-purple); }
-// .schema-nav-pink    { @include colour-schema-nav ($col-pink); }

@@ -17,7 +17,6 @@ $af-height: 45px;
     @media (max-width: $bp-sm) {
         display: none;
     }
-
     .af {
         flex-basis: auto;
         flex-shrink: 1;
@@ -27,7 +26,6 @@ $af-height: 45px;
         }
         img {
             padding: 0 20px;
-            box-sizing: border-box;
             max-width: 100%;
             &:nth-of-type(1) {
                 display: inline-block;
@@ -36,48 +34,7 @@ $af-height: 45px;
                 display: none;
             }
         }
-        >div {
-            display: none;
-            position: absolute;
-            bottom: 125px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 260px;
-            height: auto;
-            text-align: center;
-            background-color: $bg-dark;
-            box-sizing: border-box;
-            padding: 20px;
-            >div {
-                transform: rotateZ(45deg);
-                background-color:  $bg-dark;
-                width: 30px;
-                height: 30px;
-                box-sizing: border-box;
-                position: absolute;
-                bottom: -14px;
-                left: 112px;
-            }
-        }
-        h4 {
-            font-size: 18px;
-            margin-top: 0;
-            margin-bottom: 14px;
-        }
-        p { 
-            font-size: 13px;
-            margin-top: 11px;
-            margin-bottom: 0;
-        }
-        span {
-            width:28px;
-            height: 3px;
-            margin: auto;
-            background-color: white;
-            display: block;
-        }
-    } 
-
+    }
     .changable:hover {
         cursor: pointer;
         >img:nth-of-type(1) {
@@ -86,9 +43,59 @@ $af-height: 45px;
         >img:nth-of-type(2) {
             display: inline-block;
         }
-        >div {
+        .popup-ctnr, .affi-popup {
             display: block;
         }
     }
 
-}
+    $popup-width: 260px;
+    $container-width: 750px;
+    $popup-offset-b: 50px;
+    .popup-ctnr {
+        display: none;
+        $padding-x: calc((#{$container-width} - #{$popup-width}) / 2);
+        padding: 0 $padding-x $popup-offset-b;
+        width: $container-width;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        bottom: 70px;
+        transform: translateX(-50%);
+    }
+    .affi-popup {
+        display: block;
+        position: absolute;
+        bottom: 50px;
+        width: 260px;
+        height: auto;
+        text-align: center;
+        background-color: $bg-dark;
+        padding: 20px;
+        >div {
+            transform: rotateZ(45deg);
+            background-color:  $bg-dark;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            bottom: -14px;
+            left: 112px;
+        }
+    }
+    h4 {
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 14px;
+    }
+    p { 
+        font-size: 13px;
+        margin-top: 11px;
+        margin-bottom: 0;
+    }
+    span {
+        width:28px;
+        height: 3px;
+        margin: auto;
+        background-color: white;
+        display: block;
+    }
+} 

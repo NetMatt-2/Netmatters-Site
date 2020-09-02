@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            box-sizing: content-box;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: green;
+        }
+        .container:hover {
+            padding: 200px;
+        }
+        .container:hover .hover {
+            background-color: red;
+        }
+        .hover {
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+        }
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    
+    <div class=container>
+        <div class=hover></div>
+    </div>
+
+
+
+</body>
+</html>

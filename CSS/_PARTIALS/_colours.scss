@@ -5,16 +5,6 @@ $grey-md: rgb(204, 204, 204);
 $grey-md-dk: rgb(153,154,162);
 $grey-dk: rgb(116, 116, 116);
 
-
-//Schema colours
-$col-seagrey:rgb(103,128,159);
-$col-blue:rgb(65,131,215);
-$col-green:rgb(46,204,113);
-$col-red:rgb(214,69,65);
-$col-purple:rgb(146,111,177);
-$col-pink:rgb(246,36,89);
-
-
 $colours: (
     'seagrey':rgb(103,128,159),
     'blue':rgb(65,131,215),
@@ -23,3 +13,41 @@ $colours: (
     'purple':rgb(146,111,177),
     'pink':rgb(246,36,89),
 );
+
+$strArr-bannerColours: ('purple', 'blue', 'red', 'seagrey', 'green', 'pink');
+
+
+
+
+
+//////////////
+/*  NOTES:  */
+//////////////
+
+//////////////////////////////////////////////////
+/*  Create a bunch of classes from the colours  */ 
+/*  listed in $colours:                         */
+//////////////////////////////////////////////////
+
+//@each $schema-name, $colour in $colours {     //<== $schema-name being the key to the key-value pair listed in the map
+//    .schema-news-#{$schema-name} {
+//        @include colour-schema-news ($colour);
+//    }
+//}
+
+//////////////////////////////////////////////////
+/*  Alternatively, write a string-array and     */
+/*  iterate through that to get the appropriate */
+/*  colours out of the map:                     */
+//////////////////////////////////////////////////
+
+// $strArr-bannerColours: ('purple', 'blue', 'red', 'seagrey', 'green', 'pink');
+
+//@for $i from 1 through 6 {
+//    .cat:nth-child(#{$i}):hover {
+//        background-color: map-get($colours, #{nth($strArr-bannerColours, $i)});
+//    }
+//    .flex-container .h-list:nth-of-type(#{$i}) {
+//        background-color: darken(map-get($colours, #{nth($strArr-bannerColours, $i)}), 12);
+//    }
+//}

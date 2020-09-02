@@ -1,23 +1,431 @@
+@charset "UTF-8";
 * {
   font-family: "Poppins", sans-serif;
 }
 
-* {
+/*  NOTES:  */
+/*  Create a bunch of classes from the colours  */
+/*  listed in $colours:                         */
+/*  Alternatively, write a string-array and     */
+/*  iterate through that to get the appropriate */
+/*  colours out of the map:                     */
+.btn-base {
+  border-radius: 5px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.btn-base img {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn-base p {
+  margin: 0;
+}
+
+.btn-base, .btn-base p {
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.btn-header {
+  -ms-flex-preferred-size: 60px;
+      flex-basis: 60px;
+  font-size: 18px;
+}
+
+.btn-header img {
+  height: 24px;
+  width: 24px;
+}
+
+#btn-support {
+  background-color: #4183d7;
+}
+
+#btn-support:hover {
+  background-color: #286abd;
+}
+
+#btn-contact {
+  background-color: #999aa2;
+}
+
+#btn-contact:hover {
+  background-color: #7e808a;
+}
+
+#btn-support, #btn-contact {
+  display: none;
+}
+
+#btn-support img, #btn-contact img {
+  left: 20px;
+}
+
+#btn-support p, #btn-contact p {
+  margin-left: 40px;
+}
+
+@media (min-width: 992px) {
+  #btn-support, #btn-contact {
+    display: block;
+    -ms-flex-preferred-size: calc((100% - 20px) / 2);
+        flex-basis: calc((100% - 20px) / 2);
+  }
+  #btn-support p, #btn-contact p {
+    height: 56px;
+    line-height: 56px;
+  }
+}
+
+#btn-menuburger {
+  background-color: #333645;
+}
+
+#btn-menuburger:hover {
+  background-color: #1d1f28;
+}
+
+#btn-menuburger img {
+  top: 20px;
+  max-height: 25px;
+  width: 60px;
+}
+
+#btn-menuburger p {
+  height: initial;
+  line-height: initial;
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  font-size: 12px;
+}
+
+#btn-search {
+  background-color: #999aa2;
+}
+
+#btn-search:hover {
+  background-color: #7e808a;
+}
+
+#btn-search img:nth-child(1) {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+#btn-search img:nth-child(2) {
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+
+#btn-search:hover {
+  background-color: #7e808a;
+}
+
+#btn-search, #btn-phone {
+  border: none;
+}
+
+.btn-slide {
+  height: 60px;
+  line-height: 60px;
+  width: 224px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .btn-slide {
+    margin-left: 0;
+  }
+}
+
+#slideBtn-webDesign {
+  background-color: #926fb1;
+}
+
+#slideBtn-webDesign:hover {
+  background-color: #79539a;
+}
+
+#slideBtn-ITSupport {
+  background-color: #4183d7;
+}
+
+#slideBtn-ITSupport:hover {
+  background-color: #286abd;
+}
+
+#slideBtn-telecomsServices {
+  background-color: #d64541;
+}
+
+#slideBtn-telecomsServices:hover {
+  background-color: #bc2c28;
+}
+
+#slideBtn-bespokeSoftware {
+  background-color: #67809f;
+}
+
+#slideBtn-bespokeSoftware:hover {
+  background-color: #526781;
+}
+
+#slideBtn-digitalMarketing {
+  background-color: #2ecc71;
+}
+
+#slideBtn-digitalMarketing:hover {
+  background-color: #25a25a;
+}
+
+#slideBtn-cyberSecurity {
+  background-color: #f62459;
+}
+
+#slideBtn-cyberSecurity:hover {
+  background-color: #de093f;
+}
+
+#btn-about {
+  width: 173.19px;
+  margin-bottom: 20px;
+  background-color: white;
+  color: #333645;
+}
+
+#btn-about:hover {
+  background-color: #e6e6e6;
+}
+
+.btn-readmore-news {
+  margin-top: 30px;
+  width: 100px;
+}
+
+.btn-socMed {
+  border-radius: 0;
+  margin-top: 30px;
+  background-color: #1d1f28;
+}
+
+.btn-socMed:hover {
+  background-color:  ();
+}
+
+.btn-socMed img {
+  width: 30px;
+  height: 30px;
+}
+
+#cookie-settings button, #cookie-settings .btn-ctnr {
+  height: 46.4px;
+  line-height: 46.4px;
+}
+
+#cookie-settings .btn-ctnr button {
+  text-transform: uppercase;
+  width: 90px;
+  display: inline-block;
+  color: black;
+}
+
+#cookie-settings .btn-ctnr button:first-of-type:before {
+  content: "Disable";
+}
+
+#cookie-settings .btn-ctnr button:last-of-type:before {
+  content: "Enable";
+}
+
+/*  NOTES:  */
+/*  Create a bunch of classes from the colours  */
+/*  listed in $colours:                         */
+/*  Alternatively, write a string-array and     */
+/*  iterate through that to get the appropriate */
+/*  colours out of the map:                     */
+#cookie-popup {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #666666;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  z-index: 1000000;
+  padding: 30px;
+  height: 100%;
+}
+
+#cookie-popup .thingy {
+  border-radius: 5px;
+  background-color: white;
+  height: auto;
+  position: absolute;
+  width: calc(100% - (30px * 2));
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#cookie-popup h3, #cookie-popup .text-ctnr, #cookie-popup .link-ctnr {
+  padding: 20px;
+}
+
+#cookie-popup .text-ctnr {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+#cookie-popup h3 {
+  margin: 0;
+  color: #333645;
+  font-size: 26px;
+}
+
+#cookie-popup p {
+  line-height: 30px;
+}
+
+#cookie-popup p:first-of-type {
+  margin-top: 0;
+}
+
+#cookie-popup p:last-of-type {
+  margin-bottom: 0;
+}
+
+#cookie-popup .link-ctnr {
+  width: 100%;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#cookie-popup a {
+  width: 100%;
+  height: 46.4px;
+  line-height: 46.4px;
+  font-size: 17px;
+}
+
+#cookie-popup a:first-of-type {
+  float: left;
+  background-color: #999aa2;
+  margin-bottom: 30px;
+}
+
+#cookie-popup a:last-of-type {
+  float: right;
+  background-color: #926fb1;
+}
+
+@media (min-width: 768px) {
+  #cookie-popup .thingy {
+    width: 600px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  #cookie-popup a {
+    width: calc(50% - 15px);
+  }
+  #cookie-popup a:first-of-type {
+    margin: 0;
+  }
+}
+
+#cookie-settings {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000001;
+  background-color: white;
+  padding: 15px;
+}
+
+#cookie-settings p {
+  font-size: 14px;
+}
+
+#cookie-settings h3 {
+  font-size: 26px;
+}
+
+#cookie-settings h1 {
+  font-size: 36px;
+}
+
+#cookie-settings h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#cookie-settings table {
+  overflow-x: scroll;
+}
+
+#cookie-settings table tr {
+  background: #ddd;
+}
+
+#cookie-settings table tr:first-of-type {
+  background: #aaa;
+}
+
+#cookie-settings table th {
+  color: white;
+}
+
+#cookie-settings table th, #cookie-settings table td {
+  padding: 15px;
+  line-height: 1;
+}
+
+#cookie-settings table td, #cookie-settings table a {
+  color: #666;
+}
+
+#cookie-settings table a:first-of-type:before {
+  content: "+";
+}
+
+@media (min-width: 768px) {
+  #cookie-settings .content-ctnr {
+    width: 750px;
+    margin: auto;
+  }
+}
+
+/*  NOTES:  */
+/*  Create a bunch of classes from the colours  */
+/*  listed in $colours:                         */
+/*  Alternatively, write a string-array and     */
+/*  iterate through that to get the appropriate */
+/*  colours out of the map:                     */
+header * {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
 }
 
-header {
+.header-wrapper {
   background-color: white;
   width: 100%;
   height: auto;
   padding: 20px 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,94 +459,7 @@ header {
   cursor: pointer;
 }
 
-.btn, .btn img {
-  border: none;
-  border-radius: 5px;
-}
-
-.btn {
-  -ms-flex-preferred-size: 60px;
-      flex-basis: 60px;
-  height: 60px;
-  position: relative;
-  text-decoration: none;
-}
-
-.btn img {
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  top: calc((60px - 40px) / 2);
-  left: calc((60px - 40px) / 2);
-}
-
-.btn p {
-  color: white;
-  text-transform: uppercase;
-  margin-left: 60px;
-}
-
-.btn-support, .btn-contact {
-  display: none;
-  color: white;
-  border: none;
-}
-
-.btn-support {
-  background-color: #4183d7;
-}
-
-.btn-support:hover {
-  background-color: #286abd;
-}
-
-.btn-contact {
-  background-color: #999aa2;
-}
-
-.btn-contact:hover {
-  background-color: #7e808a;
-}
-
-.menuburger, .btn-search {
-  -ms-flex-preferred-size: 60px;
-      flex-basis: 60px;
-  width: 60px;
-}
-
-.menuburger:hover, .btn-search:hover {
-  cursor: pointer;
-}
-
-.menuburger {
-  background-color: #333645;
-  color: white;
-  padding: 0;
-}
-
-.menuburger:hover {
-  background-color: #1d1f28;
-}
-
-.menuburger div {
-  height: 60px;
-}
-
-.menuburger img {
-  max-height: 25px;
-  width: 60px;
-  left: 0px;
-}
-
-.menuburger p {
-  position: absolute;
-  top: 40px;
-  margin: 0;
-  width: 40px;
-  left: 10px;
-}
-
-.navbar-opts, .menuburger {
+.navbar-opts, #btn-menuburger {
   -ms-flex-preferred-size: 60px;
       flex-basis: 60px;
   margin-left: 20px;
@@ -150,10 +471,8 @@ header {
   display: flex;
 }
 
-.searchbar, .inp-search, .btn-search {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 60px;
+.searchbar, .inp-search {
+  height: 56px;
   border: none;
 }
 
@@ -178,27 +497,11 @@ header {
   width: 100%;
 }
 
-.btn-search {
-  -ms-flex-preferred-size: 60px;
-      flex-basis: 60px;
-  background-color: #999aa2;
-  padding: 0;
-}
-
-.btn-search img:nth-child(1) {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-}
-
-.btn-search img:nth-child(2) {
-  display: none;
-  width: 20px;
-  height: 20px;
-}
-
-.btn-search:hover {
-  background-color: #7e808a;
+.inp-search:focus {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 @media (max-width: 768px) {
@@ -209,19 +512,15 @@ header {
   .inp-search {
     width: 100%;
   }
-  .searchbar, .inp-search, .btn-search {
+  .searchbar, .inp-search, #btn-search {
     background-color: #e5e5e5;
     height: 40px;
   }
-  .btn-search img:nth-child(1) {
+  #btn-search img:nth-child(1) {
     display: none;
-    width: 40px;
-    height: 40px;
   }
-  .btn-search img:nth-child(2) {
+  #btn-search img:nth-child(2) {
     display: inline-block;
-    width: 20px;
-    height: 20px;
   }
 }
 
@@ -234,14 +533,21 @@ header {
   .navbar-opts {
     display: none;
   }
-  .menuburger {
+  #btn-menuburger {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
+  #btn-search {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
   .searchbar {
-    -ms-flex-preferred-size: 200px;
-        flex-basis: 200px;
+    -ms-flex-preferred-size: 234px;
+        flex-basis: 234px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .inp-search {
     border-width: 1px;
@@ -249,8 +555,10 @@ header {
     border-color: #cccccc;
     width: calc(100% - 60px);
   }
-  .btn-search {
-    border-radius: 4px;
+  .inp-search:focus {
+    border: 1px solid #5bc0de;
+    -webkit-box-shadow: 0 0 8px 0 rgba(91, 192, 222, 0.75);
+            box-shadow: 0 0 8px 0 rgba(91, 192, 222, 0.75);
   }
 }
 
@@ -269,38 +577,29 @@ header {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .btn-phone {
+  #btn-phone {
     display: none;
-  }
-  .btn-support, .btn-contact {
-    display: block;
-    -ms-flex-preferred-size: calc((100% - 20px) / 2);
-        flex-basis: calc((100% - 20px) / 2);
-  }
-  .btn-support p, .btn-contact p {
-    height: 60px;
-    line-height: 60px;
-    margin: 0;
-    text-align: center;
-    padding-left: 50px;
   }
   .searchbar {
     -ms-flex-preferred-size: 60px;
         flex-basis: 60px;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
     margin-left: 20px;
   }
   .inp-search {
     display: none;
   }
-  .btn-search img:nth-child(1) {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
+  #btn-search {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
   }
-  .btn-search img:nth-child(2) {
+  #btn-search img:nth-child(1) {
+    display: inline-block;
+  }
+  #btn-search img:nth-child(2) {
     display: none;
-    width: 20px;
-    height: 20px;
   }
 }
 
@@ -309,14 +608,24 @@ header {
     width: calc(1260px - (2 * 20px));
   }
   .searchbar {
-    -ms-flex-preferred-size: 200px;
-        flex-basis: 200px;
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+  }
+  #btn-search {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
   .inp-search {
     display: inline-block;
   }
 }
 
+/*  NOTES:  */
+/*  Create a bunch of classes from the colours  */
+/*  listed in $colours:                         */
+/*  Alternatively, write a string-array and     */
+/*  iterate through that to get the appropriate */
+/*  colours out of the map:                     */
 #banner-menu {
   display: none;
   height: 97.6px;
@@ -438,39 +747,94 @@ header {
   display: initial;
 }
 
-#banner-menu .cat:hover + * + * + * + * + * + * {
+#banner-menu .cat:hover .h-list-ctnr, #banner-menu .cat:hover .h-list {
   display: block;
 }
 
-#banner-menu .h-list {
+#banner-menu .cat:nth-child(1):hover {
+  background-color: #926fb1;
+}
+
+#banner-menu .cat:nth-child(1) .h-list-ctnr .h-list {
+  background-color: #735093;
+}
+
+#banner-menu .cat:nth-child(2):hover {
+  background-color: #4183d7;
+}
+
+#banner-menu .cat:nth-child(2) .h-list-ctnr .h-list {
+  background-color: #2665b5;
+}
+
+#banner-menu .cat:nth-child(3):hover {
+  background-color: #d64541;
+}
+
+#banner-menu .cat:nth-child(3) .h-list-ctnr .h-list {
+  background-color: #b32a27;
+}
+
+#banner-menu .cat:nth-child(4):hover {
+  background-color: #67809f;
+}
+
+#banner-menu .cat:nth-child(4) .h-list-ctnr .h-list {
+  background-color: #4e627b;
+}
+
+#banner-menu .cat:nth-child(5):hover {
+  background-color: #2ecc71;
+}
+
+#banner-menu .cat:nth-child(5) .h-list-ctnr .h-list {
+  background-color: #239a55;
+}
+
+#banner-menu .cat:nth-child(6):hover {
+  background-color: #f62459;
+}
+
+#banner-menu .cat:nth-child(6) .h-list-ctnr .h-list {
+  background-color: #d4093c;
+}
+
+#banner-menu .h-list-ctnr {
   position: absolute;
-  z-index: 1000000000;
+  width: calc(100% * 10);
+  left: calc(calc((calc(100% * 10) - 100%) / 2) * -1);
   top: 97.6px;
-  width: 1000%;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: left;
+  padding-bottom: 90px;
   display: none;
-  left: calc(calc((1000% - 100%) / 2) * -1);
-  padding-left: calc((1000% - 100%) / 2);
-  padding-right: calc((1000% - 100%) / 2);
+  z-index: 1001;
 }
 
-#banner-menu .h-list li {
+#banner-menu .h-list-ctnr > * {
+  position: absolute;
+  padding-left: calc( (100% - (100% / 10)) / 2);
+  padding-right: calc( (100% - (100% / 10)) / 2);
+  width: 100%;
+}
+
+#banner-menu .h-list-ctnr .h-list {
+  z-index: 1000;
+  top: 0;
+  margin: 0;
+  text-align: left;
+}
+
+#banner-menu .h-list-ctnr .h-list li {
   display: inline-block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
-#banner-menu .h-list li:not(:last-of-type)::after {
+#banner-menu .h-list-ctnr .h-list li:not(:last-of-type)::after {
   content: "-";
   padding-left: 20px;
   padding-right: 20px;
   color: white;
 }
 
-#banner-menu .h-list a {
+#banner-menu .h-list-ctnr .h-list a {
   color: white;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
@@ -480,60 +844,18 @@ header {
 }
 
 @media (min-width: 1260px) {
-  #banner-menu .h-list a {
+  #banner-menu .h-list-ctnr .h-list a {
     font-size: 16px;
   }
 }
 
-#banner-menu .cat:nth-child(1):hover {
-  background-color: #926fb1;
-}
-
-#banner-menu .flex-container .h-list:nth-of-type(1) {
-  background-color: #735093;
-}
-
-#banner-menu .cat:nth-child(2):hover {
-  background-color: #4183d7;
-}
-
-#banner-menu .flex-container .h-list:nth-of-type(2) {
-  background-color: #2665b5;
-}
-
-#banner-menu .cat:nth-child(3):hover {
-  background-color: #d64541;
-}
-
-#banner-menu .flex-container .h-list:nth-of-type(3) {
-  background-color: #b32a27;
-}
-
-#banner-menu .cat:nth-child(4):hover {
-  background-color: #67809f;
-}
-
-#banner-menu .flex-container .h-list:nth-of-type(4) {
-  background-color: #4e627b;
-}
-
-#banner-menu .cat:nth-child(5):hover {
-  background-color: #2ecc71;
-}
-
-#banner-menu .flex-container .h-list:nth-of-type(5) {
-  background-color: #239a55;
-}
-
-#banner-menu .cat:nth-child(6):hover {
-  background-color: #f62459;
-}
-
-#banner-menu .flex-container .h-list:nth-of-type(6) {
-  background-color: #d4093c;
-}
-
-.splash, .splash img, .splash img + div {
+/*  NOTES:  */
+/*  Create a bunch of classes from the colours  */
+/*  listed in $colours:                         */
+/*  Alternatively, write a string-array and     */
+/*  iterate through that to get the appropriate */
+/*  colours out of the map:                     */
+.splash, .slide, .slide img, .slide img + div {
   width: 100%;
   height: 500px;
 }
@@ -542,12 +864,28 @@ header {
   position: relative;
 }
 
-.splash img {
+#dotHolder {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  bottom: 20%;
+}
+
+#dotHolder button {
+  padding: 0;
+}
+
+.slide {
+  position: relative;
+}
+
+.slide img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.splash img + div {
+.slide img + div {
   position: absolute;
   background-image: -webkit-gradient(linear, left top, right top, from(black), color-stop(25%, rgba(63, 63, 63, 0.5)));
   background-image: linear-gradient(to right, black, rgba(63, 63, 63, 0.5) 25%);
@@ -555,7 +893,7 @@ header {
   left: 0;
 }
 
-.splash-text {
+.slide-text {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -566,61 +904,49 @@ header {
   font-size: 20px;
 }
 
-.splash-text * {
+.slide-text * {
   color: white;
 }
 
-.splash-text h2 {
+.slide-text h2 {
   text-transform: uppercase;
   font-size: 48px;
   margin: 0;
 }
 
-.splash-text p {
+.slide-text p {
   margin: 50px 0;
-}
-
-.splash-text a {
-  padding: 20px 20px;
-  border-radius: 5px;
-  width: auto;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  color: white;
-  background-color: #67809f;
-}
-
-.splash-text a:hover {
-  background-color: #526781;
 }
 
 /*Fixed size, text-align center*/
 @media (min-width: 992px) {
-  .splash-text {
+  .slide-text {
     -webkit-transform: translate(calc(0px - (992px / 2) + 20px), -50%);
     transform: translate(calc(0px - (992px / 2) + 20px), -50%);
     text-align: left;
   }
-  .splash-text, .splash-text h2, .splash-text p {
+  .slide-text, .slide-text h2, .slide-text p {
     width: calc(992px - (2 * 20px));
   }
 }
 
 @media (min-width: 1260px) {
-  .splash-text {
+  .slide-text {
     -webkit-transform: translate(calc(0px - (1260px / 2) + 20px), -50%);
     transform: translate(calc(0px - (1260px / 2) + 20px), -50%);
     text-align: left;
   }
-  .splash-text, .splash-text h2, .splash-text p {
+  .slide-text, .slide-text h2, .slide-text p {
     width: calc(1260px - (2 * 20px));
   }
 }
 
+/*  NOTES:  */
+/*  Create a bunch of classes from the colours  */
+/*  listed in $colours:                         */
+/*  Alternatively, write a string-array and     */
+/*  iterate through that to get the appropriate */
+/*  colours out of the map:                     */
 @supports not (-ms-high-contrast: none) {
   /* Non-IE styles here */
   .nav-mid {
@@ -731,8 +1057,6 @@ header {
 
 .nav-mid .icon {
   padding: 18px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   border-radius: 50%;
   height: 60px;
   width: 60px;
@@ -742,6 +1066,14 @@ header {
 .nav-mid .icon img {
   max-width: 100%;
   height: auto;
+}
+
+.nav-mid .icon img:nth-child(1) {
+  display: inline-block;
+}
+
+.nav-mid .icon img:nth-child(2) {
+  display: none;
 }
 
 .nav-mid .readmore {
@@ -755,22 +1087,32 @@ header {
   line-height: 35px;
   text-align: center;
   color: white;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
 }
 
-.schema-nav-seagrey .readmore, .schema-nav-seagrey .icon {
-  background-color: #67809f;
+.nav-mid .panel:hover .readmore, .nav-mid .panel:hover .icon {
+  background-color: white;
 }
 
-.schema-nav-seagrey .icon img:nth-child(1) {
+.nav-mid .panel:hover h2, .nav-mid .panel:hover p {
+  color: white;
+}
+
+.nav-mid .panel:hover span {
+  background-color: white;
+}
+
+.nav-mid .panel:hover .icon img:nth-child(1) {
+  display: none;
+}
+
+.nav-mid .panel:hover .icon img:nth-child(2) {
   display: inline-block;
 }
 
-.schema-nav-seagrey .icon img:nth-child(2) {
-  display: none;
+.schema-nav-seagrey .readmore, .schema-nav-seagrey .icon {
+  background-color: #67809f;
 }
 
 .schema-nav-seagrey:hover {
@@ -781,36 +1123,8 @@ header {
   color: #67809f;
 }
 
-.schema-nav-seagrey:hover .readmore, .schema-nav-seagrey:hover .icon {
-  background-color: white;
-}
-
-.schema-nav-seagrey:hover h2, .schema-nav-seagrey:hover p {
-  color: white;
-}
-
-.schema-nav-seagrey:hover span {
-  background-color: white;
-}
-
-.schema-nav-seagrey:hover .icon img:nth-child(1) {
-  display: none;
-}
-
-.schema-nav-seagrey:hover .icon img:nth-child(2) {
-  display: inline-block;
-}
-
 .schema-nav-blue .readmore, .schema-nav-blue .icon {
   background-color: #4183d7;
-}
-
-.schema-nav-blue .icon img:nth-child(1) {
-  display: inline-block;
-}
-
-.schema-nav-blue .icon img:nth-child(2) {
-  display: none;
 }
 
 .schema-nav-blue:hover {
@@ -821,36 +1135,8 @@ header {
   color: #4183d7;
 }
 
-.schema-nav-blue:hover .readmore, .schema-nav-blue:hover .icon {
-  background-color: white;
-}
-
-.schema-nav-blue:hover h2, .schema-nav-blue:hover p {
-  color: white;
-}
-
-.schema-nav-blue:hover span {
-  background-color: white;
-}
-
-.schema-nav-blue:hover .icon img:nth-child(1) {
-  display: none;
-}
-
-.schema-nav-blue:hover .icon img:nth-child(2) {
-  display: inline-block;
-}
-
 .schema-nav-green .readmore, .schema-nav-green .icon {
   background-color: #2ecc71;
-}
-
-.schema-nav-green .icon img:nth-child(1) {
-  display: inline-block;
-}
-
-.schema-nav-green .icon img:nth-child(2) {
-  display: none;
 }
 
 .schema-nav-green:hover {
@@ -861,36 +1147,8 @@ header {
   color: #2ecc71;
 }
 
-.schema-nav-green:hover .readmore, .schema-nav-green:hover .icon {
-  background-color: white;
-}
-
-.schema-nav-green:hover h2, .schema-nav-green:hover p {
-  color: white;
-}
-
-.schema-nav-green:hover span {
-  background-color: white;
-}
-
-.schema-nav-green:hover .icon img:nth-child(1) {
-  display: none;
-}
-
-.schema-nav-green:hover .icon img:nth-child(2) {
-  display: inline-block;
-}
-
 .schema-nav-red .readmore, .schema-nav-red .icon {
   background-color: #d64541;
-}
-
-.schema-nav-red .icon img:nth-child(1) {
-  display: inline-block;
-}
-
-.schema-nav-red .icon img:nth-child(2) {
-  display: none;
 }
 
 .schema-nav-red:hover {
@@ -901,36 +1159,8 @@ header {
   color: #d64541;
 }
 
-.schema-nav-red:hover .readmore, .schema-nav-red:hover .icon {
-  background-color: white;
-}
-
-.schema-nav-red:hover h2, .schema-nav-red:hover p {
-  color: white;
-}
-
-.schema-nav-red:hover span {
-  background-color: white;
-}
-
-.schema-nav-red:hover .icon img:nth-child(1) {
-  display: none;
-}
-
-.schema-nav-red:hover .icon img:nth-child(2) {
-  display: inline-block;
-}
-
 .schema-nav-purple .readmore, .schema-nav-purple .icon {
   background-color: #926fb1;
-}
-
-.schema-nav-purple .icon img:nth-child(1) {
-  display: inline-block;
-}
-
-.schema-nav-purple .icon img:nth-child(2) {
-  display: none;
 }
 
 .schema-nav-purple:hover {
@@ -941,36 +1171,8 @@ header {
   color: #926fb1;
 }
 
-.schema-nav-purple:hover .readmore, .schema-nav-purple:hover .icon {
-  background-color: white;
-}
-
-.schema-nav-purple:hover h2, .schema-nav-purple:hover p {
-  color: white;
-}
-
-.schema-nav-purple:hover span {
-  background-color: white;
-}
-
-.schema-nav-purple:hover .icon img:nth-child(1) {
-  display: none;
-}
-
-.schema-nav-purple:hover .icon img:nth-child(2) {
-  display: inline-block;
-}
-
 .schema-nav-pink .readmore, .schema-nav-pink .icon {
   background-color: #f62459;
-}
-
-.schema-nav-pink .icon img:nth-child(1) {
-  display: inline-block;
-}
-
-.schema-nav-pink .icon img:nth-child(2) {
-  display: none;
 }
 
 .schema-nav-pink:hover {
@@ -981,26 +1183,12 @@ header {
   color: #f62459;
 }
 
-.schema-nav-pink:hover .readmore, .schema-nav-pink:hover .icon {
-  background-color: white;
-}
-
-.schema-nav-pink:hover h2, .schema-nav-pink:hover p {
-  color: white;
-}
-
-.schema-nav-pink:hover span {
-  background-color: white;
-}
-
-.schema-nav-pink:hover .icon img:nth-child(1) {
-  display: none;
-}
-
-.schema-nav-pink:hover .icon img:nth-child(2) {
-  display: inline-block;
-}
-
+/*  NOTES:  */
+/*  Create a bunch of classes from the colours  */
+/*  listed in $colours:                         */
+/*  Alternatively, write a string-array and     */
+/*  iterate through that to get the appropriate */
+/*  colours out of the map:                     */
 .about {
   background-color: #333645;
   background-repeat: no-repeat;
@@ -1008,8 +1196,6 @@ header {
   background-position: 50% 50%;
   height: auto;
   padding: 30px 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .about .about {
@@ -1017,8 +1203,6 @@ header {
 }
 
 .about-text {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   line-height: 1.8;
   margin: auto;
   width: 100%;
@@ -1046,25 +1230,6 @@ header {
   font-weight: 600;
 }
 
-.about-text a {
-  padding: 10px 20px;
-  border-radius: 5px;
-  width: auto;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: inline-block;
-  color: #333645;
-  background-color: white;
-  margin-bottom: 20px;
-}
-
-.about-text a:hover {
-  background-color: #e6e6e6;
-}
-
 @media (min-width: 768px) {
   .about-text {
     width: calc(768px - (2 * 20px));
@@ -1089,6 +1254,12 @@ header {
   }
 }
 
+/*  NOTES:  */
+/*  Create a bunch of classes from the colours  */
+/*  listed in $colours:                         */
+/*  Alternatively, write a string-array and     */
+/*  iterate through that to get the appropriate */
+/*  colours out of the map:                     */
 .latest-heading {
   margin: auto;
 }
@@ -1187,6 +1358,7 @@ header {
 }
 
 .newspanel {
+  position: relative;
   background-color: white;
   border: solid #cccccc 1px;
   border-radius: 4px;
@@ -1238,6 +1410,11 @@ header {
   margin-bottom: 30px;
   font-weight: 600;
   background-color: transparent;
+  text-decoration: none;
+}
+
+.newspanel .text-container a:nth-of-type(1):hover {
+  text-decoration: underline;
 }
 
 .newspanel .text-container p {
@@ -1285,6 +1462,11 @@ header {
   margin: 0;
 }
 
+.newspanel .btn-readmore {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
 @media (min-width: 768px) {
   .latest {
     padding-top: 50px;
@@ -1319,78 +1501,162 @@ header {
   }
 }
 
-.schema-news-seagrey a:nth-of-type(1) {
-  color: #67809f;
+/*  NOTES:  */
+/*  Create a bunch of classes from the colours  */
+/*  listed in $colours:                         */
+/*  Alternatively, write a string-array and     */
+/*  iterate through that to get the appropriate */
+/*  colours out of the map:                     */
+.news-tag {
+  top: 10px;
+  right: 0;
+  padding: 0 10px;
+  position: absolute;
+  z-index: 100;
+  height: 22px;
+  width: auto;
 }
 
-.schema-news-seagrey a:not(:nth-of-type(1)) {
-  background-color: #67809f;
+.news-tag:hover a {
+  text-decoration: underline;
 }
 
-.schema-news-seagrey a:not(:nth-of-type(1)):hover {
-  background-color: #526781;
+.news-tag:hover > .description-ctnr {
+  display: block;
 }
 
-.schema-news-blue a:nth-of-type(1) {
-  color: #4183d7;
+.news-tag a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  height: 22px;
+  line-height: 22px;
+  bottom: 4px;
 }
 
-.schema-news-blue a:not(:nth-of-type(1)) {
-  background-color: #4183d7;
+.news-tag a:before {
+  text-transform: uppercase;
+  height: 22px;
+  line-height: 22px;
 }
 
-.schema-news-blue a:not(:nth-of-type(1)):hover {
-  background-color: #286abd;
+.description-ctnr {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+  bottom: 32px;
 }
 
-.schema-news-green a:nth-of-type(1) {
-  color: #2ecc71;
+.description-ctnr > div:first-child {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  width: 200px;
+  height: auto;
+  text-align: center;
+  background-color: #333645;
+  padding: 10px 15px;
+  color: white;
+  font-size: 12px;
 }
 
-.schema-news-green a:not(:nth-of-type(1)) {
-  background-color: #2ecc71;
+.description-ctnr > div:last-child {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform: rotateZ(45deg) translateX(-50%);
+          transform: rotateZ(45deg) translateX(-50%);
+  background-color: #333645;
+  width: 10px;
+  height: 10px;
+  bottom: -8px;
+  z-index: -1;
 }
 
-.schema-news-green a:not(:nth-of-type(1)):hover {
-  background-color: #25a25a;
-}
-
-.schema-news-red a:nth-of-type(1) {
-  color: #d64541;
-}
-
-.schema-news-red a:not(:nth-of-type(1)) {
-  background-color: #d64541;
-}
-
-.schema-news-red a:not(:nth-of-type(1)):hover {
-  background-color: #bc2c28;
-}
-
-.schema-news-purple a:nth-of-type(1) {
-  color: #926fb1;
-}
-
-.schema-news-purple a:not(:nth-of-type(1)) {
+.panel-category-news .news-tag {
   background-color: #926fb1;
 }
 
-.schema-news-purple a:not(:nth-of-type(1)):hover {
+.panel-category-news .news-tag a:before {
+  content: "news";
+}
+
+.panel-category-news .news-tag > .description-ctnr > div:first-child:before {
+  content: "views news here or whatever";
+}
+
+.panel-category-news .text-container a:first-of-type {
+  color: #926fb1;
+}
+
+.panel-category-news .text-container a:last-of-type {
+  background-color: #926fb1;
+}
+
+.panel-category-news .text-container a:last-of-type:hover {
   background-color: #79539a;
 }
 
-.schema-news-pink a:nth-of-type(1) {
-  color: #f62459;
+.panel-category-careers .news-tag {
+  background-color: #67809f;
 }
 
-.schema-news-pink a:not(:nth-of-type(1)) {
-  background-color: #f62459;
+.panel-category-careers .news-tag a:before {
+  content: "careers";
 }
 
-.schema-news-pink a:not(:nth-of-type(1)):hover {
-  background-color: #de093f;
+.panel-category-careers .news-tag > .description-ctnr > div:first-child:before {
+  content: "views careers here or whatever";
 }
 
+.panel-category-careers .text-container a:first-of-type {
+  color: #67809f;
+}
+
+.panel-category-careers .text-container a:last-of-type {
+  background-color: #67809f;
+}
+
+.panel-category-careers .text-container a:last-of-type:hover {
+  background-color: #526781;
+}
+
+.panel-category-portfolio .news-tag {
+  background-color: #d64541;
+}
+
+.panel-category-portfolio .news-tag a:before {
+  content: "portfolios";
+}
+
+.panel-category-portfolio .news-tag > .description-ctnr > div:first-child:before {
+  content: "views portfolios here or whatever";
+}
+
+.panel-category-portfolio .text-container a:first-of-type {
+  color: #d64541;
+}
+
+.panel-category-portfolio .text-container a:last-of-type {
+  background-color: #d64541;
+}
+
+.panel-category-portfolio .text-container a:last-of-type:hover {
+  background-color: #bc2c28;
+}
+
+/*  NOTES:  */
+/*  Create a bunch of classes from the colours  */
+/*  listed in $colours:                         */
+/*  Alternatively, write a string-array and     */
+/*  iterate through that to get the appropriate */
+/*  colours out of the map:                     */
 .affiliates {
   background-color: #f6f6f6;
   height: auto;
@@ -1464,8 +1730,6 @@ header {
 
 .affiliates .af img {
   padding: 0 20px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   max-width: 100%;
 }
 
@@ -1475,55 +1739,6 @@ header {
 
 .affiliates .af img:nth-of-type(2) {
   display: none;
-}
-
-.affiliates .af > div {
-  display: none;
-  position: absolute;
-  bottom: 125px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 260px;
-  height: auto;
-  text-align: center;
-  background-color: #333645;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 20px;
-}
-
-.affiliates .af > div > div {
-  -webkit-transform: rotateZ(45deg);
-          transform: rotateZ(45deg);
-  background-color: #333645;
-  width: 30px;
-  height: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  position: absolute;
-  bottom: -14px;
-  left: 112px;
-}
-
-.affiliates .af h4 {
-  font-size: 18px;
-  margin-top: 0;
-  margin-bottom: 14px;
-}
-
-.affiliates .af p {
-  font-size: 13px;
-  margin-top: 11px;
-  margin-bottom: 0;
-}
-
-.affiliates .af span {
-  width: 28px;
-  height: 3px;
-  margin: auto;
-  background-color: white;
-  display: block;
 }
 
 .affiliates .changable:hover {
@@ -1538,10 +1753,70 @@ header {
   display: inline-block;
 }
 
-.affiliates .changable:hover > div {
+.affiliates .changable:hover .popup-ctnr, .affiliates .changable:hover .affi-popup {
   display: block;
 }
 
+.affiliates .popup-ctnr {
+  display: none;
+  padding: 0 calc((750px - 260px) / 2) 50px;
+  width: 750px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.affiliates .affi-popup {
+  display: block;
+  position: absolute;
+  bottom: 50px;
+  width: 260px;
+  height: auto;
+  text-align: center;
+  background-color: #333645;
+  padding: 20px;
+}
+
+.affiliates .affi-popup > div {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+  background-color: #333645;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: -14px;
+  left: 112px;
+}
+
+.affiliates h4 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.affiliates p {
+  font-size: 13px;
+  margin-top: 11px;
+  margin-bottom: 0;
+}
+
+.affiliates span {
+  width: 28px;
+  height: 3px;
+  margin: auto;
+  background-color: white;
+  display: block;
+}
+
+/*  NOTES:  */
+/*  Create a bunch of classes from the colours  */
+/*  listed in $colours:                         */
+/*  Alternatively, write a string-array and     */
+/*  iterate through that to get the appropriate */
+/*  colours out of the map:                     */
 #links {
   width: 100%;
   height: auto;
@@ -1657,8 +1932,6 @@ header {
   background-color: #1d1f28;
   text-align: center;
   padding: 10px 0 8px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .socMed-links a img {
@@ -1671,23 +1944,14 @@ header {
   background-color: #4183d7;
 }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 275px;
-  height: 100%;
-  overflow: auto;
-  background-color: #333645;
-  z-index: -1;
-}
-
 * {
   background: transparent;
   color: black;
   font-family: "Poppins", sans-serif;
   letter-spacing: .4px;
   font-weight: 400;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {

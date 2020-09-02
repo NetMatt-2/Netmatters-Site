@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AACI,kBADc,CACd,kBAAkB,CAAC;EACf,aAAa,EAAE,IAAI;EACnB,WAAW,EAAE,MAAM;CACtB",
+    "sources": [
+        "mmenu.multiline.scss",
+        "../../_mixins.scss",
+        "../../_includes.scss",
+        "../../_variables.scss"
+    ],
+    "names": [],
+    "file": "mmenu.multiline.css"
+}

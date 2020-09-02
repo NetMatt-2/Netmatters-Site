@@ -2,13 +2,26 @@
         "../_PARTIALS/colours",
         "../_PARTIALS/universals";
 
-.splash, .splash img, .splash img+div {
+.splash, .slide, .slide img, .slide img+div {
     width:100%;
     height:500px;
 }
-
 .splash {
-    position:relative;
+    position: relative;
+}
+#dotHolder {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    bottom: 20%;
+    button {
+        padding: 0;
+    }
+}
+
+.slide {
+    position: relative;
     img {
         object-fit: cover;
     }
@@ -19,7 +32,8 @@
         left: 0;
     }
 }
-.splash-text {
+
+.slide-text {
     width:100%;
     position: absolute;
     top: 50%;
@@ -39,32 +53,28 @@
     p {
         margin: 50px 0;
     }
-    a {
-        @include btn-style-1 (white, $col-seagrey, 20px,);
-    }
 }
 
 /*Fixed size, text-align center*/
-
 @media (min-width:$bp-md) {
-    .splash-text {
+    .slide-text {
         $pos-md: calc(0px - (#{$bp-md} / 2) + #{$x-pad_page});
         -webkit-transform: translate(#{$pos-md}, -50%);
                 transform: translate(#{$pos-md}, -50%);
         text-align: left;
     }
-    .splash-text, .splash-text h2, .splash-text p {
+    .slide-text, .slide-text h2, .slide-text p {
         width: calc(#{$bp-md} - (2 * #{$x-pad_page}));
     }
 }
 @media (min-width:$bp-lg) {
-    .splash-text {
+    .slide-text {
         $pos-lg: calc(0px - (#{$bp-lg} / 2) + #{$x-pad_page});
         -webkit-transform: translate(#{$pos-lg}, -50%);
                 transform: translate(#{$pos-lg}, -50%);
         text-align: left;
     }
-    .splash-text, .splash-text h2, .splash-text p {
+    .slide-text, .slide-text h2, .slide-text p {
         width: calc(#{$bp-lg} - (2 * #{$x-pad_page}));
     }
 }
