@@ -1,0 +1,121 @@
+#side-menu {
+  background-color: #333645;
+}
+
+#side-menu * {
+  color: white;
+  text-transform: uppercase;
+}
+
+#side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-cat-ctnr ul {
+  background-color: #262934;
+}
+
+.sidebar-cat-ctnr:hover .sidebar-cat-hdr {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+#sidebar-contactUs, .sidebar-cat-hdr, .sidebar-cat-links {
+  cursor: pointer;
+}
+
+#sidebar-section1 {
+  padding: 20px;
+  text-align: center;
+}
+
+#sidebar-section1 ul {
+  margin: 0;
+}
+
+#sidebar-section1 #sidebar-contactUs {
+  font-size: 18px;
+}
+
+#sidebar-section1 #sidebar-contactUs:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+#sidebar-section1 #sidebar-contactUs, #sidebar-section1 .sidebar-cat-hdr {
+  margin-bottom: 20px;
+  padding: 19px 0;
+  outline: 1px solid rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#sidebar-section1 #sidebar-contactUs, #sidebar-section1 .sidebar-cat-hdr, #sidebar-section1 .sidebar-cat-links {
+  border-radius: 4px;
+}
+
+#sidebar-section1 .sidebar-cat-hdr img {
+  width: 24px;
+  height: 24px;
+}
+
+#sidebar-section1 .sidebar-cat-hdr p {
+  margin: 0;
+}
+
+#sidebar-section1 .sidebar-cat-hdr p:first-of-type {
+  font-size: 10px;
+}
+
+#sidebar-section1 .sidebar-cat-hdr p:last-of-type {
+  font-size: 18px;
+}
+
+#sidebar-section1 .sidebar-cat-ctnr {
+  margin-top: 20px;
+}
+
+#sidebar-section1 .sidebar-cat-ctnr ul a {
+  line-height: 43px;
+}
+
+#sidebar-section1 .sidebar-cat-ctnr li:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+#sidebar-section1 .sidebar-cat-ctnr li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+#sidebar-section2 ul {
+  margin: 0;
+}
+
+#sidebar-section2 ul li:before {
+  content: '';
+  display: inline-block;
+  height: 8px;
+  width: 6px;
+  background-image: url("../IMGs/BULLETS/double-chevron-inv.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+}
+
+#sidebar-section2 .sidebar-cat-hdr {
+  padding: 20px 20px;
+  line-height: 16px;
+}
+
+#sidebar-section2 .sidebar-cat-links li {
+  padding: 15px 20px;
+}
+
+#sidebar-section2 .sidebar-cat-links li a {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+#sidebar-section2 .sidebar-cat-hdr, #sidebar-section2 .sidebar-cat-links li {
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+/*# sourceMappingURL=sidebar-themes.css.map */

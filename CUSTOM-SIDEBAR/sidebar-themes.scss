@@ -1,0 +1,84 @@
+$sidebar-padding: 20px;
+$item-border-top: 1px solid hsla(0, 0%, 100%, 0.055);
+$item-border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+
+
+#side-menu {
+    background-color: #333645;
+    * {
+        color: white;
+        text-transform: uppercase;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.sidebar-cat-ctnr {
+    ul {
+        background-color: rgb(38, 41, 52);
+    }
+    &:hover {
+        .sidebar-cat-hdr { background-color: rgba(255, 255, 255, 0.075) }
+    }
+}
+
+#sidebar-contactUs, .sidebar-cat-hdr, .sidebar-cat-links { cursor: pointer; }
+
+
+#sidebar-section1 {
+    padding: $sidebar-padding;
+    text-align: center;
+    ul {margin: 0;}
+    #sidebar-contactUs {
+        font-size: 18px;
+        &:hover { background-color: rgba(255, 255, 255, 0.075) }
+    }
+    #sidebar-contactUs, .sidebar-cat-hdr {
+        margin-bottom: $sidebar-padding;
+        padding: 19px 0;
+        outline: 1px solid rgba(0, 0, 0, 0.25);
+        border: 1px solid hsla(0, 0%, 100%, 0.1);
+    }
+    #sidebar-contactUs, .sidebar-cat-hdr, .sidebar-cat-links { border-radius: 4px; }
+    .sidebar-cat-hdr {
+        img { width: 24px; height: 24px; }
+        p {
+            margin: 0;
+            &:first-of-type {font-size: 10px}
+            &:last-of-type {font-size: 18px}
+        }
+    }
+    .sidebar-cat-ctnr {
+        margin-top: $sidebar-padding;
+        ul a {line-height: 43px}
+        li:not(:first-child) {border-top: $item-border-top}
+        li:not(:last-child) {border-bottom: $item-border-bottom}
+    }
+}
+
+#sidebar-section2 {
+    ul {
+        margin: 0;
+    }
+    ul li:before{
+        content: '';
+        display: inline-block;
+        height: 8px;
+        width: 6px;
+        background-image: url("../IMGs/BULLETS/double-chevron-inv.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 20px;
+     }
+    .sidebar-cat-hdr { padding: 20px $sidebar-padding; line-height: 16px }
+    .sidebar-cat-links li { padding: 15px $sidebar-padding; }
+    .sidebar-cat-links li a { font-size: 14px; line-height: 14px }
+
+    .sidebar-cat-hdr, .sidebar-cat-links li {
+        border-top: $item-border-top;
+        border-bottom: $item-border-bottom;
+    }
+}
+

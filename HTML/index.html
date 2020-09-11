@@ -10,10 +10,14 @@
     
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/ieStyles.css">
-    <link rel="stylesheet" href="../CUSTOM-SIDEBAR/custom-sidebar.css">
+
+    <link rel="stylesheet" href="../CUSTOM-SIDEBAR/include/custom-sidebar.css">
+    <link rel="stylesheet" href="../CUSTOM-SIDEBAR/sidebar-themes.css">
+    <link rel="stylesheet" href="../CUSTOM-SIDEBAR-BTN/btn-trans.css">
 
     <style>
-        #cookie-popup, #cookie-settings {display: none}
+        #cookie-popup {}
+        #cookie-settings {display: none}
     </style>
 
 </head>
@@ -28,8 +32,8 @@
                 <p>You can see a list of the other companies who use cookies on this website, by visiting cookie settings at the bottom of each page. For full details of how we use your personal information, and your rights in relation to it, view our privacy policy.</p>
             </div>
             <div class=link-ctnr>
-                <a id=c-btn-1 class=btn-base>Change Settings</a>
-                <a id=c-btn-2 class=btn-base>Accept Cookies</a>
+                <a href=# id=c-btn-1 class=btn-base>Change Settings</a>
+                <a href=# id=c-btn-2 class=btn-base>Accept Cookies</a>
             </div>
         </div>
     </div>
@@ -65,162 +69,231 @@
 
             <p>Different web browsers may use different methods for managing cookies. Please follow the instructions below, from the web browser manufacturers directly, to configure your browser settings*.</p>
             <ul>
-                <li><a>Microsoft Internet Explorer (IE)</a></li>
-                <li><a>Google Chrome</a></li>
-                <li><a>Safari</a></li>
-                <li><a>Firefox</a></li>
+                <li><a href=#>Microsoft Internet Explorer (IE)</a></li>
+                <li><a href=#>Google Chrome</a></li>
+                <li><a href=#>Safari</a></li>
+                <li><a href=#>Firefox</a></li>
             </ul>
             <div id=tbl class=btn-base>
-                <table>
-                    <tr>
-                        <th>Company</th>
-                        <th>Domain</th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <td><a>company</a></td>
-                        <td>domain</td>
-                        <td>
-                            <div class=btn-ctnr>
-                                <button class=btn-base></button>
-                                <button class=btn-base></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a>company</a></td>
-                        <td>domain</td>
-                        <td>
-                            <div class=btn-ctnr>
-                                <button class=btn-base></button>
-                                <button class=btn-base></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a>company</a></td>
-                        <td>domain</td>
-                        <td>
-                            <div class=btn-ctnr>
-                                <button class=btn-base></button>
-                                <button class=btn-base></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a>company</a></td>
-                        <td>domain</td>
-                        <td>
-                            <div class=btn-ctnr>
-                                <button class=btn-base></button>
-                                <button class=btn-base></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a>company</a></td>
-                        <td>domain</td>
-                        <td>
-                            <div class=btn-ctnr>
-                                <button class=btn-base></button>
-                                <button class=btn-base></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><a>company</a></td>
-                        <td>domain</td>
-                        <td>
-                            <div class=btn-ctnr>
-                                <button class=btn-base></button>
-                                <button class=btn-base></button>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+            </div>
+            <table>
+                <tr>
+                    <th>Company</th>
+                    <th>Domain</th>
+                    <th></th>
+                </tr>
+                <tr class="data-entry" id="c1">
+                    <td><a href=#>company</a></td>
+                    <td>domain</td>
+                    <td>
+                        <div class=btn-ctnr>
+                            <button class=btn-base></button>
+                            <button class=btn-base></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="data-entry" id="c2">
+                    <td><a href=#>company</a></td>
+                    <td>domain</td>
+                    <td>
+                        <div class=btn-ctnr>
+                            <button class=btn-base></button>
+                            <button class=btn-base></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="data-entry" id="c3">
+                    <td><a href=#>company</a></td>
+                    <td>domain</td>
+                    <td>
+                        <div class=btn-ctnr>
+                            <button class=btn-base></button>
+                            <button class=btn-base></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="data-entry" id="c4">
+                    <td><a href=#>company</a></td>
+                    <td>domain</td>
+                    <td>
+                        <div class=btn-ctnr>
+                            <button class=btn-base></button>
+                            <button class=btn-base></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="data-entry" id="c5">
+                    <td><a href=#>company</a></td>
+                    <td>domain</td>
+                    <td>
+                        <div class=btn-ctnr>
+                            <button class=btn-base></button>
+                            <button class=btn-base></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="data-entry" id="c6">
+                    <td><a href=#>company</a></td>
+                    <td>domain</td>
+                    <td>
+                        <div class=btn-ctnr>
+                            <button class=btn-base></button>
+                            <button class=btn-base></button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <button class=btn-base>Cancel</button>
+                <button class=btn-base>Accept Settings</button>
             </div>
         </div>
     </div>
 
     <div id="page-blocker" class="blocker-hidden"></div>
     <nav id="side-menu" class="menu-closed">
-        <div id="side-section1">
+        <div id="sidebar-section1">
             <ul>
-                <li id=mm-contactUs>
-                    <a>Contact us</a>
+                <li id=sidebar-contactUs>
+                    <a href=#>Contact us</a>
                 </li>
 
-                <li id=mm-webDesign>
-                    <a>Web design</a>
-                    <ul>
-                        <li><a>Stylish Websites</a></li>
-                        <li><a>ECommerce Stores</a></li>
-                        <li><a>Branding</a></li>
-                        <li><a>Mobile Apps</a></li>
-                        <li><a>Web Hosting</a></li>
-                        <li><a>Pay Monthly Websites</a></li>
+                <li class=sidebar-cat-ctnr id=sidebar-webDesign>
+                    <div class=sidebar-cat-hdr>
+                        <img src="../IMGs/ICONS/code-purple.svg" alt="Code tag icon">
+                        <p>Web</p>
+                        <p>Design</p>
+                    </div>
+                    <ul class=sidebar-cat-links>
+                        <li><a href=#>Stylish Websites</a></li>
+                        <li><a href=#>ECommerce Stores</a></li>
+                        <li><a href=#>Branding</a></li>
+                        <li><a href=#>Mobile Apps</a></li>
+                        <li><a href=#>Web Hosting</a></li>
+                        <li><a href=#>Pay Monthly Websites</a></li>
                     </ul>
                 </li>
                 
-                <li id=mm-ITSupport>
-                    <a></a>
-                    <ul>
-                        <li><a>Managed IT Support</a></li>
-                        <li><a>Business IT Support</a></li>
-                        <li><a>Office 365</a></li>
-                        <li><a>Consultancy</a></li>
-                        <li><a>Cloud Provider</a></li>
-                        <li><a>Data Backup</a></li>
+                <li class=sidebar-cat-ctnr id=sidebar-ITSupport>
+                    <div class=sidebar-cat-hdr>
+                        <img src="../IMGs/ICONS/monitor-blue.svg" alt="Monitor icon">
+                        <p>IT</p>
+                        <p>Support</p>
+                    </div>
+                    <ul class=sidebar-cat-links>
+                        <li><a href=#>Managed IT Support</a></li>
+                        <li><a href=#>Business IT Support</a></li>
+                        <li><a href=#>Office 365</a></li>
+                        <li><a href=#>Consultancy</a></li>
+                        <li><a href=#>Cloud Provider</a></li>
+                        <li><a href=#>Data Backup</a></li>
                     </ul>
                 </li>
-                <li id=mm-telecomsServices>
-                    <a></a>
-                    <ul>
-                        <li><a>Gigabit Voucher</a></li>
-                        <li><a>Hosted VOIP</a></li>
-                        <li><a>Business VOIP</a></li>
-                        <li><a>Business Broadband</a></li>
-                        <li><a>Leased Line</a></li>
-                        <li><a>3CX Systems</a></li>
+                <li class=sidebar-cat-ctnr id=sidebar-telecomsServices>
+                    <div class=sidebar-cat-hdr>
+                        <img src="../IMGs/ICONS/telephone-red.svg" alt="Telephone icon">
+                        <p>Telecoms</p>
+                        <p>Services</p>
+                    </div>
+                    <ul class=sidebar-cat-links>
+                        <li><a href=#>Gigabit Voucher</a></li>
+                        <li><a href=#>Hosted VOIP</a></li>
+                        <li><a href=#>Business VOIP</a></li>
+                        <li><a href=#>Business Broadband</a></li>
+                        <li><a href=#>Leased Line</a></li>
+                        <li><a href=#>3CX Systems</a></li>
                     </ul>
                 </li>
-                <li id=mm-bespokeSoftware>
-                    <a></a>
-                    <ul>
-                        <li><a>Workflow Solutions</a></li>
-                        <li><a>Automation</a></li>
-                        <li><a>System Integration</a></li>
-                        <li><a>Database Management</a></li>
-                        <li><a>Sharepoint</a></li>
-                        <li><a>ERP</a></li>
+                <li class=sidebar-cat-ctnr id=sidebar-bespokeSoftware>
+                    <div class=sidebar-cat-hdr>
+                        <img src="../IMGs/ICONS/grid-seagrey.svg" alt="Grid icon">
+                        <p>Bespoke</p>
+                        <p>Software</p>
+                    </div>
+                    <ul class=sidebar-cat-links>
+                        <li><a href=#>Workflow Solutions</a></li>
+                        <li><a href=#>Automation</a></li>
+                        <li><a href=#>System Integration</a></li>
+                        <li><a href=#>Database Management</a></li>
+                        <li><a href=#>Sharepoint</a></li>
+                        <li><a href=#>ERP</a></li>
                     </ul>
                 </li>
-                <li id=mm-digitalMarketing>
-                    <a></a>
-                    <ul>
-                        <li><a>SEO</a></li>
-                        <li><a>PPC</a></li>
-                        <li><a>CRO</a></li>
-                        <li><a>Email</a></li>
-                        <li><a>Social</a></li>
-                        <li><a>Content</a></li>
+                <li class=sidebar-cat-ctnr id=sidebar-digitalMarketing>
+                    <div class=sidebar-cat-hdr>
+                        <img src="../IMGs/ICONS/graph-green.svg" alt="Graph icon">
+                        <p>Digital</p>
+                        <p>Marketing</p>
+                    </div>
+                    <ul class=sidebar-cat-links>
+                        <li><a href=#>SEO</a></li>
+                        <li><a href=#>PPC</a></li>
+                        <li><a href=#>CRO</a></li>
+                        <li><a href=#>Email</a></li>
+                        <li><a href=#>Social</a></li>
+                        <li><a href=#>Content</a></li>
                     </ul>
                 </li>
-                <li id=mm-cyberSecurity>
-                    <a></a>
-                    <ul>
-                        <li><a>Assessment</a></li>
-                        <li><a>Management</a></li>
-                        <li><a>Penetration Testing</a></li>
-                        <li><a>Cyber Essentials</a></li>
-                        <li><a>PCI/DSS</a></li>
-                        <li><a>Hacker Prevention</a></li>
+                <li class=sidebar-cat-ctnr id=sidebar-cyberSecurity>
+                    <div class=sidebar-cat-hdr>
+                        <img src="../IMGs/ICONS/shield-pink.svg" alt="Shield icon">
+                        <p>Cyber</p>
+                        <p>Security</p>
+                    </div>
+                    <ul class=sidebar-cat-links>
+                        <li><a href=#>Assessment</a></li>
+                        <li><a href=#>Management</a></li>
+                        <li><a href=#>Penetration Testing</a></li>
+                        <li><a href=#>Cyber Essentials</a></li>
+                        <li><a href=#>PCI/DSS</a></li>
+                        <li><a href=#>Hacker Prevention</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
-        <div id="side-section2">
-
+        <div id="sidebar-section2">
+            <div class=sidebar-cat-ctnr>
+                <div class=sidebar-cat-hdr><a href=#>Training</a></div>
+                <ul class=sidebar-cat-links>
+                    <li><a href=#>Web Developer Course</a></li>
+                </ul>
+            </div>
+            <div class=sidebar-cat-ctnr>
+                <div class=sidebar-cat-hdr><a href=#>Events</a></div>
+                <ul class=sidebar-cat-links>
+                    <li><a href=#>Business Automation Seminar</a></li>
+                </ul>
+            </div>
+            <div class=sidebar-cat-ctnr>
+                <div class=sidebar-cat-hdr><a href=#>Our Company</a></div>
+                <ul class=sidebar-cat-links>
+                    <li><a href=#>Our Culture</a></li>
+                    <li><a href=#>Our Team</a></li>
+                    <li><a href=#>Our Careers</a></li>
+                    <li><a href=#>Our Benefits</a></li>
+                    <li><a href=#>Our Great Yarmouth Office</a></li>
+                </ul>
+            </div>
+            <div class=sidebar-cat-ctnr>
+                <div class=sidebar-cat-hdr><a href=#>Our Work</a></div>
+                <ul class=sidebar-cat-links>
+                    <li><a href=#>Case Studies</a></li>
+                </ul>
+            </div>
+            <div class=sidebar-cat-ctnr>
+                <div class=sidebar-cat-hdr><a href=#>Our Knowledge</a></div>
+                <ul class=sidebar-cat-links>
+                    <li><a href=#>Guides</a></li>
+                    <li><a href=#>News</a></li>
+                    <li><a href=#>Insights</a></li>
+                </ul>
+            </div>
+            <div class=sidebar-cat-ctnr>
+                <div class=sidebar-cat-hdr><a href=#>Covid Risk Assessments</a></div>
+            </div>
+            <div class=sidebar-cat-ctnr>
+                <div class=sidebar-cat-hdr><a href=#>Support</a></div>
+            </div>
         </div>
     </nav>
 
@@ -250,8 +323,9 @@
                     </a>
                 </div>
                 <!--Open mMenu-->
-                <a class="btn-base btn-header" id="btn-menuburger">
+                <a class="btn-base btn-header btn-state-default" id="btn-menuburger">
                     <img src="../IMGs/burger-white.svg" alt="Menu icon">
+                    <img src="../IMGs/close.svg" alt="Cross icon">
                     <p>MENU</p>
                 </a>
                 <!--Searchbar-->
@@ -270,8 +344,8 @@
                     <!--MENU CATEGORIES-->
                     <div class="cat" id="bMenu-WD">
                         <div class="icon">
-                            <img src="../IMGs/code-white.svg" alt="Code tag icon">
-                            <img src="../IMGs/code-purple.svg" alt="Code tag icon">
+                            <img src="../IMGs/ICONS/code-white.svg" alt="Code tag icon">
+                            <img src="../IMGs/ICONS/code-purple.svg" alt="Code tag icon">
                         </div>
                         <h5>Web</h5>
                         <h5>Design</h5>
@@ -288,8 +362,8 @@
                     </div>
                     <div class="cat" id="bMenu-IT">
                         <div class="icon">
-                            <img src="../IMGs/monitor-white.svg" alt="Monitor icon">
-                            <img src="../IMGs/monitor-blue.svg" alt="Monitor icon">
+                            <img src="../IMGs/ICONS/monitor-white.svg" alt="Monitor icon">
+                            <img src="../IMGs/ICONS/monitor-blue.svg" alt="Monitor icon">
                         </div>
                         <h5>IT</h5>
                         <h5>Support</h5>
@@ -306,8 +380,8 @@
                     </div>
                     <div class="cat" id="bMenu-TC">
                         <div class="icon">
-                            <img src="../IMGs/telephone-white.svg" alt="Telephone icon">
-                            <img src="../IMGs/telephone-red.svg" alt="Telephone icon">
+                            <img src="../IMGs/ICONS/telephone-white.svg" alt="Telephone icon">
+                            <img src="../IMGs/ICONS/telephone-red.svg" alt="Telephone icon">
                         </div>
                         <h5>Telecoms</h5>
                         <h5>Services</h5>
@@ -324,8 +398,8 @@
                     </div>
                     <div class="cat" id="bMenu-BS">
                         <div class="icon">
-                            <img src="../IMGs/grid-white.svg" alt="Layout icon">
-                            <img src="../IMGs/grid-seagrey.svg" alt="Layout icon">
+                            <img src="../IMGs/ICONS/grid-white.svg" alt="Layout icon">
+                            <img src="../IMGs/ICONS/grid-seagrey.svg" alt="Layout icon">
                         </div>
                         <h5>Bespoke</h5>
                         <h5>Software</h5>
@@ -342,8 +416,8 @@
                     </div>
                     <div class="cat" id="bMenu-DM">
                         <div class="icon">
-                            <img src="../IMGs/graph-white.svg" alt="Graph icon">
-                            <img src="../IMGs/graph-green.svg" alt="Graph icon">
+                            <img src="../IMGs/ICONS/graph-white.svg" alt="Graph icon">
+                            <img src="../IMGs/ICONS/graph-green.svg" alt="Graph icon">
                         </div>
                         <h5>Digital</h5>
                         <h5>Marketing</h5>
@@ -360,8 +434,8 @@
                     </div>
                     <div class="cat" id="bMenu-CS">
                         <div class="icon">
-                            <img src="../IMGs/shield-white.svg" alt="Shield icon">
-                            <img src="../IMGs/shield-pink.svg" alt="Shield icon">
+                            <img src="../IMGs/ICONS/shield-white.svg" alt="Shield icon">
+                            <img src="../IMGs/ICONS/shield-pink.svg" alt="Shield icon">
                         </div>
                         <h5>Cyber</h5>
                         <h5>Security</h5>
@@ -447,8 +521,8 @@
                 <div class="flex-container">
                     <a class="panel schema-nav-seagrey" id="nav-bespokeSoftware" href="#">
                         <div class="icon">
-                            <img src="../IMGs/grid-white.svg" alt="Layout icon">
-                            <img src="../IMGs/grid-seagrey.svg" alt="Layout icon">
+                            <img src="../IMGs/ICONS/grid-white.svg" alt="Layout icon">
+                            <img src="../IMGs/ICONS/grid-seagrey.svg" alt="Layout icon">
                         </div>
                         <h2>Bespoke Software</h2>
                         <span></span>
@@ -457,8 +531,8 @@
                     </a>
                     <a class="panel schema-nav-blue" id="nav-ITSupport" href="#">
                         <div class="icon">
-                            <img src="../IMGs/monitor-white.svg" alt="Monitor icon">
-                            <img src="../IMGs/monitor-blue.svg" alt="Monitor icon">
+                            <img src="../IMGs/ICONS/monitor-white.svg" alt="Monitor icon">
+                            <img src="../IMGs/ICONS/monitor-blue.svg" alt="Monitor icon">
                         </div>
                         <h2>IT Support</h2>
                         <span></span>
@@ -467,8 +541,8 @@
                     </a>
                     <a class="panel schema-nav-green" id="nav-digitalMarketing" href="#">
                         <div class="icon">
-                            <img src="../IMGs/graph-white.svg" alt="Graph icon">
-                            <img src="../IMGs/graph-green.svg" alt="Graph icon">
+                            <img src="../IMGs/ICONS/graph-white.svg" alt="Graph icon">
+                            <img src="../IMGs/ICONS/graph-green.svg" alt="Graph icon">
                         </div>
                         <h2>Digital Marketing</h2>
                         <span></span>
@@ -477,8 +551,8 @@
                     </a>
                     <a class="panel schema-nav-red" id="nav-telecomsServices" href="#">
                         <div class="icon">
-                            <img src="../IMGs/telephone-white.svg" alt="Telephone icon">
-                            <img src="../IMGs/telephone-red.svg" alt="Telephone icon">
+                            <img src="../IMGs/ICONS/telephone-white.svg" alt="Telephone icon">
+                            <img src="../IMGs/ICONS/telephone-red.svg" alt="Telephone icon">
                         </div>
                         <h2>Telecoms Services</h2>
                         <span></span>
@@ -487,8 +561,8 @@
                     </a>
                     <a class="panel schema-nav-purple" id="nav-webDesign" href="#">
                         <div class="icon">
-                            <img src="../IMGs/code-white.svg" alt="Code tag icon">
-                            <img src="../IMGs/code-purple.svg" alt="Code tag icon">
+                            <img src="../IMGs/ICONS/code-white.svg" alt="Code tag icon">
+                            <img src="../IMGs/ICONS/code-purple.svg" alt="Code tag icon">
                         </div>
                         <h2>Web Design</h2>
                         <span></span>
@@ -497,8 +571,8 @@
                     </a>
                     <a class="panel schema-nav-pink" id="nav-cyberSecurity" href="#">
                         <div class="icon">
-                            <img src="../IMGs/shield-white.svg" alt="Shield icon">
-                            <img src="../IMGs/shield-pink.svg" alt="Shield icon">
+                            <img src="../IMGs/ICONS/shield-white.svg" alt="Shield icon">
+                            <img src="../IMGs/ICONS/shield-pink.svg" alt="Shield icon">
                         </div> 
                         <h2>Cyber Security</h2>
                         <span></span>
@@ -534,11 +608,11 @@
             </section>
             <section class=latest>
                 <div class=flex-container>
-                    <div class="newspanel panel-category-news">
+                    <div class="newspanel newspanel-cat-webdesign newspanel-type-news">
                         <div class="news-tag">
                             <a href=#></a>
                             <div class="description-ctnr">
-                                <div></div>
+                                <div><span></span><span></span></div>
                                 <div></div>
                             </div>
                         </div>
@@ -562,11 +636,11 @@
                             </table>
                         </div>
                     </div>
-                    <div class="newspanel panel-category-portfolio">
+                    <div class="newspanel newspanel-cat-digitalmarketing newspanel-type-portfolios">
                         <div class="news-tag">
                             <a href=#></a>
                             <div class="description-ctnr">
-                                <div></div>
+                                <div><span></span><span></span></div>
                                 <div></div>
                             </div>
                         </div>
@@ -590,11 +664,11 @@
                             </table>
                         </div>
                     </div>
-                    <div class="newspanel panel-category-careers">
+                    <div class="newspanel newspanel-cat-telecomsservices newspanel-type-careers">
                         <div class="news-tag">
                             <a href=#></a>
                             <div class="description-ctnr">
-                                <div></div>
+                                <div><span></span><span></span></div>
                                 <div></div>
                             </div>
                         </div>
@@ -769,7 +843,10 @@
             });
         </script>
     <!--Menu-->
-        <script src="../CUSTOM-SIDEBAR/custom-sidebar.js"></script>
+        <script src="../CUSTOM-SIDEBAR/include/custom-sidebar.js"></script>
+        <script src="../CUSTOM-SIDEBAR-BTN/btn-trans.js"></script>
+    <!--Cookies-->
+        <script src="../JS/allowCookies.js"></script>
 <!--end Scripts-->
 <!--end Body-->
 </body>

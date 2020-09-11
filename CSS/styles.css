@@ -348,7 +348,7 @@
 }
 
 #cookie-settings {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 1000001;
@@ -1579,76 +1579,160 @@ header * {
   z-index: -1;
 }
 
-.panel-category-news .news-tag {
+.newspanel-cat-webdesign .news-tag {
   background-color: #926fb1;
 }
 
-.panel-category-news .news-tag a:before {
-  content: "news";
+.newspanel-cat-webdesign .news-tag > .description-ctnr > div:first-child > span:first-child:before {
+  color: white;
+  content: "View all: Web Design /";
 }
 
-.panel-category-news .news-tag > .description-ctnr > div:first-child:before {
-  content: "views news here or whatever";
-}
-
-.panel-category-news .text-container a:first-of-type {
+.newspanel-cat-webdesign .text-container a:first-of-type {
   color: #926fb1;
 }
 
-.panel-category-news .text-container a:last-of-type {
+.newspanel-cat-webdesign .text-container a:last-of-type {
   background-color: #926fb1;
 }
 
-.panel-category-news .text-container a:last-of-type:hover {
+.newspanel-cat-webdesign .text-container a:last-of-type:hover {
   background-color: #79539a;
 }
 
-.panel-category-careers .news-tag {
-  background-color: #67809f;
+.newspanel-cat-itsupport .news-tag {
+  background-color: #4183d7;
 }
 
-.panel-category-careers .news-tag a:before {
-  content: "careers";
+.newspanel-cat-itsupport .news-tag > .description-ctnr > div:first-child > span:first-child:before {
+  color: white;
+  content: "View all: IT Support /";
 }
 
-.panel-category-careers .news-tag > .description-ctnr > div:first-child:before {
-  content: "views careers here or whatever";
+.newspanel-cat-itsupport .text-container a:first-of-type {
+  color: #4183d7;
 }
 
-.panel-category-careers .text-container a:first-of-type {
-  color: #67809f;
+.newspanel-cat-itsupport .text-container a:last-of-type {
+  background-color: #4183d7;
 }
 
-.panel-category-careers .text-container a:last-of-type {
-  background-color: #67809f;
+.newspanel-cat-itsupport .text-container a:last-of-type:hover {
+  background-color: #286abd;
 }
 
-.panel-category-careers .text-container a:last-of-type:hover {
-  background-color: #526781;
-}
-
-.panel-category-portfolio .news-tag {
+.newspanel-cat-telecomsservices .news-tag {
   background-color: #d64541;
 }
 
-.panel-category-portfolio .news-tag a:before {
-  content: "portfolios";
+.newspanel-cat-telecomsservices .news-tag > .description-ctnr > div:first-child > span:first-child:before {
+  color: white;
+  content: "View all: Telecoms Services /";
 }
 
-.panel-category-portfolio .news-tag > .description-ctnr > div:first-child:before {
-  content: "views portfolios here or whatever";
-}
-
-.panel-category-portfolio .text-container a:first-of-type {
+.newspanel-cat-telecomsservices .text-container a:first-of-type {
   color: #d64541;
 }
 
-.panel-category-portfolio .text-container a:last-of-type {
+.newspanel-cat-telecomsservices .text-container a:last-of-type {
   background-color: #d64541;
 }
 
-.panel-category-portfolio .text-container a:last-of-type:hover {
+.newspanel-cat-telecomsservices .text-container a:last-of-type:hover {
   background-color: #bc2c28;
+}
+
+.newspanel-cat-bespokesoftware .news-tag {
+  background-color: #67809f;
+}
+
+.newspanel-cat-bespokesoftware .news-tag > .description-ctnr > div:first-child > span:first-child:before {
+  color: white;
+  content: "View all: Bespoke Software /";
+}
+
+.newspanel-cat-bespokesoftware .text-container a:first-of-type {
+  color: #67809f;
+}
+
+.newspanel-cat-bespokesoftware .text-container a:last-of-type {
+  background-color: #67809f;
+}
+
+.newspanel-cat-bespokesoftware .text-container a:last-of-type:hover {
+  background-color: #526781;
+}
+
+.newspanel-cat-digitalmarketing .news-tag {
+  background-color: #2ecc71;
+}
+
+.newspanel-cat-digitalmarketing .news-tag > .description-ctnr > div:first-child > span:first-child:before {
+  color: white;
+  content: "View all: Digital Marketing /";
+}
+
+.newspanel-cat-digitalmarketing .text-container a:first-of-type {
+  color: #2ecc71;
+}
+
+.newspanel-cat-digitalmarketing .text-container a:last-of-type {
+  background-color: #2ecc71;
+}
+
+.newspanel-cat-digitalmarketing .text-container a:last-of-type:hover {
+  background-color: #25a25a;
+}
+
+.newspanel-cat-cybersecurity .news-tag {
+  background-color: #f62459;
+}
+
+.newspanel-cat-cybersecurity .news-tag > .description-ctnr > div:first-child > span:first-child:before {
+  color: white;
+  content: "View all: Cyber Security /";
+}
+
+.newspanel-cat-cybersecurity .text-container a:first-of-type {
+  color: #f62459;
+}
+
+.newspanel-cat-cybersecurity .text-container a:last-of-type {
+  background-color: #f62459;
+}
+
+.newspanel-cat-cybersecurity .text-container a:last-of-type:hover {
+  background-color: #de093f;
+}
+
+.newspanel-type-news .news-tag a:before {
+  content: "news";
+}
+
+.newspanel-type-news .news-tag > .description-ctnr > div:first-child > span:last-child:before {
+  color: white;
+  text-transform: capitalize;
+  content: " news";
+}
+
+.newspanel-type-careers .news-tag a:before {
+  content: "careers";
+}
+
+.newspanel-type-careers .news-tag > .description-ctnr > div:first-child > span:last-child:before {
+  color: white;
+  text-transform: capitalize;
+  content: " careers";
+}
+
+.newspanel-type-portfolios .news-tag a:before {
+  content: "portfolios";
+}
+
+.newspanel-type-portfolios .news-tag > .description-ctnr > div:first-child > span:last-child:before {
+  color: white;
+  text-transform: capitalize;
+  content: " portfolios";
 }
 
 /*  NOTES:  */

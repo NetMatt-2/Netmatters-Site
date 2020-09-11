@@ -73,40 +73,50 @@ $tag-height: 22px;
 
 
 //CATEGORIES
-@mixin category-scheme($category, $description, $colour){
-    .news-tag {
-        background-color: $colour;
-        a:before { 
-            content:$category;
+$categories: ("webdesign", "itsupport", "telecomsservices", "bespokesoftware", "digitalmarketing", "cybersecurity");
+$cat-text: ("Web Design", "IT Support", "Telecoms Services", "Bespoke Software", "Digital Marketing", "Cyber Security");
+$strArr-clrs: ('purple', 'blue', 'red', 'seagrey', 'green', 'pink');
+$i:0;
+@each $cat in $categories {                                 //<== Could use a for loop, but this way you can add to the categories list without changing value of $i manually.
+    $i: $i+1;
+    $colour: map-get($colours, #{nth($strArr-clrs, $i)});
+    .newspanel-cat-#{$cat} {                                    //<== You could also use str-index() to get the space in e.g. "Web Design", str-slice() to get "Web" and "Design", str-insert() and str-to-lowercase() to concatinate to webdesign, and then you'd have your class name.
+        .news-tag {                                             // ...or you could not do that :)
+            background-color: $colour;
+            >.description-ctnr >div:first-child >span:first-child:before {
+                color: white;
+                content: "View all: #{nth($cat-text, $i)} /";
+            }
         }
-        >.description-ctnr >div:first-child:before {
-            content: $description;
-        }
-    }
-    .text-container {
-        a:first-of-type {
-            color: $colour;
-        }
-        a:last-of-type {
-            background-color:$colour;
-            &:hover {
-                background-color:darken($colour, 10);
+        .text-container {
+            a:first-of-type {
+                color: $colour;
+            }
+            a:last-of-type {
+                background-color:$colour;
+                &:hover {
+                    background-color:darken($colour, 10);
+                }
             }
         }
     }
 }
 
-.panel-category-news {
-    @include category-scheme("news", "views news here or whatever", map-get($colours, 'purple'));
+$types: ("news", "careers", "portfolios");
+@each $type in $types {
+    .newspanel-type-#{$type} {
+        .news-tag {
+            a:before { 
+                content:$type;
+            }
+            >.description-ctnr >div:first-child >span:last-child:before {
+                color: white;
+                text-transform: capitalize;
+                content: " #{$type}";
+            }
+        }
+    }
 }
-.panel-category-careers {
-    @include category-scheme("careers", "views careers here or whatever", map-get($colours, 'seagrey'));
-}
-.panel-category-portfolio {
-    @include category-scheme("portfolios", "views portfolios here or whatever", map-get($colours, 'red'));
-}
-
-
 
 
 
